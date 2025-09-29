@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public CharacterController controller;
     public float speed = 5f;
 
+    public Transform referenceCamera;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +23,23 @@ public class Player : MonoBehaviour
     {
         Vector2 inputDirection = moveAction.ReadValue<Vector2>();
 
-        controller.Move(new Vector3(inputDirection.x, 0, inputDirection.y) * Time.deltaTime * speed);
+        Vector3 forward = referenceCamera.forward;
+        forward.y = 0;
+        forward.Normalize();
+        Vector3 right = referenceCamera.right;
+
+        //wie viel auf forward + wie viel auf right
+        Vector3 moveDirection = forward * inputDirection.y + right * inputDirection.x;
+        moveDirection.y = 0f; // keine höhenveränderung
+        moveDirection.Normalize();
+
+
+        controller.Move(moveDirection * Time.deltaTime * speed);
+
+        if (inputDirection != Vector2.zero)
+        {
+            //transform (klein) verweist auf "mein" Transform
+            transform.forward = Vector3.Slerp(transform.forward, moveDirection, 0.1f);
+        }
     }
 }
