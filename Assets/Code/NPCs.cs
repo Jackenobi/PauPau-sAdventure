@@ -3,7 +3,7 @@ using UnityEngine;
 public class NPCs : Interactable
 {
 
-    public string name;
+    public string namenpc;
     public DialogueLine dialogue;
     public Sprite portrait;
     public DialogueScreen dialogueScreen;
@@ -23,7 +23,8 @@ public class NPCs : Interactable
 
     public override void Interact()
     {
-        dialogueScreen.ShowDialogue(dialogue, name);
+        base.Interact();
+        dialogueScreen.ShowDialogue(dialogue, namenpc);
     }
 
 
