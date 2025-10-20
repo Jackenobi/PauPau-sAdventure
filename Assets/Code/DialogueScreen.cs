@@ -19,6 +19,9 @@ public class DialogueScreen : MonoBehaviour
     public GameObject continueButton;
 
     public PlayerInput input;
+
+    public Image npcPortrait;
+    public Image characterPortrait;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -72,8 +75,8 @@ public class DialogueScreen : MonoBehaviour
 
     public void SelectChoice(int index)
     {
-        ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
         onChoiceSelected?.Invoke(currentLine.choices[index].id);
+        ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
     }
 
     public void Continue()

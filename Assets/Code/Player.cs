@@ -30,7 +30,6 @@ public class Player : MonoBehaviour
         {
             interactable.Interact();
         }
-        throw new System.NotImplementedException();
     }
 
     // Update is called once per frame

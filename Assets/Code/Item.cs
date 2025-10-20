@@ -1,7 +1,11 @@
 using UnityEngine;
 
 public class Item : Interactable
+
 {
+
+    public ItemType type;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,5 +23,13 @@ public class Item : Interactable
     {
         base.Interact();
         Debug.Log("Interacted with Item ");
+        Destroy(gameObject);
+        GameObject.FindFirstObjectByType<Inventory>().AddItem(this);
     }
+}
+
+
+public enum ItemType //enumeration = Aufzählung
+{
+    Tape, Egg, Map, Kid
 }

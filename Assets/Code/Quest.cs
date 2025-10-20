@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Quest : MonoBehaviour
@@ -8,64 +10,57 @@ public class Quest : MonoBehaviour
     public DialogueScreen dialogueScreen;
     public Transform questScreen;
     public GameObject questDisplayPrefab;
+    public Inventory inventory;
 
-    [Header("Quest 1")] //Überschrift im Inspector
+    [Header("Quest Nachbarn")] //Überschrift im Inspector
     public NPCs npc1;
-    public Item bottle;
-    public DialogueLine dialogue2;
-
-    [Header("Quest 2")]
     public NPCs npc2;
-    public Item item2;
-    public DialogueLine dialogue2npc2;
+    public NPCs npc3;
+    public DialogueLine npc1After;
+
+    [Header("Quest Bauarbeiter")]
+    public NPCs bauarbeiter;
+    public Item tape;
+    public DialogueLine bauarbeiterAfter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //beide Quests gleichzeitig starten
-        StartCoroutine(Quest1());
-        StartCoroutine(Quest2());
+        StartCoroutine(QuestNachbarn());
+        StartCoroutine(QuestBauarbeiter());
     }
 
-    IEnumerator Quest1()
+    IEnumerator QuestNachbarn()
     {
+        GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
+        var questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
+        questTMP.text = "Talk to your neighbors";
+
+
         yield return WaitForChoice("dashierincodeschreiben");
 
-        GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
-        var questTMP = questDisplay.GetComponent<TMP_Text>();
+        npc1.dialogue = npc1After;
 
-        questTMP.text = "finde ne die Flasche";
-
-        bottle.gameObject.SetActive(true);
-
-        yield return WaitForItem(bottle);
-
-        Destroy(bottle.gameObject);
-        npc1.dialogue = dialogue2;
-
-        questTMP.text = "bringe die flasche zum NPC";
-
-        yield return WaitForNPC(npc1);
-        Destroy(questDisplay);
     }
 
-    IEnumerator Quest2()
+    IEnumerator QuestBauarbeiter()
     {
-        yield return WaitForNPC(npc2);
+        yield return WaitForNPC(bauarbeiter);
         yield return new WaitUntil(() => dialogueScreen.panel.activeSelf == false);
 
         GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
-        var questTMP = questDisplay.GetComponent<TMP_Text>();
+        var questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
 
-        questTMP.text = "hilfee";
+        questTMP.text = "Find 1 Tape";
 
-        item2.gameObject.SetActive(true);
+        tape.gameObject.SetActive(true);
 
-        yield return WaitForItem(item2);
+        yield return WaitForItem(ItemType.Tape, 1);
 
-        Destroy(item2.gameObject);
-        npc2.dialogue = dialogue2npc2;
+        bauarbeiter.dialogue = bauarbeiterAfter;
     }
+
 
     IEnumerator WaitForNPC (NPCs npc)
     {
@@ -102,21 +97,22 @@ public class Quest : MonoBehaviour
         dialogueScreen.onChoiceSelected -= action; //entfernt die Funktion aus der Liste
     }
 
-    IEnumerator WaitForItem(Item item)
+    IEnumerator WaitForItem(ItemType item, int amount)
     {
         bool gotItem = false;
 
         //Variabel, die eine Funktion speichert 
-        System.Action action = () =>
+        System.Action<ItemType> action = (type) =>
         {
+            if(inventory.CountItems(type) >= amount)
             gotItem = true;
         };
 
-        item.onInteracted += action; //fügt die Funktion der Liste hinzu
+        inventory.onItemCollected += action; //fügt die Funktion der Liste hinzu
         //coroutine wartet bis die Bedingung true ist
         yield return new WaitUntil(() => gotItem);
 
-        item.onInteracted -= action; //entfernt die Funktion aus der Liste
+        inventory.onItemCollected -= action; //entfernt die Funktion aus der Liste
     }
 
 }
