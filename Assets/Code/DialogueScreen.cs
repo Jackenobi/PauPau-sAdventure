@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -19,6 +20,7 @@ public class DialogueScreen : MonoBehaviour
     public GameObject continueButton;
 
     public PlayerInput input;
+    
 
     public Image npcPortrait;
     public Image characterPortrait;
@@ -64,12 +66,14 @@ public class DialogueScreen : MonoBehaviour
         }
 
             input.SwitchCurrentActionMap("UI");
+            
             panel.SetActive(true);
     }
 
     public void HideDialogue()
     {
         input.SwitchCurrentActionMap("Player");
+        
         panel.SetActive(false);
     }
 

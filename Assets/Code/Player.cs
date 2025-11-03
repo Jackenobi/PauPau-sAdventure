@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
     {
      Interactable inter = other.GetComponent<Interactable>();
 
-        if (interactable != null)
+        if (inter != null)
             interactable = null;
     }
 

@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 
 public class Quest : MonoBehaviour
 {
@@ -14,9 +15,8 @@ public class Quest : MonoBehaviour
 
     [Header("Quest Nachbarn")] //Überschrift im Inspector
     public NPCs npc1;
-    public NPCs npc2;
-    public NPCs npc3;
-    public DialogueLine npc1After;
+    public Item[] nachbarn;
+    public DialogueLine npc1After; //neuer Dialog nach Questabschluss
 
     [Header("Quest Bauarbeiter")]
     public NPCs bauarbeiter;
@@ -51,16 +51,40 @@ public class Quest : MonoBehaviour
 
         GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
         var questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
-
-        questTMP.text = "Find 1 Tape";
+        questTMP.text = "Find some Tape";
 
         tape.gameObject.SetActive(true);
 
-        yield return WaitForItem(ItemType.Tape, 1);
+        yield return WaitForItem(ItemType.Tape, 1, null); 
 
         bauarbeiter.dialogue = bauarbeiterAfter;
+
+        questTMP.text = "Bring the tape to the constructionworker";
+
+        yield return WaitForNPC(bauarbeiter);
+        Destroy(questDisplay);
     }
 
+    /*------------AUF 2 NPCs PARALLEL WARTEN-------------
+		bool talkedToNPC1 = false;
+		//variabel, die eine Funktion speichert
+		System.Action action = () => {
+			talkedToNPC1 = true;
+		};
+		npc1.onInteracted += action;
+
+		bool talkedToNPC2 = false;
+		//variabel, die eine Funktion speichert
+		System.Action action2 = () => {
+			talkedToNPC2 = true;
+		};
+		npc2.onInteracted += action;
+
+		yield return new WaitUntil(() => talkedToNPC1 && talkedToNPC2);
+
+		npc1.onInteracted -= action;
+		npc2.onInteracted -= action;
+		*/
 
     IEnumerator WaitForNPC (NPCs npc)
     {
@@ -97,22 +121,42 @@ public class Quest : MonoBehaviour
         dialogueScreen.onChoiceSelected -= action; //entfernt die Funktion aus der Liste
     }
 
-    IEnumerator WaitForItem(ItemType item, int amount)
+    //wartet auf ein SPEZIFISCHES item
+    //IEnumerator WaitForItem(Item item) {
+    //	bool gotItem = false;
+
+    //	//variabel, die eine Funktion speichert
+    //	System.Action action = () => {
+    //		gotItem = true;
+    //	};
+
+    //	item.onInteracted += action;
+    //	//die coroutine wartet
+    //	yield return new WaitUntil(() => gotItem);
+
+    //	item.onInteracted -= action;
+    //}
+
+    IEnumerator WaitForItem(ItemType item, int amount, TMP_Text tmp)
     {
         bool gotItem = false;
 
-        //Variabel, die eine Funktion speichert 
-        System.Action<ItemType> action = (type) =>
-        {
-            if(inventory.CountItems(type) >= amount)
-            gotItem = true;
+        //variabel, die eine Funktion speichert
+        System.Action<ItemType> action = (type) => {
+            int count = inventory.CountItems(type);
+            if (tmp != null)
+            {
+                tmp.text = count + "/" + amount;
+            }
+            if (count >= amount)
+                gotItem = true;
         };
 
-        inventory.onItemCollected += action; //fügt die Funktion der Liste hinzu
-        //coroutine wartet bis die Bedingung true ist
+        inventory.onItemCollected += action;
+        //die coroutine wartet
         yield return new WaitUntil(() => gotItem);
 
-        inventory.onItemCollected -= action; //entfernt die Funktion aus der Liste
+        inventory.onItemCollected -= action;
     }
 
 }
