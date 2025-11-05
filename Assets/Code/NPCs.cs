@@ -7,6 +7,7 @@ public class NPCs : Interactable
     public DialogueLine dialogue;
     public Sprite portrait;
     public DialogueScreen dialogueScreen;
+    public playerdialogueScreen playerdialoguescreen;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,7 +25,15 @@ public class NPCs : Interactable
     public override void Interact()
     {
         base.Interact();
-        dialogueScreen.ShowDialogue(dialogue, namenpc);
+        if (dialogue.player)
+        {
+            playerdialoguescreen.ShowDialogue(dialogue, "PaoPao");
+        }
+        else
+        {
+            dialogueScreen.ShowDialogue(dialogue, namenpc);
+        }
+            
     }
 
 

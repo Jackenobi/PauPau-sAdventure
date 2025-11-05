@@ -5,10 +5,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-public class DialogueScreen : MonoBehaviour
+public class playerdialogueScreen : MonoBehaviour
 {
     private DialogueLine currentLine;
-    private string currentSpeaker;
+    private string NPCSpeaker;
 
     //string ist die ID der Choice
     public event System.Action<string> onChoiceSelected;
@@ -18,7 +18,7 @@ public class DialogueScreen : MonoBehaviour
     public TMP_Text dialogueTextTMP;
     public GameObject[] choiceButtons;
     public GameObject continueButton;
-    public playerdialogueScreen playerdialoguescreen;
+    public DialogueScreen dialogueScreen;
 
     public PlayerInput input;
     
@@ -36,9 +36,9 @@ public class DialogueScreen : MonoBehaviour
     public void ShowDialogue(DialogueLine dialogue, string speakerName)
     {
         currentLine = dialogue;
-        currentSpeaker = speakerName;
+        NPCSpeaker = speakerName;
 
-        nameTMP.text = speakerName;
+        nameTMP.text = "PaoPao";
         dialogueTextTMP.text = dialogue.text;
 
         //for Loop for choices 
@@ -80,32 +80,35 @@ public class DialogueScreen : MonoBehaviour
 
     public void SelectChoice(int index)
     {
-
+        Debug.Log("pds select choice triggered");
         onChoiceSelected?.Invoke(currentLine.choices[index].id);
         if (currentLine.choices[index].nextLine.player)
         {
-            panel.SetActive(false);
-            playerdialoguescreen.ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
+            
+            ShowDialogue(currentLine.choices[index].nextLine, NPCSpeaker);
         }
         else
         {
-            ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
+            panel.SetActive(false);
+            dialogueScreen.ShowDialogue(currentLine.choices[index].nextLine, NPCSpeaker);
         }
             
     }
 
     public void Continue()
     {
-        if(currentLine.nextLine != null)
+        Debug.Log("pds continue triggered");
+        if (currentLine.nextLine != null)
         {
             if (currentLine.nextLine.player)
             {
-                panel.SetActive(false);
-                playerdialoguescreen.ShowDialogue(currentLine.nextLine, currentSpeaker);
+                
+                ShowDialogue(currentLine.nextLine, NPCSpeaker);
             }
             else
             {
-                ShowDialogue(currentLine.nextLine, "");
+                panel.SetActive(false);
+                dialogueScreen.ShowDialogue(currentLine.nextLine, "");
             }
                
         }

@@ -21,6 +21,8 @@ public class Quest : MonoBehaviour
     [Header("Quest Bauarbeiter")]
     public NPCs bauarbeiter;
     public Item tape;
+    public DialogueLine bauarbeiterDuring;
+    public DialogueLine bauarbeiterDone;
     public DialogueLine bauarbeiterAfter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -55,14 +57,18 @@ public class Quest : MonoBehaviour
 
         tape.gameObject.SetActive(true);
 
+        bauarbeiter.dialogue = bauarbeiterDuring;
+
         yield return WaitForItem(ItemType.Tape, 1, null); 
 
-        bauarbeiter.dialogue = bauarbeiterAfter;
+        bauarbeiter.dialogue = bauarbeiterDone;
 
         questTMP.text = "Bring the tape to the constructionworker";
 
         yield return WaitForNPC(bauarbeiter);
         Destroy(questDisplay);
+
+        bauarbeiter.dialogue = bauarbeiterAfter;
     }
 
     /*------------AUF 2 NPCs PARALLEL WARTEN-------------
