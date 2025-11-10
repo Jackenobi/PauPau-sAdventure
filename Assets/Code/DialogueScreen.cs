@@ -1,36 +1,40 @@
 using TMPro;
-using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class DialogueScreen : MonoBehaviour
 {
     private DialogueLine currentLine;
     private string currentSpeaker;
 
-    //string ist die ID der Choice
+    // Event für Choice-Auswahl
     public event System.Action<string> onChoiceSelected;
 
+    [Header("UI References")]
     public GameObject panel;
     public TMP_Text nameTMP;
     public TMP_Text dialogueTextTMP;
     public GameObject[] choiceButtons;
     public GameObject continueButton;
+
+    [Header("Portraits")]
+    public Image npcPortrait;          // Linkes Portrait
+    public Image characterPortrait;    // Rechtes Portrait
+
+    [Header("Dialogue Screens")]
     public playerdialogueScreen playerdialoguescreen;
 
+    [Header("Input")]
     public PlayerInput input;
-    
 
-    public Image npcPortrait;
-    public Image characterPortrait;
     
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
+        if (panel != null)
+            panel.SetActive(false);
     }
 
     public void ShowDialogue(DialogueLine dialogue, string speakerName)
@@ -38,13 +42,41 @@ public class DialogueScreen : MonoBehaviour
         currentLine = dialogue;
         currentSpeaker = speakerName;
 
+        // Namen und Text anzeigen
         nameTMP.text = speakerName;
         dialogueTextTMP.text = dialogue.text;
 
-        //for Loop for choices 
-        for(int i = 0; i < choiceButtons.Length; i++)
+        //  Portraits aktualisieren
+        if (npcPortrait != null)
         {
-            if(i < dialogue.choices.Length)
+            if (dialogue.npcPortrait != null)
+            {
+                npcPortrait.sprite = dialogue.npcPortrait;
+                npcPortrait.gameObject.SetActive(true);
+            }
+            else
+            {
+                npcPortrait.gameObject.SetActive(false);
+            }
+        }
+
+        if (characterPortrait != null)
+        {
+            if (dialogue.playerPortrait != null)
+            {
+                characterPortrait.sprite = dialogue.playerPortrait;
+                characterPortrait.gameObject.SetActive(true);
+            }
+            else
+            {
+                characterPortrait.gameObject.SetActive(false);
+            }
+        }
+
+        //Choices vorbereiten
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            if (i < dialogue.choices.Length)
             {
                 choiceButtons[i].SetActive(true);
                 choiceButtons[i].GetComponentInChildren<TMP_Text>().text = dialogue.choices[i].text;
@@ -55,7 +87,8 @@ public class DialogueScreen : MonoBehaviour
             }
         }
 
-        if(dialogue.choices.Length == 0)
+        //Continue-Button aktivieren, wenn keine Choices da sind
+        if (dialogue.choices.Length == 0)
         {
             continueButton.SetActive(true);
             EventSystem.current.SetSelectedGameObject(continueButton);
@@ -66,37 +99,42 @@ public class DialogueScreen : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(choiceButtons[0]);
         }
 
-            input.SwitchCurrentActionMap("UI");
-            
-            panel.SetActive(true);
+        //Action Map umschalten
+        input.SwitchCurrentActionMap("UI");
+        panel.SetActive(true);
     }
 
     public void HideDialogue()
     {
         input.SwitchCurrentActionMap("Player");
-        
         panel.SetActive(false);
     }
 
     public void SelectChoice(int index)
     {
-
         onChoiceSelected?.Invoke(currentLine.choices[index].id);
-        if (currentLine.choices[index].nextLine.player)
+
+        if (currentLine.choices[index].nextLine != null)
         {
-            panel.SetActive(false);
-            playerdialoguescreen.ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
+            if (currentLine.choices[index].nextLine.player)
+            {
+                panel.SetActive(false);
+                playerdialoguescreen.ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
+            }
+            else
+            {
+                ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
+            }
         }
         else
         {
-            ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
+            HideDialogue();
         }
-            
     }
 
     public void Continue()
     {
-        if(currentLine.nextLine != null)
+        if (currentLine.nextLine != null)
         {
             if (currentLine.nextLine.player)
             {
@@ -107,13 +145,10 @@ public class DialogueScreen : MonoBehaviour
             {
                 ShowDialogue(currentLine.nextLine, "");
             }
-               
         }
         else
         {
             HideDialogue();
         }
     }
-
-
 }

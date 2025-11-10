@@ -1,50 +1,81 @@
 using TMPro;
-using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class playerdialogueScreen : MonoBehaviour
 {
     private DialogueLine currentLine;
-    private string NPCSpeaker;
+    private string currentSpeaker;
 
-    //string ist die ID der Choice
+    
     public event System.Action<string> onChoiceSelected;
 
+    [Header("UI References")]
     public GameObject panel;
     public TMP_Text nameTMP;
     public TMP_Text dialogueTextTMP;
     public GameObject[] choiceButtons;
     public GameObject continueButton;
-    public DialogueScreen dialogueScreen;
 
+    [Header("Portraits")]
+    public Image npcPortrait;         
+    public Image characterPortrait;   
+
+    [Header("Dialogue Screens")]
+    public DialogueScreen npcDialogueScreen;
+
+    [Header("Input")]
     public PlayerInput input;
-    
 
-    public Image npcPortrait;
-    public Image characterPortrait;
-    
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if (panel != null)
+            panel.SetActive(false);
     }
+
 
     public void ShowDialogue(DialogueLine dialogue, string speakerName)
     {
         currentLine = dialogue;
-        NPCSpeaker = speakerName;
+        currentSpeaker = speakerName;
 
-        nameTMP.text = "PaoPao";
+        nameTMP.text = speakerName;
         dialogueTextTMP.text = dialogue.text;
 
-        //for Loop for choices 
-        for(int i = 0; i < choiceButtons.Length; i++)
+        //Portraits aktualisieren
+        if (npcPortrait != null)
         {
-            if(i < dialogue.choices.Length)
+            if (dialogue.npcPortrait != null)
+            {
+                npcPortrait.sprite = dialogue.npcPortrait;
+                npcPortrait.gameObject.SetActive(true);
+            }
+            else
+            {
+                npcPortrait.gameObject.SetActive(false);
+            }
+        }
+
+        if (characterPortrait != null)
+        {
+            if (dialogue.playerPortrait != null)
+            {
+                characterPortrait.sprite = dialogue.playerPortrait;
+                characterPortrait.gameObject.SetActive(true);
+            }
+            else
+            {
+                characterPortrait.gameObject.SetActive(false);
+            }
+        }
+
+        //Choices anzeigen
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            if (i < dialogue.choices.Length)
             {
                 choiceButtons[i].SetActive(true);
                 choiceButtons[i].GetComponentInChildren<TMP_Text>().text = dialogue.choices[i].text;
@@ -55,7 +86,8 @@ public class playerdialogueScreen : MonoBehaviour
             }
         }
 
-        if(dialogue.choices.Length == 0)
+        //Wenn keine Choices Continue-Button anzeigen
+        if (dialogue.choices.Length == 0)
         {
             continueButton.SetActive(true);
             EventSystem.current.SetSelectedGameObject(continueButton);
@@ -66,51 +98,33 @@ public class playerdialogueScreen : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(choiceButtons[0]);
         }
 
-            input.SwitchCurrentActionMap("UI");
-            
-            panel.SetActive(true);
+        input.SwitchCurrentActionMap("UI");
+        panel.SetActive(true);
     }
+
 
     public void HideDialogue()
     {
         input.SwitchCurrentActionMap("Player");
-        
         panel.SetActive(false);
     }
 
+
     public void SelectChoice(int index)
     {
-        Debug.Log("pds select choice triggered");
         onChoiceSelected?.Invoke(currentLine.choices[index].id);
-        if (currentLine.choices[index].nextLine.player)
-        {
-            
-            ShowDialogue(currentLine.choices[index].nextLine, NPCSpeaker);
-        }
-        else
-        {
-            panel.SetActive(false);
-            dialogueScreen.ShowDialogue(currentLine.choices[index].nextLine, NPCSpeaker);
-        }
-            
-    }
 
-    public void Continue()
-    {
-        Debug.Log("pds continue triggered");
-        if (currentLine.nextLine != null)
+        if (currentLine.choices[index].nextLine != null)
         {
-            if (currentLine.nextLine.player)
+            if (!currentLine.choices[index].nextLine.player)
             {
-                
-                ShowDialogue(currentLine.nextLine, NPCSpeaker);
+                panel.SetActive(false);
+                npcDialogueScreen.ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
             }
             else
             {
-                panel.SetActive(false);
-                dialogueScreen.ShowDialogue(currentLine.nextLine, "");
+                ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
             }
-               
         }
         else
         {
@@ -119,4 +133,24 @@ public class playerdialogueScreen : MonoBehaviour
     }
 
 
+    public void Continue()
+    {
+        if (currentLine.nextLine != null)
+        {
+            if (!currentLine.nextLine.player)
+            {
+                panel.SetActive(false);
+                npcDialogueScreen.ShowDialogue(currentLine.nextLine, currentSpeaker);
+            }
+            else
+            {
+                ShowDialogue(currentLine.nextLine, "");
+            }
+        }
+        else
+        {
+            HideDialogue();
+        }
+    }
 }
+

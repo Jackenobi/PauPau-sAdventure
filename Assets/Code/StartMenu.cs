@@ -18,6 +18,7 @@ public class StartMenu : MonoBehaviour
     {
         startbtn.onClick.AddListener(() =>
         {
+            AudioSystem.instance.musicEmitter.EventInstance.setParameterByNameWithLabel("Scene", "Level");
             SceneManager.LoadScene("Intro");
         }
         );

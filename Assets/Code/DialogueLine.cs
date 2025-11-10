@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class DialogueLine : MonoBehaviour
 {
+    [TextArea]
     public string text;
-    public DialogueChoice[] choices; //array of choices
-    public Sprite portraits;
-    public DialogueLine nextLine; //wenn keine choices, dann gehts hier weiter //OPTIONAL
+    public DialogueChoice[] choices;
+
+    // Portraits
+    public Sprite npcPortrait;
+    public Sprite playerPortrait;
+
+    public DialogueLine nextLine;
     public bool player;
 }
