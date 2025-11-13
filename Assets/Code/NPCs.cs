@@ -8,7 +8,7 @@ public class NPCs : Interactable
     public Sprite portrait;
     public DialogueScreen dialogueScreen;
     public playerdialogueScreen playerdialoguescreen;
-
+    [HideInInspector] public bool hasSpoken = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

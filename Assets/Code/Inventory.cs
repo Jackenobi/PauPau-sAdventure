@@ -21,6 +21,11 @@ public class Inventory : MonoBehaviour
         
     }
 
+    public bool HasItem(ItemType type)
+    {
+        return CountItems(type) > 0;
+    }
+
     public void AddItem(Item item)
     {
         items.Add(item.type); //ItemType aus dem neuen item holen und zur Liste hinzufügen
