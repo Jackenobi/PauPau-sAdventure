@@ -15,7 +15,7 @@ public class Item : Interactable
     // Update is called once per frame
     void Update()
     {
-        
+     
     }
 
     //override erweitert/überschreibt die basis Funktion
@@ -25,6 +25,8 @@ public class Item : Interactable
         Debug.Log("Interacted with Item ");
         Destroy(gameObject);
         GameObject.FindFirstObjectByType<Inventory>().AddItem(this);
+
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/ItemPickup", gameObject); //sound ohne emitter
     }
 }
 
