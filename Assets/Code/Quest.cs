@@ -176,8 +176,7 @@ public class Quest : MonoBehaviour
         bauarbeiter.dialogue = bauarbeiterAfter;
     }
 
-    // HILFSFUNKTIONEN
-
+    
     IEnumerator WaitForNPC(NPCs npc)
     {
         bool talked = false;

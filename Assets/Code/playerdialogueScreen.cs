@@ -8,8 +8,10 @@ public class playerdialogueScreen : MonoBehaviour
 {
     private DialogueLine currentLine;
     private string currentSpeaker;
+    public string playerName = "PaoPao";
 
-    
+
+
     public event System.Action<string> onChoiceSelected;
 
     [Header("UI References")]
@@ -144,7 +146,7 @@ public class playerdialogueScreen : MonoBehaviour
             }
             else
             {
-                ShowDialogue(currentLine.nextLine, "");
+                ShowDialogue(currentLine.nextLine, playerName);
             }
         }
         else
