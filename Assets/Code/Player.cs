@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     private InputAction interactAction;
 
     public CharacterController controller;
+    public Animator animator;
+
     public float speed = 5f;
 
     public Transform referenceCamera;
@@ -56,6 +58,8 @@ public class Player : MonoBehaviour
             //transform (klein) verweist auf "mein" Transform
             transform.forward = Vector3.Slerp(transform.forward, moveDirection, 0.1f);
         }
+
+        animator.SetFloat("speed", moveDirection.magnitude * speed);
     }
 
     private void OnTriggerEnter(Collider other)
