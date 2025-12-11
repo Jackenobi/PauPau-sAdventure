@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -20,6 +21,7 @@ public class playerdialogueScreen : MonoBehaviour
     public TMP_Text dialogueTextTMP;
     public GameObject[] choiceButtons;
     public GameObject continueButton;
+    public CinemachineInputAxisController cinemachineController;
 
     [Header("Portraits")]
     public Image npcPortrait;         
@@ -42,7 +44,7 @@ public class playerdialogueScreen : MonoBehaviour
     public void ShowDialogue(DialogueLine dialogue, string speakerName)
     {
         currentLine = dialogue;
-        currentSpeaker = speakerName;
+        currentSpeaker = "PaoPao";
 
         nameTMP.text = speakerName;
         dialogueTextTMP.text = dialogue.text;
@@ -102,6 +104,7 @@ public class playerdialogueScreen : MonoBehaviour
 
         input.SwitchCurrentActionMap("UI");
         panel.SetActive(true);
+        cinemachineController.enabled = false;
     }
 
 
@@ -109,6 +112,7 @@ public class playerdialogueScreen : MonoBehaviour
     {
         input.SwitchCurrentActionMap("Player");
         panel.SetActive(false);
+        cinemachineController.enabled = true;
     }
 
 

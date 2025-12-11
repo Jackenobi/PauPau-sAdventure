@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -18,6 +19,7 @@ public class DialogueScreen : MonoBehaviour
     public TMP_Text dialogueTextTMP;
     public GameObject[] choiceButtons;
     public GameObject continueButton;
+    public CinemachineInputAxisController cinemachineController;
 
     [Header("Portraits")]
     public Image npcPortrait;          // Linkes Portrait
@@ -102,12 +104,14 @@ public class DialogueScreen : MonoBehaviour
         //Action Map umschalten
         input.SwitchCurrentActionMap("UI");
         panel.SetActive(true);
+        cinemachineController.enabled = false;
     }
 
     public void HideDialogue()
     {
         input.SwitchCurrentActionMap("Player");
         panel.SetActive(false);
+        cinemachineController.enabled = true;
     }
 
     public void SelectChoice(int index)
