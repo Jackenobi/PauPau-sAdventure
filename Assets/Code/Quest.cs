@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -9,26 +9,32 @@ public class Quest : MonoBehaviour
     public Transform questScreen;
     public GameObject questDisplayPrefab;
     public Inventory inventory;
+    public CanvasGroup blackScreen;
 
     [Header("Quest: Nachbarn")]
     public NPCs[] nachbarn;
+    public Item mapItem;
     public DialogueLine[] nachbarnDuring;
     public DialogueLine[] nachbarnAfter;
 
     [Header("Quest: Bauarbeiter")]
     public NPCs bauarbeiter;
     public Item tapeItem;
+    public GameObject brueckeKaputt;
+    public GameObject brueckeHeil;
     public DialogueLine bauarbeiterBefore;
     public DialogueLine bauarbeiterDuring;
-    public DialogueLine bauarbeiterNoItem;   
+    public DialogueLine bauarbeiterNoItem;
     public DialogueLine bauarbeiterDone;
     public DialogueLine bauarbeiterAfter;
 
 
     private bool nachbarnQuestActive = false;
     private bool nachbarnQuestDone = false;
+    private bool nachbarnAfterUnlocked = false;
     private bool bauarbeiterQuestActive = false;
-    private bool bauarbeiterQuestStarted = false; 
+    private bool bauarbeiterQuestStarted = false;
+    private bool bauarbeiterQuestDone = false;
     private TMP_Text questTMP;
     private int talkedToCount = 0;
 
@@ -46,6 +52,33 @@ public class Quest : MonoBehaviour
             // Anfangs gesperrter Dialog
             if (bauarbeiterBefore != null)
                 bauarbeiter.dialogue = bauarbeiterBefore;
+        }
+
+        // Blackscreen unsichtbar machen
+        if (blackScreen != null)
+        {
+            blackScreen.alpha = 0f;
+            blackScreen.gameObject.SetActive(false);
+        }
+
+        // Map Item am Anfang verstecken (falls vorhanden)
+        if (mapItem != null)
+            mapItem.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        // Prüfe ob Map Item aufgesammelt wurde
+        if (nachbarnQuestDone && !nachbarnAfterUnlocked && inventory.HasItem(ItemType.Map))
+        {
+            nachbarnAfterUnlocked = true;
+
+            // Nachbarn auf After-Dialog umstellen
+            for (int i = 0; i < nachbarn.Length; i++)
+            {
+                if (i < nachbarnAfter.Length && nachbarnAfter[i] != null)
+                    nachbarn[i].dialogue = nachbarnAfter[i];
+            }
         }
     }
 
@@ -84,7 +117,8 @@ public class Quest : MonoBehaviour
         }
         else if (nachbarnQuestDone)
         {
-            if (nachbarnAfter != null && index < nachbarnAfter.Length && nachbarnAfter[index] != null)
+            // Nachbarn bleiben auf "during" Dialog bis Map Item gefunden wurde
+            if (nachbarnAfterUnlocked && nachbarnAfter != null && index < nachbarnAfter.Length && nachbarnAfter[index] != null)
                 npc.dialogue = nachbarnAfter[index];
         }
     }
@@ -101,25 +135,20 @@ public class Quest : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        for (int i = 0; i < nachbarn.Length; i++)
-        {
-            if (i < nachbarnAfter.Length && nachbarnAfter[i] != null)
-                nachbarn[i].dialogue = nachbarnAfter[i];
-        }
 
-        //Bauarbeiter-Quest aktiviert
+        // Bauarbeiter-Quest aktiviert
         bauarbeiterQuestActive = true;
 
-        //Bauarbeiter neuer Dialog
+        // Bauarbeiter neuer Dialog
         if (bauarbeiterDuring != null)
             bauarbeiter.dialogue = bauarbeiterDuring;
     }
 
 
-    //BAUARBEITER-QUEST
+    // BAUARBEITER-QUEST
     private void OnBauarbeiterTalked()
     {
-        // Wenn noch gesperrt  nur Before-Dialog
+        // Wenn noch gesperrt - nur Before-Dialog
         if (!bauarbeiterQuestActive)
         {
             if (bauarbeiterBefore != null)
@@ -127,7 +156,7 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Quest aktiv, aber noch nicht gestartet  starte sie
+        // Wenn Quest aktiv, aber noch nicht gestartet - starte sie
         if (!bauarbeiterQuestStarted)
         {
             bauarbeiterQuestStarted = true;
@@ -136,27 +165,37 @@ public class Quest : MonoBehaviour
         }
 
         // Wenn Quest bereits gestartet, aber Tape noch nicht abgegeben
-        if (bauarbeiterQuestStarted && !inventory.HasItem(ItemType.Tape))
+        if (bauarbeiterQuestStarted && !bauarbeiterQuestDone && !inventory.HasItem(ItemType.Tape))
         {
             if (bauarbeiterNoItem != null)
                 bauarbeiter.dialogue = bauarbeiterNoItem;
             return;
         }
 
-        // Wenn Tape schon da  "Done"-Dialog
-        if (bauarbeiterQuestStarted && inventory.HasItem(ItemType.Tape))
+        // Wenn Tape da ist und Quest noch nicht abgeschlossen  DONE Dialog zeigen
+        if (bauarbeiterQuestStarted && !bauarbeiterQuestDone && inventory.HasItem(ItemType.Tape))
         {
+            // Zeige DONE Dialog beim Abgeben
             if (bauarbeiterDone != null)
                 bauarbeiter.dialogue = bauarbeiterDone;
+
+            // QUEST ABSCHLIESSEN mit Blackscreen-Animation
+            StartCoroutine(CompleteBauarbeiterQuest());
+            return;
+        }
+
+        // Wenn Quest schon abgeschlossen- After-Dialog (immer wieder)
+        if (bauarbeiterQuestDone)
+        {
+            if (bauarbeiterAfter != null)
+                bauarbeiter.dialogue = bauarbeiterAfter;
         }
     }
 
 
     IEnumerator QuestBauarbeiter()
     {
-        // Questlog erzeugen
-        GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
-        var questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
+        // Questlog aktualisieren (kein neues Display erstellen, da questTMP bereits existiert)
         questTMP.text = "Find some Tape";
 
         if (tapeItem != null)
@@ -167,16 +206,14 @@ public class Quest : MonoBehaviour
         // Auf Tape warten
         yield return WaitForItem(ItemType.Tape, 1, null);
 
-        bauarbeiter.dialogue = bauarbeiterDone;
+        // Questlog aktualisieren
         questTMP.text = "Bring the tape to the construction worker";
 
-        yield return WaitForNPC(bauarbeiter);
-
-        Destroy(questDisplay);
-        bauarbeiter.dialogue = bauarbeiterAfter;
+        if (bauarbeiterDone != null)
+            bauarbeiter.dialogue = bauarbeiterDone;
     }
 
-    
+
     IEnumerator WaitForNPC(NPCs npc)
     {
         bool talked = false;
@@ -192,5 +229,59 @@ public class Quest : MonoBehaviour
         int startCount = inventory.CountItems(type);
         yield return new WaitUntil(() => inventory.CountItems(type) >= startCount + amount);
         onCollected?.Invoke();
+    }
+
+    IEnumerator CompleteBauarbeiterQuest()
+    {
+        bauarbeiterQuestDone = true;
+
+        // Blackscreen einblenden
+        if (blackScreen != null)
+        {
+            blackScreen.gameObject.SetActive(true);
+            float fadeTime = 1f;
+            float elapsed = 0f;
+
+            while (elapsed < fadeTime)
+            {
+                elapsed += Time.deltaTime;
+                blackScreen.alpha = Mathf.Lerp(0f, 1f, elapsed / fadeTime);
+                yield return null;
+            }
+            blackScreen.alpha = 1f;
+        }
+
+        // Während Blackscreen: Brücken austauschen
+        yield return new WaitForSeconds(2f); // Hier später Sound abspielen
+
+        if (brueckeKaputt != null)
+            brueckeKaputt.SetActive(false);
+        if (brueckeHeil != null)
+            brueckeHeil.SetActive(true);
+
+        // Blackscreen ausblenden
+        if (blackScreen != null)
+        {
+            float fadeTime = 1f;
+            float elapsed = 0f;
+
+            while (elapsed < fadeTime)
+            {
+                elapsed += Time.deltaTime;
+                blackScreen.alpha = Mathf.Lerp(1f, 0f, elapsed / fadeTime);
+                yield return null;
+            }
+            blackScreen.alpha = 0f;
+            blackScreen.gameObject.SetActive(false);
+        }
+
+        // Quest abschließen
+        questTMP.text = "Bridge fixed!";
+
+        if (bauarbeiterAfter != null)
+            bauarbeiter.dialogue = bauarbeiterAfter;
+
+        if (tapeItem != null)
+            tapeItem.gameObject.SetActive(false);
     }
 }
