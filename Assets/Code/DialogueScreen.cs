@@ -1,3 +1,4 @@
+ï»¿using System.Collections;
 using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -10,101 +11,135 @@ public class DialogueScreen : MonoBehaviour
     private DialogueLine currentLine;
     private string currentSpeaker;
 
-    // Event für Choice-Auswahl
     public event System.Action<string> onChoiceSelected;
 
-    [Header("UI References")]
+    [Header("UI Panel")]
     public GameObject panel;
-    public TMP_Text nameTMP;
-    public TMP_Text dialogueTextTMP;
+
+    [Header("Dialogue Layout")]
+    public GameObject leftContainer;   // NPC
+    public GameObject rightContainer;  // Player
+
+    [Header("NPC (Left) UI")]
+    public TMP_Text leftNameTMP;
+    public TMP_Text leftDialogueTMP;
+    public Image npcPortrait;
+
+    [Header("Player (Right) UI")]
+    public TMP_Text rightNameTMP;
+    public TMP_Text rightDialogueTMP;
+    public Image playerPortrait;
+
+    [Header("Choices")]
     public GameObject[] choiceButtons;
     public GameObject continueButton;
+
+    [Header("Camera & Input")]
     public CinemachineInputAxisController cinemachineController;
-
-    [Header("Portraits")]
-    public Image npcPortrait;          // Linkes Portrait
-    public Image characterPortrait;    // Rechtes Portrait
-
-    [Header("Dialogue Screens")]
-    public playerdialogueScreen playerdialoguescreen;
-
-    [Header("Input")]
     public PlayerInput input;
 
-    
+    [Header("Quest Manager")]
+    public Quest questManager;
+
+    [Header("Player Name")]
+    public string playerName = "PaoPao";
+
+    [Header("Portrait Pulse")]
+    public float pulseScale = 1.15f;
+    public float pulseDuration = 0.15f;
+
+    private Coroutine portraitPulseRoutine;
+
     void Start()
     {
-        
-        if (panel != null)
-            panel.SetActive(false);
+        panel.SetActive(false);
     }
 
     public void ShowDialogue(DialogueLine dialogue, string speakerName)
     {
         currentLine = dialogue;
-        currentSpeaker = speakerName;
+        bool isPlayer = dialogue.player;
 
-        // Namen und Text anzeigen
-        nameTMP.text = speakerName;
-        dialogueTextTMP.text = dialogue.text;
+        // Reset UI
+        leftContainer.SetActive(false);
+        rightContainer.SetActive(false);
+        npcPortrait.gameObject.SetActive(false);
+        playerPortrait.gameObject.SetActive(false);
 
-        //  Portraits aktualisieren
-        if (npcPortrait != null)
+        // =========================
+        // PLAYER  RECHTS
+        // =========================
+        if (isPlayer)
         {
+            rightContainer.SetActive(true);
+            rightNameTMP.text = playerName;
+            rightDialogueTMP.text = dialogue.text;
+
+            if (dialogue.playerPortrait != null)
+            {
+                playerPortrait.sprite = dialogue.playerPortrait;
+                playerPortrait.gameObject.SetActive(true);
+                PulsePortrait(playerPortrait);
+            }
+
+            currentSpeaker = playerName;
+        }
+        // =========================
+        // NPC  LINKS
+        // =========================
+        else
+        {
+            leftContainer.SetActive(true);
+            leftNameTMP.text = speakerName;
+            leftDialogueTMP.text = dialogue.text;
+
             if (dialogue.npcPortrait != null)
             {
                 npcPortrait.sprite = dialogue.npcPortrait;
                 npcPortrait.gameObject.SetActive(true);
+                PulsePortrait(npcPortrait);
             }
-            else
-            {
-                npcPortrait.gameObject.SetActive(false);
-            }
+
+            currentSpeaker = speakerName;
         }
 
-        if (characterPortrait != null)
-        {
-            if (dialogue.playerPortrait != null)
-            {
-                characterPortrait.sprite = dialogue.playerPortrait;
-                characterPortrait.gameObject.SetActive(true);
-            }
-            else
-            {
-                characterPortrait.gameObject.SetActive(false);
-            }
-        }
+        // =========================
+        // CHOICES (FIXED)
+        // =========================
+        bool hasChoices = dialogue.hasChoices;
 
-        //Choices vorbereiten
+        // Erst ALLE Buttons aus
         for (int i = 0; i < choiceButtons.Length; i++)
         {
-            if (i < dialogue.choices.Length)
-            {
-                choiceButtons[i].SetActive(true);
-                choiceButtons[i].GetComponentInChildren<TMP_Text>().text = dialogue.choices[i].text;
-            }
-            else
-            {
-                choiceButtons[i].SetActive(false);
-            }
+            choiceButtons[i].SetActive(false);
         }
 
-        //Continue-Button aktivieren, wenn keine Choices da sind
-        if (dialogue.choices.Length == 0)
+        continueButton.SetActive(false);
+
+        if (hasChoices)
         {
-            continueButton.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(continueButton);
+            // Nur wenn es wirklich Choices gibt
+            for (int i = 0; i < dialogue.choices.Length && i < choiceButtons.Length; i++)
+            {
+                choiceButtons[i].SetActive(true);
+                choiceButtons[i].GetComponentInChildren<TMP_Text>().text =
+                    dialogue.choices[i].text;
+            }
+
+            EventSystem.current.SetSelectedGameObject(choiceButtons[0]);
         }
         else
         {
-            continueButton.SetActive(false);
-            EventSystem.current.SetSelectedGameObject(choiceButtons[0]);
+            // Keine Choices  Continue
+            continueButton.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(continueButton);
         }
 
-        //Action Map umschalten
+
+        // Input & Camera
         input.SwitchCurrentActionMap("UI");
-        panel.SetActive(true);
         cinemachineController.enabled = false;
+        panel.SetActive(true);
     }
 
     public void HideDialogue()
@@ -118,17 +153,14 @@ public class DialogueScreen : MonoBehaviour
     {
         onChoiceSelected?.Invoke(currentLine.choices[index].id);
 
+        if (questManager != null && currentLine.choices.Length > 0)
+        {
+            questManager.OnAnswerSelected(currentLine.choices[index].isCorrect);
+        }
+
         if (currentLine.choices[index].nextLine != null)
         {
-            if (currentLine.choices[index].nextLine.player)
-            {
-                panel.SetActive(false);
-                playerdialoguescreen.ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
-            }
-            else
-            {
-                ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
-            }
+            ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
         }
         else
         {
@@ -140,19 +172,46 @@ public class DialogueScreen : MonoBehaviour
     {
         if (currentLine.nextLine != null)
         {
-            if (currentLine.nextLine.player)
-            {
-                panel.SetActive(false);
-                playerdialoguescreen.ShowDialogue(currentLine.nextLine, currentSpeaker);
-            }
-            else
-            {
-                ShowDialogue(currentLine.nextLine, "");
-            }
+            ShowDialogue(currentLine.nextLine, currentSpeaker);
         }
         else
         {
             HideDialogue();
         }
+    }
+
+    // =========================
+    // PORTRAIT "AUFBLINKEN"
+    // =========================
+    void PulsePortrait(Image portrait)
+    {
+        if (portraitPulseRoutine != null)
+            StopCoroutine(portraitPulseRoutine);
+
+        portraitPulseRoutine = StartCoroutine(PulseRoutine(portrait.transform));
+    }
+
+    IEnumerator PulseRoutine(Transform target)
+    {
+        Vector3 originalScale = target.localScale;
+        Vector3 targetScale = originalScale * pulseScale;
+
+        float t = 0f;
+        while (t < pulseDuration)
+        {
+            t += Time.deltaTime;
+            target.localScale = Vector3.Lerp(originalScale, targetScale, t / pulseDuration);
+            yield return null;
+        }
+
+        t = 0f;
+        while (t < pulseDuration)
+        {
+            t += Time.deltaTime;
+            target.localScale = Vector3.Lerp(targetScale, originalScale, t / pulseDuration);
+            yield return null;
+        }
+
+        target.localScale = originalScale;
     }
 }

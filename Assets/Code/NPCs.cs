@@ -7,7 +7,7 @@ public class NPCs : Interactable
     public DialogueLine dialogue;
     public Sprite portrait;
     public DialogueScreen dialogueScreen;
-    public playerdialogueScreen playerdialoguescreen;
+   // public playerdialogueScreen playerdialoguescreen;
     [HideInInspector] public bool hasSpoken = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,7 +27,7 @@ public class NPCs : Interactable
         base.Interact();
         if (dialogue.player)
         {
-            playerdialoguescreen.ShowDialogue(dialogue, "PaoPao");
+            dialogueScreen.ShowDialogue(dialogue, "PaoPao");
         }
         else
         {
