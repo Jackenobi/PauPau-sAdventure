@@ -194,12 +194,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: What do you want?
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Tiger
   npcPortrait: {fileID: 21300000, guid: 02fc14b4773ebe14dad2353c31e54575, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 875225051}
+  player: 0
 --- !u!1 &42445352
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +495,7 @@ RectTransform:
   - {fileID: 2079571995}
   - {fileID: 2124853888}
   - {fileID: 574096005}
+  - {fileID: 1311105985}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1156,7 +1157,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 4.212735
-  m_Center: {x: -0.0035861218, y: 2.5169528, z: 4.7173853}
+  m_Center: {x: -0.0035861218, y: 2.5169528, z: 0.25}
 --- !u!136 &103771027
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1251,7 +1252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &105795360
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2099,12 +2100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Lemme see!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Victor
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1880743268}
+  player: 0
 --- !u!1 &134477893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,13 +2449,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: It'sss fun watching the fo.., I MEAN KIDSSS, play.
-  player: 0
-  hasChoices: 0
+  text: It'sss fun watching the foo.., I MEAN KIDSSS, play.
   choices: []
+  speakerName: Emily
   npcPortrait: {fileID: 21300000, guid: b62f53d2a369ee64e8988edbfca48304, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &170752755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,12 +2625,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I don't care about your egg.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Tiger
   npcPortrait: {fileID: 21300000, guid: 02fc14b4773ebe14dad2353c31e54575, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!4 &213527258
 Transform:
   m_ObjectHideFlags: 0
@@ -2645,6 +2646,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 898453291}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &223405503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223405504}
+  - component: {fileID: 223405505}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223405504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223405503}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -1.6543612e-24, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 335073075}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &223405505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223405503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Thank you for your help! Take care!
+  choices: []
+  speakerName: PaoPao
+  npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 0}
+  player: 1
 --- !u!1 &234479896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,12 +3276,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Okay, I'm going to count.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 1
 --- !u!1 &278206559
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,12 +3331,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Hey PaoPao, what's up?
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 2124210745}
+  player: 0
 --- !u!1 &281665974
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,12 +3734,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I found this weird egg. Have you seen something like this before?
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 3f5f2e84cae6b5f4ba1911331de798a6, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1531736804}
+  player: 1
 --- !u!1001 &288367211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3710,7 +3762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d322deaa69b839646bfc0b821aed9cd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.08
+      value: -38.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d322deaa69b839646bfc0b821aed9cd4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3718,7 +3770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d322deaa69b839646bfc0b821aed9cd4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.17
+      value: 5.86
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d322deaa69b839646bfc0b821aed9cd4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3793,12 +3845,14 @@ Transform:
   m_GameObject: {fileID: 288367213}
   serializedVersion: 2
   m_LocalRotation: {x: 6.4461796e-18, y: -0.7577818, z: -8.6355366e-17, w: -0.6525081}
-  m_LocalPosition: {x: -39.08, y: 9.54, z: 2.17}
+  m_LocalPosition: {x: -38.53, y: 9.54, z: 5.86}
   m_LocalScale: {x: 1.0961659, y: 1.0961659, z: 1.0961659}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1381311885}
   - {fileID: 1616878199}
   - {fileID: 2024176672}
+  - {fileID: 335073075}
   m_Father: {fileID: 2116900601}
   m_LocalEulerAnglesHint: {x: 0, y: 98.538, z: 0}
 --- !u!1 &288367213
@@ -3859,7 +3913,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 4.212735
-  m_Center: {x: -0.0035861218, y: 2.5169528, z: 4.7173853}
+  m_Center: {x: -0.23, y: 2.75, z: -0.1}
 --- !u!136 &288367216
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3882,7 +3936,7 @@ CapsuleCollider:
   m_Radius: 3.2273867
   m_Height: 6.484458
   m_Direction: 1
-  m_Center: {x: -0.0035858827, y: 2.5169537, z: -0.035269428}
+  m_Center: {x: -0.42, y: 2.5169537, z: -0.035269428}
 --- !u!23 &288367217
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4413,12 +4467,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Yeah! I got an old map for a distand island. I'm going on an adventure!
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1119907124}
+  player: 1
 --- !u!1 &330437832
 GameObject:
   m_ObjectHideFlags: 0
@@ -4471,12 +4525,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Got all the eggs? We are in a hurry!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Benni
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 846117299}
+  player: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4698,12 +4752,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: If you can't find the parents I can cook the egg for you. HAHA just joking.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Christ
   npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &331846037
 GameObject:
   m_ObjectHideFlags: 0
@@ -4871,12 +4925,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Thanks anyway.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 02fc14b4773ebe14dad2353c31e54575, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 0}
+  player: 1
 --- !u!1 &334759495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,6 +5006,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334759495}
   m_CullTransparentMesh: 1
+--- !u!1 &335073074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335073075}
+  - component: {fileID: 335073076}
+  m_Layer: 0
+  m_Name: zumwald
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335073075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335073074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 866503276}
+  - {fileID: 1576889669}
+  - {fileID: 223405504}
+  m_Father: {fileID: 288367212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &335073076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335073074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: YOU SEE THESE REALLY TALL BUILDINGS NEXT TO US?
+  choices: []
+  speakerName: Jana
+  npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 866503277}
+  player: 0
 --- !u!1 &342060785
 GameObject:
   m_ObjectHideFlags: 0
@@ -4997,12 +5105,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Not yet, sorry.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 1401415171}
+  player: 1
 --- !u!4 &350966792 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5392059513590859799, guid: be6c7817d371e214083e9fed2b9e0b4d, type: 3}
@@ -5276,12 +5384,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Go get me some tape and I might consider letting you pass.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Ingo
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &378421177
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,12 +5438,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Got all the eggs? We are in a hurry!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Benni
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 342060787}
+  player: 0
 --- !u!1 &380095416
 GameObject:
   m_ObjectHideFlags: 0
@@ -5381,12 +5489,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: No incidents on this bridge yet, better keep it that way.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Ingo
   npcPortrait: {fileID: 21300000, guid: bf9b4e9dfdc70604aa2aa9e14ed21d78, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &380414826
 GameObject:
   m_ObjectHideFlags: 0
@@ -5553,12 +5661,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: The bridge is closed, go play somewhere else.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Ingo
   npcPortrait: {fileID: 21300000, guid: bf9b4e9dfdc70604aa2aa9e14ed21d78, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1471878183}
+  player: 0
 --- !u!4 &392961574
 Transform:
   m_ObjectHideFlags: 0
@@ -5717,12 +5825,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Hey kids. I am trying to find it's parents or some clues to where it belongs
     but I had no luck yet.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 2129212742}
+  player: 1
 --- !u!1 &396214936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6571,12 +6679,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Still no luck with the egg? You've got this!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Maus
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1001 &435850308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6719,7 +6827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   namenpc: Bert
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 1789410356}
   portrait: {fileID: 0}
   dialogueScreen: {fileID: 2079571996}
   hasSpoken: 0
@@ -6877,7 +6985,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NAME
+  m_text: name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a35b3c7de135304899f93b103501400, type: 2}
   m_sharedMaterial: {fileID: -5026572268955439006, guid: 1a35b3c7de135304899f93b103501400, type: 2}
@@ -6942,7 +7050,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -1.6689453, z: 0.01171875, w: 71.02805}
+  m_margin: {x: 0, y: -1.6689453, z: -440.82983, w: 71.02805}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7001,12 +7109,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Sorry, not today. Have you seen an egg like this before?
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 811708876}
+  player: 1
 --- !u!1 &479846154
 GameObject:
   m_ObjectHideFlags: 0
@@ -7061,12 +7169,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Hey, you, come here for a second!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Benni
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 2064466983}
+  player: 0
 --- !u!1 &491292977
 GameObject:
   m_ObjectHideFlags: 0
@@ -7112,12 +7220,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: got the tape yet? No? Then why are you still talking to me?
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Ingo
   npcPortrait: {fileID: 21300000, guid: bf9b4e9dfdc70604aa2aa9e14ed21d78, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &494552164
 GameObject:
   m_ObjectHideFlags: 0
@@ -7163,12 +7271,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Sorry, I'm on my break.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Victor
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &496813844
 GameObject:
   m_ObjectHideFlags: 0
@@ -7214,12 +7322,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Will do.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 0}
+  player: 1
 --- !u!1 &497381268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7398,12 +7506,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Come aboard, it's time to set sails!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Victor
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &505776688
 GameObject:
   m_ObjectHideFlags: 0
@@ -7449,12 +7557,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: sure.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Phoenix
   npcPortrait: {fileID: 21300000, guid: b0147b47f585f8a4089425b1a689a44f, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &507602083
 GameObject:
   m_ObjectHideFlags: 0
@@ -7825,57 +7933,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &514109974
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 514109975}
-  - component: {fileID: 514109976}
-  m_Layer: 0
-  m_Name: NPC1During
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &514109975
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514109974}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1616878199}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &514109976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514109974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: better talk to someone else.
-  player: 0
-  hasChoices: 0
-  choices: []
-  npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
-  nextLine: {fileID: 0}
 --- !u!1 &529811931
 GameObject:
   m_ObjectHideFlags: 0
@@ -8877,12 +8934,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Somehow some of our eggs got lost, Phoenix counted them today.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Wolf
   npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1356870509}
+  player: 0
 --- !u!1 &664028788
 GameObject:
   m_ObjectHideFlags: 0
@@ -8928,12 +8985,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: No map, no help. Sorry buddy!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Victor
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &713374520
 GameObject:
   m_ObjectHideFlags: 0
@@ -8979,12 +9036,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: No.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Tiger
   npcPortrait: {fileID: 21300000, guid: 02fc14b4773ebe14dad2353c31e54575, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 333315804}
+  player: 0
+--- !u!1 &715942972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715942973}
+  m_Layer: 0
+  m_Name: OpossumSpielplatz
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &715942973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715942972}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -143.24, y: 21.03, z: 229.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 839518830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &720086073
 GameObject:
   m_ObjectHideFlags: 0
@@ -9152,12 +9240,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Good job! Now talk to my friend and after that we will show you our secret.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Marco
   npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1001 &728388123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9300,7 +9388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   namenpc: Svenja
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 1654226641}
   portrait: {fileID: 0}
   dialogueScreen: {fileID: 2079571996}
   hasSpoken: 0
@@ -9860,7 +9948,6 @@ Transform:
   m_Children:
   - {fileID: 1204248388}
   - {fileID: 365206716}
-  - {fileID: 1491763766}
   - {fileID: 2116706080}
   - {fileID: 1851228355}
   - {fileID: 256678203}
@@ -10165,12 +10252,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Wow good job! I was looking for them all day.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Wolf
   npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 980674299}
+  player: 0
 --- !u!1 &807579334
 GameObject:
   m_ObjectHideFlags: 0
@@ -10216,12 +10303,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 'Still no luck yet? I believe in you! '
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &811708874
 GameObject:
   m_ObjectHideFlags: 0
@@ -10267,12 +10354,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Hmm I don't think so, but I don't know much about eggs tbh.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Maus
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1208338881}
+  player: 0
 --- !u!1 &813221444
 GameObject:
   m_ObjectHideFlags: 0
@@ -10327,7 +10414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &816815958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10609,12 +10696,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I can't leave this bridge, maybe you can help.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Ingo
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 370282040}
+  player: 0
 --- !u!1 &824404759
 GameObject:
   m_ObjectHideFlags: 0
@@ -11048,6 +11135,8 @@ Transform:
   - {fileID: 1792291655}
   - {fileID: 846434898}
   - {fileID: 1794001444}
+  - {fileID: 1681796539}
+  - {fileID: 715942973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842118675 stripped
@@ -11122,12 +11211,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Yep, all eight eggs.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 790185249}
+  player: 1
 --- !u!1 &846434897
 GameObject:
   m_ObjectHideFlags: 0
@@ -11400,6 +11489,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1759953315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &866503275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 866503276}
+  - component: {fileID: 866503277}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &866503276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866503275}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -1.6543612e-24, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 335073075}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &866503277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866503275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Behind them there is a tiny forest! We heard that someone old and wise is
+    living there but we never saw them.
+  choices: []
+  speakerName: Marco
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 1576889670}
+  player: 0
 --- !u!1 &875225049
 GameObject:
   m_ObjectHideFlags: 0
@@ -11445,12 +11586,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Hey Tiger, do you know anything about this egg?
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 02fc14b4773ebe14dad2353c31e54575, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 713374522}
+  player: 1
 --- !u!1 &879402461
 GameObject:
   m_ObjectHideFlags: 0
@@ -11496,8 +11637,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: letzte frage 1+1
-  player: 0
-  hasChoices: 1
   choices:
   - text: 6
     nextLine: {fileID: 1891752957}
@@ -11511,9 +11650,11 @@ MonoBehaviour:
     nextLine: {fileID: 722421425}
     id: 
     isCorrect: 1
+  speakerName: Marco
   npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1001 &898453284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11598,7 +11739,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d322deaa69b839646bfc0b821aed9cd4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 898453288}
+      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d322deaa69b839646bfc0b821aed9cd4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 898453286}
@@ -11617,7 +11758,6 @@ GameObject:
   - component: {fileID: 898453291}
   - component: {fileID: 898453293}
   - component: {fileID: 898453292}
-  - component: {fileID: 898453288}
   - component: {fileID: 898453286}
   - component: {fileID: 898453287}
   m_Layer: 0
@@ -11646,8 +11786,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 4.212735
-  m_Center: {x: -0.0035861218, y: 2.5169528, z: 4.7173853}
+  m_Radius: 5.26
+  m_Center: {x: 0.06, y: 2.57, z: 1.94}
 --- !u!114 &898453287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11665,29 +11805,6 @@ MonoBehaviour:
   portrait: {fileID: 0}
   dialogueScreen: {fileID: 2079571996}
   hasSpoken: 0
---- !u!136 &898453288
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898453285}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3.2273867
-  m_Height: 6.484458
-  m_Direction: 1
-  m_Center: {x: -0.0035858827, y: 2.5169537, z: -0.035269428}
 --- !u!4 &898453291
 Transform:
   m_ObjectHideFlags: 0
@@ -11806,12 +11923,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Aye buddy, what's up?
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Victor
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1477164748}
+  player: 0
 --- !u!1 &911436905
 GameObject:
   m_ObjectHideFlags: 0
@@ -11857,12 +11974,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: (..the boss will fire me this time for sure)
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Benni
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &929317747
 GameObject:
   m_ObjectHideFlags: 0
@@ -11909,12 +12026,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Yeah we appreaciate your help but you have to leave now. No unauthorized
     animals allowed, read the sign.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Benni
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 1705314874}
+  player: 0
 --- !u!1 &931058213
 GameObject:
   m_ObjectHideFlags: 0
@@ -11960,12 +12077,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Don't worry. I've got one this time!
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 127396880}
+  player: 1
 --- !u!1 &941332389
 GameObject:
   m_ObjectHideFlags: 0
@@ -12750,12 +12867,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Oh if you ask this nicely sure you can help us. Wolf, tell him what's up!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Benni
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 961971240}
+  player: 0
 --- !u!1 &961971238
 GameObject:
   m_ObjectHideFlags: 0
@@ -12801,12 +12918,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 'Okay boss.. '
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Wolf
   npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 662491602}
+  player: 0
 --- !u!1 &962396843
 GameObject:
   m_ObjectHideFlags: 0
@@ -12825,7 +12942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &962396844
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13019,6 +13136,7 @@ MonoBehaviour:
   moeweDuring: {fileID: 378421179}
   moeweNotAllEggs: {fileID: 378421179}
   moeweEggsComplete: {fileID: 330437834}
+  moeweAfter: {fileID: 1277462804}
   schaf: {fileID: 103771025}
   schafBefore: {fileID: 1403560539}
   schafQuestions:
@@ -13027,6 +13145,16 @@ MonoBehaviour:
   - {fileID: 879402463}
   schafWrongAnswer: {fileID: 1891752957}
   schafComplete: {fileID: 722421425}
+  opossum: {fileID: 288367214}
+  opossumVersteckPosition: {fileID: 1681796539}
+  playerSpawnPosition: {fileID: 715942973}
+  opossumBefore: {fileID: 1381311886}
+  opossumStart: {fileID: 1616878200}
+  opossumFound: {fileID: 2024176673}
+  zumWald: {fileID: 335073076}
+  npcsToDisableAfterOpossum:
+  - {fileID: 728388125}
+  - {fileID: 435850310}
 --- !u!4 &966584541
 Transform:
   m_ObjectHideFlags: 0
@@ -13087,12 +13215,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Now I need some help from you.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 2001389284}
+  player: 1
 --- !u!1 &981158143 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4029469722264372812, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
@@ -13251,8 +13379,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: frage 2+2
-  player: 0
-  hasChoices: 1
   choices:
   - text: 1
     nextLine: {fileID: 1891752957}
@@ -13266,9 +13392,11 @@ MonoBehaviour:
     nextLine: {fileID: 1891752957}
     id: 
     isCorrect: 0
+  speakerName: Marco
   npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1021030117
 GameObject:
   m_ObjectHideFlags: 0
@@ -13299,12 +13427,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: We will show you, but play with us first! Just say when you're ready hehe
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Marco
   npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!4 &1021030119
 Transform:
   m_ObjectHideFlags: 0
@@ -13756,12 +13884,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I know all the eggs here. Never seen one like yours.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Phoenix
   npcPortrait: {fileID: 21300000, guid: b0147b47f585f8a4089425b1a689a44f, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 929317749}
+  player: 0
 --- !u!4 &1066757626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3978827311463652592, guid: 4df029e6d13b53b4bbba79f6ac4f1326, type: 3}
@@ -14292,12 +14420,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I told you that I can't help you without a map..
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Victor
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 931058215}
+  player: 0
 --- !u!1001 &1089750570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14406,6 +14534,7 @@ Transform:
   - {fileID: 479846155}
   - {fileID: 378421178}
   - {fileID: 330437833}
+  - {fileID: 1277462805}
   m_Father: {fileID: 2116900601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089750572
@@ -14543,6 +14672,142 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089750572}
   m_Mesh: {fileID: 4243563710715782240, guid: f5da04a09ea02eb47aad34fe9bc13d08, type: 3}
+--- !u!1 &1104313379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104313380}
+  - component: {fileID: 1104313382}
+  - component: {fileID: 1104313381}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1104313380
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104313379}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1311105985}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 13, y: -419.7}
+  m_SizeDelta: {x: 331.4424, y: 69.9154}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1104313381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104313379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Press E to interact
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1a35b3c7de135304899f93b103501400, type: 2}
+  m_sharedMaterial: {fileID: -5026572268955439006, guid: 1a35b3c7de135304899f93b103501400, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 42.89
+  m_fontSizeBase: 42.89
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -121.48456, y: 0, z: -117.444336, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1104313382
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104313379}
+  m_CullTransparentMesh: 1
 --- !u!1 &1109161171
 GameObject:
   m_ObjectHideFlags: 0
@@ -14588,12 +14853,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Thanks. I'll fix the bridge for you but pass at your own risk.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Ingo
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1110422358
 GameObject:
   m_ObjectHideFlags: 0
@@ -14675,12 +14940,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Okay I'll help you but I'll need some info on this egg afterwards!
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 505776690}
+  player: 1
 --- !u!1 &1119907122
 GameObject:
   m_ObjectHideFlags: 0
@@ -14726,12 +14991,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Wow that's so cool! I'm excited to hear your stories when you get back.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Maus
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1001 &1129149733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15414,13 +15679,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 'Still no luck yet? I believe in you! '
-  player: 0
-  hasChoices: 0
+  text: vllt. after dialog oder kinder weg
   choices: []
+  speakerName: Marco
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1208338879
 GameObject:
   m_ObjectHideFlags: 0
@@ -15466,12 +15731,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I'll keep asking around then, bye!
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 0}
+  player: 1
 --- !u!1 &1209719925
 GameObject:
   m_ObjectHideFlags: 0
@@ -15869,12 +16134,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 'Still no luck yet? I believe in you! '
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1218559554
 GameObject:
   m_ObjectHideFlags: 0
@@ -15920,12 +16185,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Stop bothering me.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Tiger
   npcPortrait: {fileID: 21300000, guid: 02fc14b4773ebe14dad2353c31e54575, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1223650004
 GameObject:
   m_ObjectHideFlags: 0
@@ -16046,12 +16311,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Don't overdo these jokes please... Anyway, I'll be back soon!
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 0}
+  player: 1
 --- !u!1 &1233339246
 GameObject:
   m_ObjectHideFlags: 0
@@ -16310,6 +16575,57 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2582579002958743652, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
+--- !u!1 &1277462803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277462805}
+  - component: {fileID: 1277462804}
+  m_Layer: 0
+  m_Name: "m\xF6we after"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1277462804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277462803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: You have to leave.
+  choices: []
+  speakerName: Benni
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!4 &1277462805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277462803}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1089750571}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283381567
 GameObject:
   m_ObjectHideFlags: 0
@@ -16740,12 +17056,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Oh how eggciting that is!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Christ
   npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1225966129}
+  player: 0
 --- !u!1 &1310732105
 GameObject:
   m_ObjectHideFlags: 0
@@ -17098,6 +17414,124 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1898403080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1311105984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311105985}
+  - component: {fileID: 1311105988}
+  - component: {fileID: 1311105987}
+  - component: {fileID: 1311105986}
+  - component: {fileID: 1311105990}
+  m_Layer: 5
+  m_Name: InteractHintText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1311105985
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311105984}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1104313380}
+  m_Father: {fileID: 46583319}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1311105986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311105984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1311105987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311105984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1311105988
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311105984}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &1311105990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311105984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54e60f58032eac40b7b91607fa22c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintText: {fileID: 1104313381}
+  pulseScale: 1.2
+  pulseDuration: 0.15
 --- !u!1 &1323409555
 GameObject:
   m_ObjectHideFlags: 0
@@ -17698,12 +18132,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 'Eight eggs are missing. '
-  player: 0
-  hasChoices: 0
   choices: []
-  npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
+  speakerName: Phoenix
+  npcPortrait: {fileID: 21300000, guid: b0147b47f585f8a4089425b1a689a44f, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1655066887}
+  player: 0
 --- !u!1 &1360387203
 GameObject:
   m_ObjectHideFlags: 0
@@ -17779,6 +18213,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360387203}
   m_CullTransparentMesh: 1
+--- !u!1 &1381311884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1381311885}
+  - component: {fileID: 1381311886}
+  m_Layer: 0
+  m_Name: before
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1381311885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381311884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 288367212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1381311886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381311884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: TALK TO MY FRIEND FIRST!
+  choices: []
+  speakerName: Jana
+  npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1397781948
 GameObject:
   m_ObjectHideFlags: 0
@@ -17910,12 +18395,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Get going!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Benni
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 911436907}
+  player: 0
 --- !u!1 &1403560537
 GameObject:
   m_ObjectHideFlags: 0
@@ -17965,13 +18450,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: WOW MONKEE what's that egg?
-  player: 0
-  hasChoices: 0
+  text: Wow what's that big egg?
   choices: []
-  npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
+  speakerName: Marco
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 396024198}
+  player: 0
 --- !u!1 &1405593058
 GameObject:
   m_ObjectHideFlags: 0
@@ -18018,12 +18503,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: That must be the biggest egg I've ever seen! Keep me updated. I'm getting
     curious, too.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Christ
   npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 496813846}
+  player: 0
 --- !u!1 &1408918067
 GameObject:
   m_ObjectHideFlags: 0
@@ -18073,12 +18558,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Hey PaoPao, what's up?
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 285728274}
+  player: 0
 --- !u!1 &1412747003
 GameObject:
   m_ObjectHideFlags: 0
@@ -18127,12 +18612,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Oh PaoPao, are you coming over for dinner again?
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Christ
   npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1455406272}
+  player: 0
 --- !u!1 &1418263628
 GameObject:
   m_ObjectHideFlags: 0
@@ -18274,12 +18759,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Found an eggspert yet? ... get it??
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Christ
   npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1939848570}
+  player: 0
 --- !u!1001 &1448995318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18629,12 +19114,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Oh I would love to bur I can't. I need to find the parents of this egg.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1405593060}
+  player: 1
 --- !u!1 &1471878181
 GameObject:
   m_ObjectHideFlags: 0
@@ -18680,12 +19165,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: But I need to get to the city! Please?
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 3f5f2e84cae6b5f4ba1911331de798a6, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 823211322}
+  player: 1
 --- !u!1 &1477164746
 GameObject:
   m_ObjectHideFlags: 0
@@ -18731,12 +19216,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I found this egg on the shore, can you help me get it back somewhere?
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 2021652109}
+  player: 1
 --- !u!1 &1491617438
 GameObject:
   m_ObjectHideFlags: 0
@@ -18870,92 +19355,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491617438}
   m_CullTransparentMesh: 1
---- !u!1 &1491763763
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1491763766}
-  - component: {fileID: 1491763765}
-  - component: {fileID: 1491763764}
-  m_Layer: 0
-  m_Name: Taube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1491763764
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491763763}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 280f2f0be791d794f840c76185c3dcfb, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1491763765
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491763763}
-  m_Mesh: {fileID: 8359795741592663562, guid: f5da04a09ea02eb47aad34fe9bc13d08, type: 3}
---- !u!4 &1491763766
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491763763}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.99214333, z: -0, w: -0.12510674}
-  m_LocalPosition: {x: -21.5, y: 0.84, z: 21.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 776793770}
-  m_LocalEulerAnglesHint: {x: 0, y: -194.374, z: 0}
 --- !u!43 &1493077875
 Mesh:
   m_ObjectHideFlags: 0
@@ -19166,12 +19565,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I told you that I can't help you without a map..
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Victor
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1520367861
 GameObject:
   m_ObjectHideFlags: 0
@@ -19251,12 +19650,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: WHOA what a big egg! I'm no eggspert, HAHA, GET IT? Anyway, have to keep
     asking around.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1671682347}
+  player: 0
 --- !u!1 &1532012296
 GameObject:
   m_ObjectHideFlags: 0
@@ -19302,12 +19701,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: GO FIND ME! CLOSE YOUR EYES!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Jana
   npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 274556826}
+  player: 0
 --- !u!1 &1533879042
 GameObject:
   m_ObjectHideFlags: 0
@@ -19354,12 +19753,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: WHOA what a big egg! I'm no eggspert, HAHA, GET IT? Anyway, have to keep
     asking around.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1966448923}
+  player: 0
 --- !u!1 &1551988344
 GameObject:
   m_ObjectHideFlags: 0
@@ -19693,6 +20092,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566348583}
   m_CullTransparentMesh: 1
+--- !u!1 &1576889668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1576889669}
+  - component: {fileID: 1576889670}
+  m_Layer: 0
+  m_Name: 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1576889669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576889668}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -1.6543612e-24, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 335073075}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1576889670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576889668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: BUT THERE IS THIS SCARY OLD HOUSE! GOOD LUCK HEHEHE
+  choices: []
+  speakerName: Jana
+  npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1592260417
 GameObject:
   m_ObjectHideFlags: 0
@@ -19740,12 +20190,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Hey, any egg updates?
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Maus
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 300829547}
+  player: 0
 --- !u!1 &1596275602
 GameObject:
   m_ObjectHideFlags: 0
@@ -19927,7 +20377,6 @@ Transform:
   m_Children:
   - {fileID: 1532012297}
   - {fileID: 274556825}
-  - {fileID: 514109975}
   m_Father: {fileID: 288367212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1616878200
@@ -19943,12 +20392,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: MY TURN! MY TURN!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Jana
   npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1532012298}
+  player: 0
 --- !u!1 &1646145456
 GameObject:
   m_ObjectHideFlags: 0
@@ -20195,12 +20644,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I'm on my break, go away.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Svenja
   npcPortrait: {fileID: 21300000, guid: cd2fca239fb35ac41885215b9a3cfa3d, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1655066885
 GameObject:
   m_ObjectHideFlags: 0
@@ -20246,12 +20695,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: That's right. And you better get them back for us!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Benni
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 2048771824}
+  player: 0
 --- !u!1 &1660522311
 GameObject:
   m_ObjectHideFlags: 0
@@ -20297,12 +20746,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Really, how?
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1749784575}
+  player: 1
 --- !u!1 &1671682345
 GameObject:
   m_ObjectHideFlags: 0
@@ -20348,12 +20797,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: ... thanks anyway.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 3f5f2e84cae6b5f4ba1911331de798a6, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 0}
+  player: 1
 --- !u!1 &1677751499
 GameObject:
   m_ObjectHideFlags: 0
@@ -20398,9 +20847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 3+3
-  player: 0
-  hasChoices: 1
+  text: start dialog und danach choices. 3+3
   choices:
   - text: 6
     nextLine: {fileID: 1011812131}
@@ -20414,9 +20861,42 @@ MonoBehaviour:
     nextLine: {fileID: 1891752957}
     id: 
     isCorrect: 0
+  speakerName: Marco
   npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &1681796538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1681796539}
+  m_Layer: 0
+  m_Name: OpossumSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1681796539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681796538}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -83.5, y: 18.86, z: 247.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 839518830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694115256
 GameObject:
   m_ObjectHideFlags: 0
@@ -20745,12 +21225,12 @@ MonoBehaviour:
   text: '....
 
 '
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
+  player: 1
 --- !u!43 &1715098268
 Mesh:
   m_ObjectHideFlags: 0
@@ -21082,12 +21562,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: WE KNOW A SECRET SPOT ON THIS ISLAND HEHEHEE
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Jana
   npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1021030118}
+  player: 0
 --- !u!4 &1749784576
 Transform:
   m_ObjectHideFlags: 0
@@ -21293,12 +21773,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Hey PaoPao! You here to play?
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Maus
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 454078774}
+  player: 0
 --- !u!1 &1789410354
 GameObject:
   m_ObjectHideFlags: 0
@@ -21344,12 +21824,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: ...
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Bert
   npcPortrait: {fileID: 21300000, guid: f80c20099ea51164988267268ea4e5f3, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1792105410 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5004931322589392911, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
@@ -21740,6 +22220,8 @@ GameObject:
   - component: {fileID: 1851228355}
   - component: {fileID: 1851228354}
   - component: {fileID: 1851228353}
+  - component: {fileID: 1851228357}
+  - component: {fileID: 1851228356}
   m_Layer: 0
   m_Name: haus1
   m_TagString: Untagged
@@ -21815,6 +22297,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 776793770}
   m_LocalEulerAnglesHint: {x: -18.426, y: -163.389, z: 0}
+--- !u!65 &1851228356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851228352}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.49, y: 12.1, z: 16.11}
+  m_Center: {x: 14.88502, y: 7.2, z: -0.006341721}
+--- !u!114 &1851228357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851228352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f9db32d451ed6458cf926c652b8d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Haus
 --- !u!1 &1872451141
 GameObject:
   m_ObjectHideFlags: 0
@@ -22326,12 +22842,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: WOW! This one looks really old! But I'll be able to get you there.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Victor
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 504226798}
+  player: 0
 --- !u!1 &1891752955
 GameObject:
   m_ObjectHideFlags: 0
@@ -22377,12 +22893,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Wrooong, try again!
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Marco
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &1898403074
 GameObject:
   m_ObjectHideFlags: 0
@@ -23480,12 +23996,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Haha good one, Christ. But I found one and I've got this map.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1306772418}
+  player: 1
 --- !u!1001 &1954895459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23840,12 +24356,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: ... thanks anyway.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 3f5f2e84cae6b5f4ba1911331de798a6, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 0}
+  player: 1
 --- !u!1 &1975807601
 GameObject:
   m_ObjectHideFlags: 0
@@ -24145,12 +24661,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Have you seen an egg like this before? You've got all kind of eggs here.
     You must know SOMETHING. right?
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 1047815136}
+  player: 1
 --- !u!1 &2002370740
 GameObject:
   m_ObjectHideFlags: 0
@@ -24235,12 +24751,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Sorry, can't help you unless you bring me a map. These waters are dangerous.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Victor
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &2024176671
 GameObject:
   m_ObjectHideFlags: 0
@@ -24252,7 +24768,7 @@ GameObject:
   - component: {fileID: 2024176672}
   - component: {fileID: 2024176673}
   m_Layer: 0
-  m_Name: NPC1After
+  m_Name: found
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24285,13 +24801,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 'Still no luck yet? I believe in you! '
-  player: 0
-  hasChoices: 0
+  text: GOOD JOB! MEET ME AT THE PLAYGROUND!
   choices: []
-  npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
+  speakerName: Jana
+  npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &2024983225
 GameObject:
   m_ObjectHideFlags: 0
@@ -24337,12 +24853,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: better talk to someone else.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &2031072199
 GameObject:
   m_ObjectHideFlags: 0
@@ -24463,12 +24979,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: He looks like he got no time to talk.
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 3f5f2e84cae6b5f4ba1911331de798a6, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 0}
+  player: 1
 --- !u!43 &2042528070
 Mesh:
   m_ObjectHideFlags: 0
@@ -24679,12 +25195,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: ..thank you.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Wolf
   npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1115075510}
+  player: 0
 --- !u!1 &2050429186
 GameObject:
   m_ObjectHideFlags: 0
@@ -24730,12 +25246,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: better talk to someone else.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
+  player: 0
 --- !u!1 &2056183314
 GameObject:
   m_ObjectHideFlags: 0
@@ -24917,12 +25433,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Can I help you?
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: PaoPao
   npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 960332487}
+  player: 1
 --- !u!1 &2069519681
 GameObject:
   m_ObjectHideFlags: 0
@@ -59718,12 +60234,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: I found this weird egg. Have you seen something like this before?
-  player: 1
-  hasChoices: 0
   choices: []
+  speakerName: 
   npcPortrait: {fileID: 21300000, guid: 3f5f2e84cae6b5f4ba1911331de798a6, type: 3}
   playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1533879044}
+  player: 1
 --- !u!1 &2124853887
 GameObject:
   m_ObjectHideFlags: 0
@@ -59831,12 +60347,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: hehe we might be able to help.
-  player: 0
-  hasChoices: 0
   choices: []
+  speakerName: Marco
   npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 1660522313}
+  player: 0
 --- !u!1 &2131041755
 GameObject:
   m_ObjectHideFlags: 0
@@ -60159,6 +60675,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1066757629}
+    - target: {fileID: 5146084253864768272, guid: be6c7817d371e214083e9fed2b9e0b4d, type: 3}
+      propertyPath: interactHint
+      value: 
+      objectReference: {fileID: 1311105990}
     - target: {fileID: 5146084253864768272, guid: be6c7817d371e214083e9fed2b9e0b4d, type: 3}
       propertyPath: referenceCamera
       value: 

@@ -45,6 +45,7 @@ public class Quest : MonoBehaviour
     public DialogueLine moeweDuring;
     public DialogueLine moeweNotAllEggs;
     public DialogueLine moeweEggsComplete;
+    public DialogueLine moeweAfter;
 
     [Header("Quest: Schaf/Marco")]
     public NPCs schaf;
@@ -52,6 +53,16 @@ public class Quest : MonoBehaviour
     public DialogueLine[] schafQuestions; // 3 Fragen
     public DialogueLine schafWrongAnswer;
     public DialogueLine schafComplete;
+
+    [Header("Quest: Opossum Versteckspiel")]
+    public NPCs opossum;
+    public Transform opossumVersteckPosition; // Wo sich Opossum versteckt
+    public Transform playerSpawnPosition; // Wo Player nach Quest spawnt (Spielplatz)
+    public DialogueLine opossumBefore;
+    public DialogueLine opossumStart;
+    public DialogueLine opossumFound;
+    public DialogueLine zumWald; // Nach Quest abgeschlossen
+    public GameObject[] npcsToDisableAfterOpossum; // z.B. Opossum + Schaf
 
 
     private bool nachbarnQuestActive = false;
@@ -66,9 +77,15 @@ public class Quest : MonoBehaviour
     private bool moeweQuestActive = false;
     private bool moeweQuestStarted = false;
     private bool moeweQuestDone = false;
+    private bool moeweRewardGiven = false;
     private bool schafQuestActive = false;
     private bool schafQuestStarted = false;
     private bool schafQuestDone = false;
+    private bool opossumQuestActive = false;
+    private bool opossumQuestStarted = false;
+    private bool opossumQuestDone = false;
+    private bool opossumIsHiding = false;
+    private bool waldQuestActive = false;
     private TMP_Text questTMP;
     private int talkedToCount = 0;
     private int collectedEggs = 0;
@@ -118,6 +135,15 @@ public class Quest : MonoBehaviour
             // Anfangs-Dialog (wird aktiviert wenn Möwen-Quest fertig ist)
             if (schafBefore != null)
                 schaf.dialogue = schafBefore;
+        }
+
+        if (opossum != null)
+        {
+            opossum.onInteracted += OnOpossumTalked;
+
+            // Anfangs gesperrter Dialog
+            if (opossumBefore != null)
+                opossum.dialogue = opossumBefore;
         }
 
         // Blackscreen unsichtbar machen
@@ -206,6 +232,35 @@ public class Quest : MonoBehaviour
         if (moeweQuestDone && !schafQuestActive)
         {
             schafQuestActive = true;
+        }
+
+        // Aktiviere Opossum-Quest wenn Schaf-Quest fertig ist
+        if (schafQuestDone && !opossumQuestActive)
+        {
+            opossumQuestActive = true;
+
+            // Opossum Dialog auf "start" umstellen
+            if (opossumStart != null)
+                opossum.dialogue = opossumStart;
+        }
+
+        // Aktiviere Wald-Quest wenn Opossum-Quest fertig ist
+        if (opossumQuestDone && !waldQuestActive)
+        {
+            waldQuestActive = true;
+
+            // Beide NPCs auf "zumWald" Dialog umstellen
+            if (zumWald != null)
+            {
+                if (schaf != null)
+                    schaf.dialogue = zumWald;
+                if (opossum != null)
+                    opossum.dialogue = zumWald;
+            }
+
+            // Questlog aktualisieren
+            if (questTMP != null)
+                questTMP.text = "Explore the hidden forest";
         }
     }
 
@@ -524,10 +579,13 @@ public class Quest : MonoBehaviour
     // MÖWEN-QUEST
     private void OnMoeweTalked()
     {
-        // Wenn Quest noch nicht gestartet → starte sie
+        // Wenn Quest noch nicht gestartet → starte sie mit Before-Dialog
         if (!moeweQuestStarted)
         {
             moeweQuestStarted = true;
+
+            // Before-Dialog läuft bereits (ist schon gesetzt in Start())
+            // Quest starten, aber Dialog bleibt auf Before
             StartCoroutine(QuestMoewe());
             return;
         }
@@ -540,19 +598,30 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn alle Eier gesammelt → Belohnung geben
-        if (moeweQuestDone && collectedEggs >= 8)
+        // Wenn alle Eier gesammelt und Belohnung noch nicht gegeben → Complete Dialog & Belohnung
+        if (moeweQuestDone && !moeweRewardGiven && collectedEggs >= 8)
         {
             if (moeweEggsComplete != null)
                 moewe.dialogue = moeweEggsComplete;
 
             // Reward Objects aktivieren
             StartCoroutine(CompleteMoeweQuest());
+            return;
+        }
+
+        // Wenn Belohnung schon gegeben → After Dialog (immer wieder)
+        if (moeweRewardGiven)
+        {
+            if (moeweAfter != null)
+                moewe.dialogue = moeweAfter;
         }
     }
 
     IEnumerator QuestMoewe()
     {
+        // Warte kurz, damit Before-Dialog erst abgespielt wird
+        yield return new WaitForSeconds(0.1f);
+
         // Questlog aktualisieren
         questTMP.text = "Collect all eggs (0/8)";
 
@@ -566,10 +635,9 @@ public class Quest : MonoBehaviour
             }
         }
 
+        // JETZT auf During-Dialog wechseln (für nächstes Gespräch)
         if (moeweDuring != null)
             moewe.dialogue = moeweDuring;
-
-        yield return null;
     }
 
     IEnumerator CompleteMoeweQuest()
@@ -603,6 +671,13 @@ public class Quest : MonoBehaviour
         }
 
         questTMP.text = "Quest complete!";
+
+        // Markiere Belohnung als gegeben
+        moeweRewardGiven = true;
+
+        // Wechsel zu After-Dialog für nächstes Gespräch
+        if (moeweAfter != null)
+            moewe.dialogue = moeweAfter;
     }
 
     // SCHAF/MARCO-QUEST
@@ -616,10 +691,13 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Quest noch nicht gestartet → starte sie
+        // Wenn Quest noch nicht gestartet → starte sie mit Before-Dialog
         if (!schafQuestStarted)
         {
             schafQuestStarted = true;
+
+            // Before-Dialog läuft bereits (ist schon gesetzt in Start())
+            // Quest starten, aber Dialog bleibt auf Before
             StartCoroutine(QuestSchaf());
             return;
         }
@@ -638,20 +716,28 @@ public class Quest : MonoBehaviour
             if (schafComplete != null)
                 schaf.dialogue = schafComplete;
         }
+
+        // Nach Opossum-Quest → Wald-Quest Dialog
+        if (opossumQuestDone && waldQuestActive)
+        {
+            if (zumWald != null)
+                schaf.dialogue = zumWald;
+        }
     }
 
     IEnumerator QuestSchaf()
     {
+        // Warte kurz, damit Before-Dialog erst abgespielt wird
+        yield return new WaitForSeconds(0.1f);
+
         // Questlog aktualisieren
         questTMP.text = "Answer Marco's three questions";
 
         correctAnswers = 0;
 
-        // Erste Frage stellen
+        // Erste Frage als Dialog für nächstes Gespräch vorbereiten
         if (schafQuestions != null && schafQuestions.Length > 0)
             schaf.dialogue = schafQuestions[0];
-
-        yield return null;
     }
 
     // Diese Methode wird vom DialogueScreen aufgerufen wenn eine Antwort gewählt wird
@@ -703,5 +789,189 @@ public class Quest : MonoBehaviour
 
         if (schafQuestions != null && schafQuestions.Length > 0)
             schaf.dialogue = schafQuestions[0];
+    }
+
+    // OPOSSUM VERSTECKSPIEL-QUEST
+    private void OnOpossumTalked()
+    {
+        // Wenn noch gesperrt (Schaf-Quest nicht fertig)
+        if (!opossumQuestActive)
+        {
+            if (opossumBefore != null)
+                opossum.dialogue = opossumBefore;
+            return;
+        }
+
+        // Wenn Quest noch nicht gestartet → starte Versteckspiel
+        if (!opossumQuestStarted)
+        {
+            opossumQuestStarted = true;
+            StartCoroutine(QuestOpossum());
+            return;
+        }
+
+        // Wenn Opossum sich versteckt hat und gefunden wurde
+        if (opossumIsHiding && opossumQuestStarted && !opossumQuestDone)
+        {
+            opossumQuestDone = true;
+            StartCoroutine(CompleteOpossumQuest());
+            return;
+        }
+
+        // Nach Quest abgeschlossen → Wald-Quest Dialog
+        if (opossumQuestDone && waldQuestActive)
+        {
+            if (zumWald != null)
+                opossum.dialogue = zumWald;
+        }
+    }
+
+    IEnumerator QuestOpossum()
+    {
+        // Warte kurz, damit Start-Dialog erst abgespielt wird
+        yield return new WaitForSeconds(0.1f);
+
+        // Questlog aktualisieren
+        questTMP.text = "Find the hiding opossum";
+
+        // Warte bis Dialog zu Ende ist (z.B. 3 Sekunden für Dialog)
+        yield return new WaitForSeconds(3f);
+
+        // Blackscreen einblenden
+        if (blackScreen != null)
+        {
+            blackScreen.gameObject.SetActive(true);
+            float fadeTime = 1f;
+            float elapsed = 0f;
+
+            while (elapsed < fadeTime)
+            {
+                elapsed += Time.deltaTime;
+                blackScreen.alpha = Mathf.Lerp(0f, 1f, elapsed / fadeTime);
+                yield return null;
+            }
+            blackScreen.alpha = 1f;
+        }
+
+        // 3 Sekunden warten (vorher 5)
+        yield return new WaitForSeconds(3f);
+
+        // Opossum zum Versteck teleportieren
+        if (opossum != null && opossumVersteckPosition != null)
+        {
+            opossum.transform.position = opossumVersteckPosition.position;
+            opossumIsHiding = true;
+
+            // Dialog für "gefunden" vorbereiten
+            if (opossumFound != null)
+                opossum.dialogue = opossumFound;
+        }
+
+        // Blackscreen ausblenden
+        if (blackScreen != null)
+        {
+            float fadeTime = 1f;
+            float elapsed = 0f;
+
+            while (elapsed < fadeTime)
+            {
+                elapsed += Time.deltaTime;
+                blackScreen.alpha = Mathf.Lerp(1f, 0f, elapsed / fadeTime);
+                yield return null;
+            }
+            blackScreen.alpha = 0f;
+            blackScreen.gameObject.SetActive(false);
+        }
+    }
+
+    IEnumerator CompleteOpossumQuest()
+    {
+        // Questlog aktualisieren
+        questTMP.text = "You found the opossum!";
+
+        // Warte kurz
+        yield return new WaitForSeconds(2f);
+
+        // Blackscreen einblenden
+        if (blackScreen != null)
+        {
+            blackScreen.gameObject.SetActive(true);
+            float fadeTime = 1f;
+            float elapsed = 0f;
+
+            while (elapsed < fadeTime)
+            {
+                elapsed += Time.deltaTime;
+                blackScreen.alpha = Mathf.Lerp(0f, 1f, elapsed / fadeTime);
+                yield return null;
+            }
+            blackScreen.alpha = 1f;
+        }
+
+        // 2 Sekunden warten
+        yield return new WaitForSeconds(2f);
+
+        // Player zum Spielplatz teleportieren
+        if (playerSpawnPosition != null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+                player.transform.position = playerSpawnPosition.position;
+        }
+
+        // Opossum zurück zum Spielplatz
+        if (opossum != null && playerSpawnPosition != null)
+        {
+            opossum.transform.position = playerSpawnPosition.position;
+            opossumIsHiding = false;
+        }
+
+        // Blackscreen ausblenden
+        if (blackScreen != null)
+        {
+            float fadeTime = 1f;
+            float elapsed = 0f;
+
+            while (elapsed < fadeTime)
+            {
+                elapsed += Time.deltaTime;
+                blackScreen.alpha = Mathf.Lerp(1f, 0f, elapsed / fadeTime);
+                yield return null;
+            }
+            blackScreen.alpha = 0f;
+            blackScreen.gameObject.SetActive(false);
+        }
+
+        questTMP.text = "Quest complete!";
+
+        // ===============================
+        // WALD-QUEST STARTEN
+        // ===============================
+        waldQuestActive = true;
+
+        if (questTMP != null)
+            questTMP.text = "Explore the forest";
+
+        // NPCs bekommen Wald-Dialog
+        if (zumWald != null)
+        {
+            if (schaf != null)
+                schaf.dialogue = zumWald;
+
+            if (opossum != null)
+                opossum.dialogue = zumWald;
+        }
+
+
+        // NPCs nach Opossum-Quest ausblenden
+        if (npcsToDisableAfterOpossum != null)
+        {
+            foreach (var npc in npcsToDisableAfterOpossum)
+            {
+                if (npc != null)
+                    npc.SetActive(false);
+            }
+        }
+
     }
 }

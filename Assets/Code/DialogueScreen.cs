@@ -55,24 +55,36 @@ public class DialogueScreen : MonoBehaviour
         panel.SetActive(false);
     }
 
-    public void ShowDialogue(DialogueLine dialogue, string speakerName)
+    public void ShowDialogue(DialogueLine dialogue, string npcFallbackName)
     {
         currentLine = dialogue;
         bool isPlayer = dialogue.player;
 
-        // Reset UI
+        // =========================
+        // SPRECHERNAME AUFLÖSEN
+        // =========================
+        string resolvedSpeakerName =
+            !string.IsNullOrWhiteSpace(dialogue.speakerName)
+                ? dialogue.speakerName
+                : (isPlayer ? playerName : npcFallbackName);
+
+        currentSpeaker = resolvedSpeakerName;
+
+        // =========================
+        // RESET UI
+        // =========================
         leftContainer.SetActive(false);
         rightContainer.SetActive(false);
         npcPortrait.gameObject.SetActive(false);
         playerPortrait.gameObject.SetActive(false);
 
         // =========================
-        // PLAYER  RECHTS
+        // PLAYER → RECHTS
         // =========================
         if (isPlayer)
         {
             rightContainer.SetActive(true);
-            rightNameTMP.text = playerName;
+            rightNameTMP.text = resolvedSpeakerName;
             rightDialogueTMP.text = dialogue.text;
 
             if (dialogue.playerPortrait != null)
@@ -81,16 +93,14 @@ public class DialogueScreen : MonoBehaviour
                 playerPortrait.gameObject.SetActive(true);
                 PulsePortrait(playerPortrait);
             }
-
-            currentSpeaker = playerName;
         }
         // =========================
-        // NPC  LINKS
+        // NPC → LINKS
         // =========================
         else
         {
             leftContainer.SetActive(true);
-            leftNameTMP.text = speakerName;
+            leftNameTMP.text = resolvedSpeakerName;
             leftDialogueTMP.text = dialogue.text;
 
             if (dialogue.npcPortrait != null)
@@ -99,26 +109,21 @@ public class DialogueScreen : MonoBehaviour
                 npcPortrait.gameObject.SetActive(true);
                 PulsePortrait(npcPortrait);
             }
-
-            currentSpeaker = speakerName;
         }
 
         // =========================
-        // CHOICES (FIXED)
+        // CHOICES / CONTINUE
         // =========================
-        bool hasChoices = dialogue.hasChoices;
+        bool hasChoices = dialogue.choices != null && dialogue.choices.Length > 0;
 
-        // Erst ALLE Buttons aus
+        // Alles aus
         for (int i = 0; i < choiceButtons.Length; i++)
-        {
             choiceButtons[i].SetActive(false);
-        }
 
         continueButton.SetActive(false);
 
         if (hasChoices)
         {
-            // Nur wenn es wirklich Choices gibt
             for (int i = 0; i < dialogue.choices.Length && i < choiceButtons.Length; i++)
             {
                 choiceButtons[i].SetActive(true);
@@ -130,13 +135,13 @@ public class DialogueScreen : MonoBehaviour
         }
         else
         {
-            // Keine Choices  Continue
             continueButton.SetActive(true);
             EventSystem.current.SetSelectedGameObject(continueButton);
         }
 
-
-        // Input & Camera
+        // =========================
+        // INPUT & CAMERA
+        // =========================
         input.SwitchCurrentActionMap("UI");
         cinemachineController.enabled = false;
         panel.SetActive(true);
@@ -153,7 +158,7 @@ public class DialogueScreen : MonoBehaviour
     {
         onChoiceSelected?.Invoke(currentLine.choices[index].id);
 
-        if (questManager != null && currentLine.choices.Length > 0)
+        if (questManager != null)
         {
             questManager.OnAnswerSelected(currentLine.choices[index].isCorrect);
         }
@@ -181,7 +186,7 @@ public class DialogueScreen : MonoBehaviour
     }
 
     // =========================
-    // PORTRAIT "AUFBLINKEN"
+    // PORTRAIT PULSE
     // =========================
     void PulsePortrait(Image portrait)
     {

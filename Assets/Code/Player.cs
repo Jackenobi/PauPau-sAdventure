@@ -16,6 +16,10 @@ public class Player : MonoBehaviour
     public Transform referenceCamera;
 
     public Interactable interactable;
+    public InteractHintUI interactHint;
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +37,7 @@ public class Player : MonoBehaviour
             interactable.Interact();
         }
     }
+
 
     // Update is called once per frame
     void Update()
@@ -64,19 +69,28 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Interactable inter = other.GetComponent<Interactable>(); //sucht nach Interactable Script auf "other" Object
+        if (interactHint == null) return;
 
-        //wenn ein "Interactable" gefunden wird, ist die Variabel nicht null
-        if(inter != null)
-        interactable = inter;
+        Interactable inter = other.GetComponent<Interactable>();
+        if (inter != null)
+        {
+            interactable = inter;
+            interactHint.Show();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-     Interactable inter = other.GetComponent<Interactable>();
+        if (interactHint == null) return;
 
-        if (inter != null)
+        Interactable inter = other.GetComponent<Interactable>();
+        if (inter != null && inter == interactable)
+        {
             interactable = null;
+            interactHint.Hide();
+        }
     }
+
+
 
 }
