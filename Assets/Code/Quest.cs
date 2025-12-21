@@ -39,8 +39,8 @@ public class Quest : MonoBehaviour
 
     [Header("Quest: Möwe")]
     public NPCs moewe;
-    public Item[] eier; // ei1 bis ei8
-    public GameObject[] rewardObjects; // Die zwei GameObjects die aktiviert werden
+    public Item[] eier;
+    public GameObject[] rewardObjects;
     public DialogueLine moeweBefore;
     public DialogueLine moeweDuring;
     public DialogueLine moeweNotAllEggs;
@@ -50,20 +50,23 @@ public class Quest : MonoBehaviour
     [Header("Quest: Schaf/Marco")]
     public NPCs schaf;
     public DialogueLine schafBefore;
-    public DialogueLine[] schafQuestions; // 3 Fragen
+    public DialogueLine[] schafQuestions;
     public DialogueLine schafWrongAnswer;
     public DialogueLine schafComplete;
 
     [Header("Quest: Opossum Versteckspiel")]
     public NPCs opossum;
-    public Transform opossumVersteckPosition; // Wo sich Opossum versteckt
-    public Transform playerSpawnPosition; // Wo Player nach Quest spawnt (Spielplatz)
+    public Transform opossumVersteckPosition;
+    public Transform playerSpawnPosition;
     public DialogueLine opossumBefore;
     public DialogueLine opossumStart;
     public DialogueLine opossumFound;
-    public DialogueLine zumWald; // Nach Quest abgeschlossen
-    public GameObject[] npcsToDisableAfterOpossum; // z.B. Opossum + Schaf
+    public DialogueLine zumWald;
+    public GameObject[] npcsToDisableAfterOpossum;
 
+    [Header("Quest: Wald")]
+    public GameObject waldEingang;
+    public string waldSceneName = "Wald";
 
     private bool nachbarnQuestActive = false;
     private bool nachbarnQuestDone = false;
@@ -101,8 +104,6 @@ public class Quest : MonoBehaviour
         if (bauarbeiter != null)
         {
             bauarbeiter.onInteracted += OnBauarbeiterTalked;
-
-            // Anfangs gesperrter Dialog
             if (bauarbeiterBefore != null)
                 bauarbeiter.dialogue = bauarbeiterBefore;
         }
@@ -110,8 +111,6 @@ public class Quest : MonoBehaviour
         if (seemann != null)
         {
             seemann.onInteracted += OnSeemannTalked;
-
-            // Anfangs gesperrter Dialog
             if (seemannBefore != null)
                 seemann.dialogue = seemannBefore;
         }
@@ -119,11 +118,7 @@ public class Quest : MonoBehaviour
         if (moewe != null)
         {
             moewe.onInteracted += OnMoeweTalked;
-
-            // Möwe Quest ist immer aktiv (kann jederzeit gestartet werden)
             moeweQuestActive = true;
-
-            // Anfangs-Dialog
             if (moeweBefore != null)
                 moewe.dialogue = moeweBefore;
         }
@@ -131,8 +126,6 @@ public class Quest : MonoBehaviour
         if (schaf != null)
         {
             schaf.onInteracted += OnSchafTalked;
-
-            // Anfangs-Dialog (wird aktiviert wenn Möwen-Quest fertig ist)
             if (schafBefore != null)
                 schaf.dialogue = schafBefore;
         }
@@ -140,24 +133,28 @@ public class Quest : MonoBehaviour
         if (opossum != null)
         {
             opossum.onInteracted += OnOpossumTalked;
-
-            // Anfangs gesperrter Dialog
             if (opossumBefore != null)
                 opossum.dialogue = opossumBefore;
         }
 
-        // Blackscreen unsichtbar machen
+        if (waldEingang != null)
+        {
+            var interactable = waldEingang.GetComponent<Interactable>();
+            if (interactable != null)
+                interactable.onInteracted += OnWaldEingangInteracted;
+
+            waldEingang.SetActive(false);
+        }
+
         if (blackScreen != null)
         {
             blackScreen.alpha = 0f;
             blackScreen.gameObject.SetActive(false);
         }
 
-        // Map Item am Anfang verstecken (falls vorhanden)
         if (mapItem != null)
             mapItem.gameObject.SetActive(false);
 
-        // Alle Eier am Anfang verstecken
         if (eier != null)
         {
             foreach (var ei in eier)
@@ -167,7 +164,6 @@ public class Quest : MonoBehaviour
             }
         }
 
-        // Reward Objects am Anfang verstecken
         if (rewardObjects != null)
         {
             foreach (var obj in rewardObjects)
@@ -180,12 +176,9 @@ public class Quest : MonoBehaviour
 
     void Update()
     {
-        // Prüfe ob Map Item aufgesammelt wurde
         if (nachbarnQuestDone && !nachbarnAfterUnlocked && inventory.HasItem(ItemType.Map))
         {
             nachbarnAfterUnlocked = true;
-
-            // Nachbarn auf After-Dialog umstellen
             for (int i = 0; i < nachbarn.Length; i++)
             {
                 if (i < nachbarnAfter.Length && nachbarnAfter[i] != null)
@@ -193,63 +186,46 @@ public class Quest : MonoBehaviour
             }
         }
 
-        // Prüfe ob ALLE Quests fertig sind → aktiviere Seemann-Quest
         if (bauarbeiterQuestDone && nachbarnAfterUnlocked && !seemannQuestActive)
         {
             seemannQuestActive = true;
-
-            // Seemann Dialog auf "during" umstellen
             if (seemannDuring != null)
                 seemann.dialogue = seemannDuring;
         }
 
-        // Prüfe ob Eier eingesammelt werden
         if (moeweQuestStarted && !moeweQuestDone)
         {
-            // Zähle wie viele Eggs im Inventar sind
             int eggsInInventory = inventory.CountItems(ItemType.Egg);
-
-            // Update Zähler wenn sich was geändert hat
             if (eggsInInventory != collectedEggs)
             {
                 collectedEggs = eggsInInventory;
                 questTMP.text = $"Collect all eggs ({collectedEggs}/8)";
 
-                // Alle Eier gesammelt?
                 if (collectedEggs >= 8)
                 {
                     moeweQuestDone = true;
                     questTMP.text = "All eggs collected! Return to the seagull";
-
-                    // Dialog auf "complete" umstellen
                     if (moeweEggsComplete != null)
                         moewe.dialogue = moeweEggsComplete;
                 }
             }
         }
 
-        // Aktiviere Schaf-Quest wenn Möwen-Quest fertig ist
         if (moeweQuestDone && !schafQuestActive)
         {
             schafQuestActive = true;
         }
 
-        // Aktiviere Opossum-Quest wenn Schaf-Quest fertig ist
         if (schafQuestDone && !opossumQuestActive)
         {
             opossumQuestActive = true;
-
-            // Opossum Dialog auf "start" umstellen
             if (opossumStart != null)
                 opossum.dialogue = opossumStart;
         }
 
-        // Aktiviere Wald-Quest wenn Opossum-Quest fertig ist
         if (opossumQuestDone && !waldQuestActive)
         {
             waldQuestActive = true;
-
-            // Beide NPCs auf "zumWald" Dialog umstellen
             if (zumWald != null)
             {
                 if (schaf != null)
@@ -257,14 +233,11 @@ public class Quest : MonoBehaviour
                 if (opossum != null)
                     opossum.dialogue = zumWald;
             }
-
-            // Questlog aktualisieren
             if (questTMP != null)
                 questTMP.text = "Explore the hidden forest";
         }
     }
 
-    // NACHBARN-QUEST
     private void OnNeighborTalked(NPCs npc)
     {
         int index = System.Array.IndexOf(nachbarn, npc);
@@ -291,19 +264,16 @@ public class Quest : MonoBehaviour
                     StartCoroutine(CompleteNeighborQuest());
                 }
 
-                // Start-Dialog läuft bereits, NACH diesem Dialog auf "during" wechseln
                 StartCoroutine(SwitchToDuringAfterDialogue(npc, index));
             }
             else
             {
-                // Wurde schon angesprochen → zeige "during" Dialog
                 if (nachbarnDuring != null && index < nachbarnDuring.Length && nachbarnDuring[index] != null)
                     npc.dialogue = nachbarnDuring[index];
             }
         }
         else if (nachbarnQuestDone)
         {
-            // Nachbarn bleiben auf "during" Dialog bis Map Item gefunden wurde
             if (nachbarnAfterUnlocked && nachbarnAfter != null && index < nachbarnAfter.Length && nachbarnAfter[index] != null)
                 npc.dialogue = nachbarnAfter[index];
         }
@@ -311,10 +281,7 @@ public class Quest : MonoBehaviour
 
     IEnumerator SwitchToDuringAfterDialogue(NPCs npc, int index)
     {
-        // Warte kurz, damit der Start-Dialog erst abgespielt wird
         yield return new WaitForSeconds(0.1f);
-
-        // Wechsel zu "during" Dialog für nächstes Mal
         if (nachbarnDuring != null && index < nachbarnDuring.Length && nachbarnDuring[index] != null)
             npc.dialogue = nachbarnDuring[index];
     }
@@ -330,23 +297,13 @@ public class Quest : MonoBehaviour
     IEnumerator CompleteNeighborQuest()
     {
         yield return new WaitForSeconds(1f);
-
-        // Nachbarn bleiben auf "during" Dialog, wechseln NICHT zu "after"!
-        // Der Wechsel passiert erst, wenn Map Item aufgesammelt wird (siehe Update)
-
-        // Bauarbeiter-Quest aktiviert
         bauarbeiterQuestActive = true;
-
-        // Bauarbeiter neuer Dialog
         if (bauarbeiterDuring != null)
             bauarbeiter.dialogue = bauarbeiterDuring;
     }
 
-
-    // BAUARBEITER-QUEST
     private void OnBauarbeiterTalked()
     {
-        // Wenn noch gesperrt → nur Before-Dialog
         if (!bauarbeiterQuestActive)
         {
             if (bauarbeiterBefore != null)
@@ -354,7 +311,6 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Quest aktiv, aber noch nicht gestartet → starte sie
         if (!bauarbeiterQuestStarted)
         {
             bauarbeiterQuestStarted = true;
@@ -362,7 +318,6 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Quest bereits gestartet, aber Tape noch nicht abgegeben
         if (bauarbeiterQuestStarted && !bauarbeiterQuestDone && !inventory.HasItem(ItemType.Tape))
         {
             if (bauarbeiterNoItem != null)
@@ -370,19 +325,14 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Tape da ist und Quest noch nicht abgeschlossen → DONE Dialog zeigen
         if (bauarbeiterQuestStarted && !bauarbeiterQuestDone && inventory.HasItem(ItemType.Tape))
         {
-            // Zeige DONE Dialog beim Abgeben
             if (bauarbeiterDone != null)
                 bauarbeiter.dialogue = bauarbeiterDone;
-
-            // QUEST ABSCHLIESSEN mit Blackscreen-Animation
             StartCoroutine(CompleteBauarbeiterQuest());
             return;
         }
 
-        // Wenn Quest schon abgeschlossen → After-Dialog (immer wieder)
         if (bauarbeiterQuestDone)
         {
             if (bauarbeiterAfter != null)
@@ -390,23 +340,14 @@ public class Quest : MonoBehaviour
         }
     }
 
-
     IEnumerator QuestBauarbeiter()
     {
-        // Questlog aktualisieren (kein neues Display erstellen, da questTMP bereits existiert)
         questTMP.text = "Find some Tape";
-
         if (tapeItem != null)
             tapeItem.gameObject.SetActive(true);
-
         bauarbeiter.dialogue = bauarbeiterDuring;
-
-        // Auf Tape warten
         yield return WaitForItem(ItemType.Tape, 1, null);
-
-        // Questlog aktualisieren
         questTMP.text = "Bring the tape to the construction worker";
-
         if (bauarbeiterDone != null)
             bauarbeiter.dialogue = bauarbeiterDone;
     }
@@ -415,13 +356,11 @@ public class Quest : MonoBehaviour
     {
         bauarbeiterQuestDone = true;
 
-        // Blackscreen einblenden
         if (blackScreen != null)
         {
             blackScreen.gameObject.SetActive(true);
             float fadeTime = 1f;
             float elapsed = 0f;
-
             while (elapsed < fadeTime)
             {
                 elapsed += Time.deltaTime;
@@ -431,20 +370,17 @@ public class Quest : MonoBehaviour
             blackScreen.alpha = 1f;
         }
 
-        // Während Blackscreen: Brücken austauschen
-        yield return new WaitForSeconds(2f); // Hier später Sound abspielen
+        yield return new WaitForSeconds(2f);
 
         if (brueckeKaputt != null)
             brueckeKaputt.SetActive(false);
         if (brueckeHeil != null)
             brueckeHeil.SetActive(true);
 
-        // Blackscreen ausblenden
         if (blackScreen != null)
         {
             float fadeTime = 1f;
             float elapsed = 0f;
-
             while (elapsed < fadeTime)
             {
                 elapsed += Time.deltaTime;
@@ -455,20 +391,15 @@ public class Quest : MonoBehaviour
             blackScreen.gameObject.SetActive(false);
         }
 
-        // Quest abschließen
         questTMP.text = "Bridge fixed!";
-
         if (bauarbeiterAfter != null)
             bauarbeiter.dialogue = bauarbeiterAfter;
-
         if (tapeItem != null)
             tapeItem.gameObject.SetActive(false);
     }
 
-    // SEEMANN-QUEST
     private void OnSeemannTalked()
     {
-        // Wenn noch gesperrt → nur Before-Dialog
         if (!seemannQuestActive)
         {
             if (seemannBefore != null)
@@ -476,7 +407,6 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Quest aktiv, aber noch nicht gestartet → starte sie
         if (!seemannQuestStarted)
         {
             seemannQuestStarted = true;
@@ -484,7 +414,6 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Quest bereits gestartet, aber Map noch nicht gefunden
         if (seemannQuestStarted && !seemannQuestDone && !inventory.HasItem(ItemType.Map))
         {
             if (seemannNoItem != null)
@@ -492,14 +421,10 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Map da ist und Quest noch nicht abgeschlossen → DONE Dialog & Scene laden
         if (seemannQuestStarted && !seemannQuestDone && inventory.HasItem(ItemType.Map))
         {
-            // Zeige DONE Dialog
             if (seemannDone != null)
                 seemann.dialogue = seemannDone;
-
-            // Quest abschließen und Scene laden
             StartCoroutine(CompleteSeemannQuest());
             return;
         }
@@ -507,21 +432,12 @@ public class Quest : MonoBehaviour
 
     IEnumerator QuestSeemann()
     {
-        // Questlog aktualisieren
         questTMP.text = "Find the Map";
-
-        // Map Item aktivieren (falls noch nicht geschehen)
         if (mapItem != null && !mapItem.gameObject.activeSelf)
             mapItem.gameObject.SetActive(true);
-
         seemann.dialogue = seemannDuring;
-
-        // Auf Map warten
         yield return WaitForItem(ItemType.Map, 1, null);
-
-        // Questlog aktualisieren
         questTMP.text = "Bring the map to the sailor";
-
         if (seemannDone != null)
             seemann.dialogue = seemannDone;
     }
@@ -529,19 +445,14 @@ public class Quest : MonoBehaviour
     IEnumerator CompleteSeemannQuest()
     {
         seemannQuestDone = true;
-
-        // Warte kurz damit Dialog fertig abgespielt wird
         yield return new WaitForSeconds(1f);
-
         questTMP.text = "Setting sail...";
 
-        // Blackscreen einblenden
         if (blackScreen != null)
         {
             blackScreen.gameObject.SetActive(true);
             float fadeTime = 1f;
             float elapsed = 0f;
-
             while (elapsed < fadeTime)
             {
                 elapsed += Time.deltaTime;
@@ -551,19 +462,14 @@ public class Quest : MonoBehaviour
             blackScreen.alpha = 1f;
         }
 
-        // 3 Sekunden warten
         yield return new WaitForSeconds(3f);
-
-        // Scene laden
         SceneManager.LoadScene(tempelEingangSceneName);
     }
-
 
     IEnumerator WaitForNPC(NPCs npc)
     {
         bool talked = false;
         System.Action onTalked = () => talked = true;
-
         npc.onInteracted += onTalked;
         yield return new WaitUntil(() => talked);
         npc.onInteracted -= onTalked;
@@ -576,21 +482,15 @@ public class Quest : MonoBehaviour
         onCollected?.Invoke();
     }
 
-    // MÖWEN-QUEST
     private void OnMoeweTalked()
     {
-        // Wenn Quest noch nicht gestartet → starte sie mit Before-Dialog
         if (!moeweQuestStarted)
         {
             moeweQuestStarted = true;
-
-            // Before-Dialog läuft bereits (ist schon gesetzt in Start())
-            // Quest starten, aber Dialog bleibt auf Before
             StartCoroutine(QuestMoewe());
             return;
         }
 
-        // Wenn Quest läuft aber noch nicht alle Eier gesammelt
         if (moeweQuestStarted && !moeweQuestDone)
         {
             if (moeweNotAllEggs != null)
@@ -598,18 +498,14 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn alle Eier gesammelt und Belohnung noch nicht gegeben → Complete Dialog & Belohnung
         if (moeweQuestDone && !moeweRewardGiven && collectedEggs >= 8)
         {
             if (moeweEggsComplete != null)
                 moewe.dialogue = moeweEggsComplete;
-
-            // Reward Objects aktivieren
             StartCoroutine(CompleteMoeweQuest());
             return;
         }
 
-        // Wenn Belohnung schon gegeben → After Dialog (immer wieder)
         if (moeweRewardGiven)
         {
             if (moeweAfter != null)
@@ -619,13 +515,8 @@ public class Quest : MonoBehaviour
 
     IEnumerator QuestMoewe()
     {
-        // Warte kurz, damit Before-Dialog erst abgespielt wird
         yield return new WaitForSeconds(0.1f);
-
-        // Questlog aktualisieren
         questTMP.text = "Collect all eggs (0/8)";
-
-        // Alle Eier aktivieren
         if (eier != null)
         {
             foreach (var ei in eier)
@@ -634,19 +525,15 @@ public class Quest : MonoBehaviour
                     ei.gameObject.SetActive(true);
             }
         }
-
-        // JETZT auf During-Dialog wechseln (für nächstes Gespräch)
         if (moeweDuring != null)
             moewe.dialogue = moeweDuring;
     }
 
     IEnumerator CompleteMoeweQuest()
     {
-        // Nur einmal ausführen
         if (rewardObjects == null || rewardObjects.Length == 0)
             yield break;
 
-        // Prüfe ob schon aktiviert
         bool alreadyActivated = true;
         foreach (var obj in rewardObjects)
         {
@@ -660,10 +547,7 @@ public class Quest : MonoBehaviour
         if (alreadyActivated)
             yield break;
 
-        // Warte kurz
         yield return new WaitForSeconds(0.5f);
-
-        // Aktiviere Reward Objects
         foreach (var obj in rewardObjects)
         {
             if (obj != null)
@@ -671,19 +555,13 @@ public class Quest : MonoBehaviour
         }
 
         questTMP.text = "Quest complete!";
-
-        // Markiere Belohnung als gegeben
         moeweRewardGiven = true;
-
-        // Wechsel zu After-Dialog für nächstes Gespräch
         if (moeweAfter != null)
             moewe.dialogue = moeweAfter;
     }
 
-    // SCHAF/MARCO-QUEST
     private void OnSchafTalked()
     {
-        // Wenn noch gesperrt
         if (!schafQuestActive)
         {
             if (schafBefore != null)
@@ -691,18 +569,13 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Quest noch nicht gestartet → starte sie mit Before-Dialog
         if (!schafQuestStarted)
         {
             schafQuestStarted = true;
-
-            // Before-Dialog läuft bereits (ist schon gesetzt in Start())
-            // Quest starten, aber Dialog bleibt auf Before
             StartCoroutine(QuestSchaf());
             return;
         }
 
-        // Wenn Quest läuft → zeige aktuelle Frage
         if (schafQuestStarted && !schafQuestDone)
         {
             if (correctAnswers < schafQuestions.Length)
@@ -710,14 +583,13 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Quest fertig
-        if (schafQuestDone)
+        if (schafQuestDone && !opossumQuestDone)
         {
             if (schafComplete != null)
                 schaf.dialogue = schafComplete;
+            return;
         }
 
-        // Nach Opossum-Quest → Wald-Quest Dialog
         if (opossumQuestDone && waldQuestActive)
         {
             if (zumWald != null)
@@ -727,20 +599,13 @@ public class Quest : MonoBehaviour
 
     IEnumerator QuestSchaf()
     {
-        // Warte kurz, damit Before-Dialog erst abgespielt wird
         yield return new WaitForSeconds(0.1f);
-
-        // Questlog aktualisieren
         questTMP.text = "Answer Marco's three questions";
-
         correctAnswers = 0;
-
-        // Erste Frage als Dialog für nächstes Gespräch vorbereiten
         if (schafQuestions != null && schafQuestions.Length > 0)
             schaf.dialogue = schafQuestions[0];
     }
 
-    // Diese Methode wird vom DialogueScreen aufgerufen wenn eine Antwort gewählt wird
     public void OnAnswerSelected(bool isCorrect)
     {
         if (!schafQuestStarted || schafQuestDone)
@@ -751,32 +616,25 @@ public class Quest : MonoBehaviour
             correctAnswers++;
             questTMP.text = $"Answer Marco's three questions ({correctAnswers}/3)";
 
-            // Alle Fragen richtig beantwortet?
             if (correctAnswers >= 3)
             {
                 schafQuestDone = true;
                 questTMP.text = "Quest complete!";
-
                 if (schafComplete != null)
                     schaf.dialogue = schafComplete;
             }
             else
             {
-                // Nächste Frage
                 if (correctAnswers < schafQuestions.Length)
                     schaf.dialogue = schafQuestions[correctAnswers];
             }
         }
         else
         {
-            // Falsche Antwort → Reset
             correctAnswers = 0;
             questTMP.text = "Wrong answer! Starting over...";
-
             if (schafWrongAnswer != null)
                 schaf.dialogue = schafWrongAnswer;
-
-            // Nach kurzer Zeit wieder zur ersten Frage
             StartCoroutine(ResetSchafQuest());
         }
     }
@@ -784,17 +642,13 @@ public class Quest : MonoBehaviour
     IEnumerator ResetSchafQuest()
     {
         yield return new WaitForSeconds(2f);
-
         questTMP.text = "Answer Marco's three questions";
-
         if (schafQuestions != null && schafQuestions.Length > 0)
             schaf.dialogue = schafQuestions[0];
     }
 
-    // OPOSSUM VERSTECKSPIEL-QUEST
     private void OnOpossumTalked()
     {
-        // Wenn noch gesperrt (Schaf-Quest nicht fertig)
         if (!opossumQuestActive)
         {
             if (opossumBefore != null)
@@ -802,7 +656,6 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Quest noch nicht gestartet → starte Versteckspiel
         if (!opossumQuestStarted)
         {
             opossumQuestStarted = true;
@@ -810,7 +663,6 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Wenn Opossum sich versteckt hat und gefunden wurde
         if (opossumIsHiding && opossumQuestStarted && !opossumQuestDone)
         {
             opossumQuestDone = true;
@@ -818,7 +670,6 @@ public class Quest : MonoBehaviour
             return;
         }
 
-        // Nach Quest abgeschlossen → Wald-Quest Dialog
         if (opossumQuestDone && waldQuestActive)
         {
             if (zumWald != null)
@@ -828,22 +679,15 @@ public class Quest : MonoBehaviour
 
     IEnumerator QuestOpossum()
     {
-        // Warte kurz, damit Start-Dialog erst abgespielt wird
         yield return new WaitForSeconds(0.1f);
-
-        // Questlog aktualisieren
         questTMP.text = "Find the hiding opossum";
-
-        // Warte bis Dialog zu Ende ist (z.B. 3 Sekunden für Dialog)
         yield return new WaitForSeconds(3f);
 
-        // Blackscreen einblenden
         if (blackScreen != null)
         {
             blackScreen.gameObject.SetActive(true);
             float fadeTime = 1f;
             float elapsed = 0f;
-
             while (elapsed < fadeTime)
             {
                 elapsed += Time.deltaTime;
@@ -853,26 +697,20 @@ public class Quest : MonoBehaviour
             blackScreen.alpha = 1f;
         }
 
-        // 3 Sekunden warten (vorher 5)
         yield return new WaitForSeconds(3f);
 
-        // Opossum zum Versteck teleportieren
         if (opossum != null && opossumVersteckPosition != null)
         {
             opossum.transform.position = opossumVersteckPosition.position;
             opossumIsHiding = true;
-
-            // Dialog für "gefunden" vorbereiten
             if (opossumFound != null)
                 opossum.dialogue = opossumFound;
         }
 
-        // Blackscreen ausblenden
         if (blackScreen != null)
         {
             float fadeTime = 1f;
             float elapsed = 0f;
-
             while (elapsed < fadeTime)
             {
                 elapsed += Time.deltaTime;
@@ -886,19 +724,14 @@ public class Quest : MonoBehaviour
 
     IEnumerator CompleteOpossumQuest()
     {
-        // Questlog aktualisieren
         questTMP.text = "You found the opossum!";
-
-        // Warte kurz
         yield return new WaitForSeconds(2f);
 
-        // Blackscreen einblenden
         if (blackScreen != null)
         {
             blackScreen.gameObject.SetActive(true);
             float fadeTime = 1f;
             float elapsed = 0f;
-
             while (elapsed < fadeTime)
             {
                 elapsed += Time.deltaTime;
@@ -908,10 +741,8 @@ public class Quest : MonoBehaviour
             blackScreen.alpha = 1f;
         }
 
-        // 2 Sekunden warten
         yield return new WaitForSeconds(2f);
 
-        // Player zum Spielplatz teleportieren
         if (playerSpawnPosition != null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -919,19 +750,16 @@ public class Quest : MonoBehaviour
                 player.transform.position = playerSpawnPosition.position;
         }
 
-        // Opossum zurück zum Spielplatz
         if (opossum != null && playerSpawnPosition != null)
         {
             opossum.transform.position = playerSpawnPosition.position;
             opossumIsHiding = false;
         }
 
-        // Blackscreen ausblenden
         if (blackScreen != null)
         {
             float fadeTime = 1f;
             float elapsed = 0f;
-
             while (elapsed < fadeTime)
             {
                 elapsed += Time.deltaTime;
@@ -943,27 +771,19 @@ public class Quest : MonoBehaviour
         }
 
         questTMP.text = "Quest complete!";
-
-        // ===============================
-        // WALD-QUEST STARTEN
-        // ===============================
         waldQuestActive = true;
 
         if (questTMP != null)
             questTMP.text = "Explore the forest";
 
-        // NPCs bekommen Wald-Dialog
         if (zumWald != null)
         {
             if (schaf != null)
                 schaf.dialogue = zumWald;
-
             if (opossum != null)
                 opossum.dialogue = zumWald;
         }
 
-
-        // NPCs nach Opossum-Quest ausblenden
         if (npcsToDisableAfterOpossum != null)
         {
             foreach (var npc in npcsToDisableAfterOpossum)
@@ -973,5 +793,37 @@ public class Quest : MonoBehaviour
             }
         }
 
+        if (waldEingang != null)
+            waldEingang.SetActive(true);
+    }
+
+    private void OnWaldEingangInteracted()
+    {
+        if (!waldQuestActive)
+            return;
+
+        StartCoroutine(EnterWald());
+    }
+
+    IEnumerator EnterWald()
+    {
+        questTMP.text = "Entering the forest...";
+
+        if (blackScreen != null)
+        {
+            blackScreen.gameObject.SetActive(true);
+            float fadeTime = 1f;
+            float elapsed = 0f;
+            while (elapsed < fadeTime)
+            {
+                elapsed += Time.deltaTime;
+                blackScreen.alpha = Mathf.Lerp(0f, 1f, elapsed / fadeTime);
+                yield return null;
+            }
+            blackScreen.alpha = 1f;
+        }
+
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(waldSceneName);
     }
 }

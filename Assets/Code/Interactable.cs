@@ -19,7 +19,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-        //Debug.Log("Interacted with " + gameObject);
+        Debug.Log("Interacted with " + gameObject);
         onInteracted?.Invoke(); //? ist ein null check, wie if(onInteracted != null)
     }
 }
