@@ -39,7 +39,9 @@ public class DialogueScreen : MonoBehaviour
     public PlayerInput input;
 
     [Header("Quest Manager")]
-    public Quest questManager;
+    public MonoBehaviour questManager;
+    private IQuestManager quest;
+
 
     [Header("Player Name")]
     public string playerName = "PaoPao";
@@ -50,10 +52,16 @@ public class DialogueScreen : MonoBehaviour
 
     private Coroutine portraitPulseRoutine;
 
-    void Start()
+    void Awake()
     {
-        panel.SetActive(false);
+        quest = questManager as IQuestManager;
+
+        if (quest == null)
+        {
+            Debug.LogError("DialogueScreen: QuestManager implements kein IQuestManager!");
+        }
     }
+
 
     public void ShowDialogue(DialogueLine dialogue, string npcFallbackName)
     {
@@ -139,9 +147,8 @@ public class DialogueScreen : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(continueButton);
         }
 
-        // =========================
-        // INPUT & CAMERA
-        // =========================
+       
+        // INPUT & CAMERA 
         input.SwitchCurrentActionMap("UI");
         cinemachineController.enabled = false;
         panel.SetActive(true);
@@ -160,7 +167,7 @@ public class DialogueScreen : MonoBehaviour
 
         if (questManager != null)
         {
-            questManager.OnAnswerSelected(currentLine.choices[index].isCorrect);
+            quest.OnAnswerSelected(currentLine.choices[index].isCorrect);
         }
 
         if (currentLine.choices[index].nextLine != null)

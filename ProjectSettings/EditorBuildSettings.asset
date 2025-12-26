@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Haus.unity
     guid: 4c02a54cc125e614f90c6c4cc246f228
   - enabled: 1
+    path: Assets/Scenes/Prophecy.unity
+    guid: e8766374ac14769479aa59f2559472ca
+  - enabled: 1
+    path: Assets/Scenes/MainAfter.unity
+    guid: 939b2732abb5c9547abda361bea3e5a9
+  - enabled: 1
     path: Assets/Scenes/Tempeleingang.unity
     guid: e882f43478e10d547b2e98c1b327d623
   - enabled: 1

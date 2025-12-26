@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class QuestHaus : MonoBehaviour
+public class QuestHaus : MonoBehaviour, IQuestManager
+
 {
     [Header("UI")]
     public DialogueScreen dialogueScreen;
@@ -24,7 +25,7 @@ public class QuestHaus : MonoBehaviour
     public DialogueLine hausComplete;
 
     [Header("Scene Management")]
-    public string mainSceneName = "Main";
+    public string mainSceneName = "Prophecy";
     public Vector3 spawnPositionInMain; // Wo Player in Main spawnen soll
 
     private bool hausQuestStarted = false;

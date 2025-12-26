@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class Quest : MonoBehaviour
+public class Quest : MonoBehaviour, IQuestManager
+
 {
     [Header("UI")]
     public DialogueScreen dialogueScreen;
