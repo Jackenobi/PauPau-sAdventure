@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -20,7 +20,7 @@ public class QuestHaus : MonoBehaviour, IQuestManager
     [Header("Quest: Haus NPC")]
     public NPCs hausNPC;
     public Item mapItem; // Das Map-Item das man bekommt
-    public DialogueLine[] hausQuestions; // 3 Fragen sp�ter
+    public DialogueLine[] hausQuestions; // 3 Fragen später
     public DialogueLine hausWrongAnswer;
     public DialogueLine hausComplete;
 
@@ -118,7 +118,7 @@ public class QuestHaus : MonoBehaviour, IQuestManager
                 if (hausComplete != null)
                     hausNPC.dialogue = hausComplete;
 
-                // Nach kurzer Zeit zur�ck zur Main Scene
+                // Nach kurzer Zeit zurück zur Main Scene
                 StartCoroutine(ReturnToMain());
             }
             else
@@ -178,4 +178,23 @@ public class QuestHaus : MonoBehaviour, IQuestManager
 
         SceneManager.LoadScene(mainSceneName);
     }
+    // =======================
+    // IQuestManager Pflichtmethoden
+    // =======================
+
+    public void StartQuest(string questId)
+    {
+        // Dieses Quest startet NICHT über ID → absichtlich leer
+    }
+
+    public void UpdateQuestProgress(string questId, int current, int total)
+    {
+        // Wird hier nicht benutzt
+    }
+
+    public void CompleteQuest(string questId)
+    {
+        // Wird hier nicht benutzt
+    }
+
 }

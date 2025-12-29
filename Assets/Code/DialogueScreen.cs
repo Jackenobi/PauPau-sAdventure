@@ -87,7 +87,7 @@ public class DialogueScreen : MonoBehaviour
         playerPortrait.gameObject.SetActive(false);
 
         // =========================
-        // PLAYER → RECHTS
+        // PLAYER  RECHTS
         // =========================
         if (isPlayer)
         {
@@ -103,7 +103,7 @@ public class DialogueScreen : MonoBehaviour
             }
         }
         // =========================
-        // NPC → LINKS
+        // NPC  LINKS
         // =========================
         else
         {

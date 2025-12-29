@@ -827,4 +827,8 @@ public class Quest : MonoBehaviour, IQuestManager
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(waldSceneName);
     }
+    public void StartQuest(string questId) { }
+    public void UpdateQuestProgress(string questId, int current, int total) { }
+    public void CompleteQuest(string questId) { }
+
 }
