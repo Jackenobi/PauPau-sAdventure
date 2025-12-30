@@ -2152,8 +2152,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questScreen: {fileID: 161123911}
   questDisplayPrefab: {fileID: 763360668861488951, guid: 898cbe3d4cc95fc4a8540852ec3d6e70, type: 3}
+  blackScreen: {fileID: 568146604}
   puzzleManager: {fileID: 1407965349}
+  doorAnimator: {fileID: 0}
+  doorOpenTrigger: Open
+  doorOpenSound: {fileID: 0}
+  audioSource: {fileID: 0}
   nextSceneName: Outro
+--- !u!225 &568146604 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 9133507959203089449, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+  m_PrefabInstance: {fileID: 161123910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &587802111
 GameObject:
   m_ObjectHideFlags: 0
@@ -5687,8 +5697,10 @@ MonoBehaviour:
   - {fileID: 107642946}
   - {fileID: 330637771}
   - {fileID: 2023663453}
-  lightDelay: 0.6
+  lightDelay: 1.2
   nextSceneName: 
+  errorMaterial: {fileID: 2100000, guid: 2179d66463b2ccc4cb4893716a579299, type: 2}
+  errorSound: {fileID: 0}
 --- !u!1001 &1612497532
 PrefabInstance:
   m_ObjectHideFlags: 0

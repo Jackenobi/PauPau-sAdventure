@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class PuzzleButton : MonoBehaviour
+public class PuzzleButton : Interactable
 {
     public int buttonIndex;
     public bool isFloorButton;
-
     public Material baseMaterial;
     public Material glowMaterial;
-
     public AudioSource audioSource;
 
     private MeshRenderer rend;
@@ -29,17 +27,39 @@ public class PuzzleButton : MonoBehaviour
     IEnumerator LightRoutine()
     {
         rend.material = glowMaterial;
-        audioSource.Play();
-        yield return new WaitForSeconds(0.4f);
+        if (audioSource != null)
+            audioSource.Play();
+        yield return new WaitForSeconds(0.5f); // Etwas länger
         rend.material = baseMaterial;
     }
 
-    private void OnMouseDown()
+    // NEU: Fehler-Anzeige
+    public void ShowError(Material errorMat, AudioClip errorClip)
     {
+        StartCoroutine(ErrorRoutine(errorMat, errorClip));
+    }
+
+    IEnumerator ErrorRoutine(Material errorMat, AudioClip errorClip)
+    {
+        rend.material = errorMat;
+
+        if (audioSource != null && errorClip != null)
+            audioSource.PlayOneShot(errorClip);
+
+        yield return new WaitForSeconds(0.5f);
+        rend.material = baseMaterial;
+    }
+
+    public override void Interact()
+    {
+        base.Interact();
+
         if (!isFloorButton)
             return;
 
         LightUp();
-        manager.PlayerPressedButton(this);
+
+        if (manager != null)
+            manager.PlayerPressedButton(this);
     }
 }
