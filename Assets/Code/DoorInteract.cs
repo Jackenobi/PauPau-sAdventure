@@ -1,16 +1,12 @@
 using UnityEngine;
 
-public class DoorInteract : MonoBehaviour
+public class DoorInteract : Interactable
 {
-    public SimonPuzzleManager puzzleManager;
-    private bool started = false;
+    public FinalQuestSimon quest;
 
-    public void Interact()
+    public override void Interact()
     {
-        if (started)
-            return;
-
-        started = true;
-        puzzleManager.StartPuzzle();
+        base.Interact();
+        quest.StartQuest();
     }
 }

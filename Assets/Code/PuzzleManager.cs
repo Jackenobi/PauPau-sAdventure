@@ -18,8 +18,12 @@ public class SimonPuzzleManager : MonoBehaviour
     private int[] rounds = { 3, 5, 8 };
     private bool playerCanInput = false;
 
-    public void StartPuzzle()
+    private FinalQuestSimon quest;
+
+    // 🔹 NUR diese Methode benutzen!
+    public void StartPuzzle(FinalQuestSimon q)
     {
+        quest = q;
         round = 0;
         StartCoroutine(StartRound());
     }
@@ -54,7 +58,7 @@ public class SimonPuzzleManager : MonoBehaviour
         if (button.buttonIndex != sequence[inputIndex])
         {
             // ❌ Fehler → Neustart
-            StartPuzzle();
+            StartPuzzle(quest);
             return;
         }
 
@@ -66,10 +70,11 @@ public class SimonPuzzleManager : MonoBehaviour
 
             if (round >= rounds.Length)
             {
-                SceneManager.LoadScene(nextSceneName);
+                quest.OnPuzzleCompleted();
             }
             else
             {
+                quest.OnRoundCompleted(round);
                 StartCoroutine(StartRound());
             }
         }
