@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//alles womit man interagieren kann
 public class Interactable : MonoBehaviour
 {
 

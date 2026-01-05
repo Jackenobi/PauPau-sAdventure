@@ -18,7 +18,6 @@ public class pausemenu : MonoBehaviour
 
     public PlayerInput input;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         input.actions.FindActionMap("Player").FindAction("Pause").performed += TogglePause;

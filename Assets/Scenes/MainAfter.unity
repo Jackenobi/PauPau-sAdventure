@@ -8196,11 +8196,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1261716352
-      Data2: 1180250900
-      Data3: 115358619
-      Data4: 348650675
-    Path: event:/ATMOS/ATMO_Jungle
+      Data1: 367112436
+      Data2: 1295630429
+      Data3: -537642091
+      Data4: -406811281
+    Path: event:/ATMOS/ATMO_Ocean
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -45835,6 +45835,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2199979129746516215, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5740834400035854311, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: interactHint
       value: 
@@ -45843,9 +45847,17 @@ PrefabInstance:
       propertyPath: referenceCamera
       value: 
       objectReference: {fileID: 330585546}
+    - target: {fileID: 7119868414611452632, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7731025824447697633, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320261930789403097, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

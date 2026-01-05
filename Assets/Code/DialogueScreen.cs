@@ -68,9 +68,7 @@ public class DialogueScreen : MonoBehaviour
         currentLine = dialogue;
         bool isPlayer = dialogue.player;
 
-        // =========================
-        // SPRECHERNAME AUFLÖSEN
-        // =========================
+
         string resolvedSpeakerName =
             !string.IsNullOrWhiteSpace(dialogue.speakerName)
                 ? dialogue.speakerName
@@ -78,17 +76,15 @@ public class DialogueScreen : MonoBehaviour
 
         currentSpeaker = resolvedSpeakerName;
 
-        // =========================
+
         // RESET UI
-        // =========================
         leftContainer.SetActive(false);
         rightContainer.SetActive(false);
         npcPortrait.gameObject.SetActive(false);
         playerPortrait.gameObject.SetActive(false);
 
-        // =========================
+
         // PLAYER  RECHTS
-        // =========================
         if (isPlayer)
         {
             rightContainer.SetActive(true);
@@ -102,9 +98,8 @@ public class DialogueScreen : MonoBehaviour
                 PulsePortrait(playerPortrait);
             }
         }
-        // =========================
+
         // NPC  LINKS
-        // =========================
         else
         {
             leftContainer.SetActive(true);
@@ -119,9 +114,8 @@ public class DialogueScreen : MonoBehaviour
             }
         }
 
-        // =========================
-        // CHOICES / CONTINUE
-        // =========================
+
+        // CHOICES  CONTINUE
         bool hasChoices = dialogue.choices != null && dialogue.choices.Length > 0;
 
         // Alles aus
@@ -192,9 +186,8 @@ public class DialogueScreen : MonoBehaviour
         }
     }
 
-    // =========================
+
     // PORTRAIT PULSE
-    // =========================
     void PulsePortrait(Image portrait)
     {
         if (portraitPulseRoutine != null)

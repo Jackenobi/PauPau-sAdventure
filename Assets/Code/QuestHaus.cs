@@ -35,13 +35,13 @@ public class QuestHaus : MonoBehaviour, IQuestManager
 
     void Start()
     {
-        // Eingangs-Sound abspielen
+        // EingangsSound
         if (hausAudioSource != null && hausEntrySound != null)
         {
             hausAudioSource.PlayOneShot(hausEntrySound);
         }
 
-        // NPC registrieren
+        // NPC
         if (hausNPC != null)
         {
             hausNPC.onInteracted += OnHausNPCTalked;
@@ -54,7 +54,7 @@ public class QuestHaus : MonoBehaviour, IQuestManager
             blackScreen.gameObject.SetActive(false);
         }
 
-        // Map Item verstecken
+        // Map Item verstecken aber brauch ich nicht mehr.egal
         if (mapItem != null)
             mapItem.gameObject.SetActive(false);
     }
@@ -111,7 +111,7 @@ public class QuestHaus : MonoBehaviour, IQuestManager
                 hausQuestDone = true;
                 questTMP.text = "Quest complete!";
 
-                // Map Item spawnen
+                // Map Item fällt weg eig.
                 if (mapItem != null)
                     mapItem.gameObject.SetActive(true);
 
@@ -178,13 +178,12 @@ public class QuestHaus : MonoBehaviour, IQuestManager
 
         SceneManager.LoadScene(mainSceneName);
     }
-    // =======================
-    // IQuestManager Pflichtmethoden
-    // =======================
+
+    // IQuestManager 
 
     public void StartQuest(string questId)
     {
-        // Dieses Quest startet NICHT über ID → absichtlich leer
+        //Quest startet NICHT über ID absichtlich leer
     }
 
     public void UpdateQuestProgress(string questId, int current, int total)

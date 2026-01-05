@@ -37,7 +37,7 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
         if (sailorNPC != null)
         {
             sailorNPC.onInteracted += OnSailorTalked;
-            sailorNPC.dialogue = sailorIntro; // 🔑 GANZ WICHTIG
+            sailorNPC.dialogue = sailorIntro; 
         }
 
         if (blackScreen != null)
@@ -46,7 +46,7 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
             blackScreen.gameObject.SetActive(false);
         }
 
-        // Quest-UI sofort anzeigen
+        // QuestUI
         GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
         questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
         questTMP.text = "Talk to the sailor at the beach";
@@ -54,7 +54,7 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
 
     private void OnSailorTalked()
     {
-        // 1️⃣ Intro-Dialog
+        //IntroDialog
         if (!introShown)
         {
             introShown = true;
@@ -62,7 +62,7 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
             return;
         }
 
-        // 2️⃣ Frage starten
+        //Frage starten
         if (!questStarted)
         {
             questStarted = true;
@@ -71,14 +71,13 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
             return;
         }
 
-        // 3️⃣ Nach Abschluss
+        //Nach Abschluss
         if (questCompleted && sailorComplete != null)
         {
             sailorNPC.dialogue = sailorComplete;
         }
     }
 
-    //  Wird AUTOMATISCH vom DialogueScreen aufgerufen
     public void OnAnswerSelected(bool isCorrect)
     {
         if (!questStarted || questCompleted)
@@ -96,7 +95,7 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
         }
         else
         {
-            // falsche Antwort → Frage erneut
+            // falsche Antwort , Frage erneut
             questTMP.text = "Wrong answer. Try again.";
             sailorNPC.dialogue = sailorQuestion;
         }

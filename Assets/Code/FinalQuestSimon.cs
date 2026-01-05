@@ -43,7 +43,7 @@ public class FinalQuestSimon : MonoBehaviour, IQuestManager
         questTMP.text = $"Door Puzzle (Round {round + 1} / 3)";
     }
 
-    // NEU: Fehler-Reset
+    //Fehler-Reset
     public void OnRoundReset(int round)
     {
         questTMP.text = $"Wrong! Try again - Round {round + 1} / 3";

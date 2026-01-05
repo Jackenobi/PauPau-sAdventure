@@ -29,11 +29,11 @@ public class PuzzleButton : Interactable
         rend.material = glowMaterial;
         if (audioSource != null)
             audioSource.Play();
-        yield return new WaitForSeconds(0.5f); // Etwas länger
+        yield return new WaitForSeconds(0.5f);
         rend.material = baseMaterial;
     }
 
-    // NEU: Fehler-Anzeige
+    //FehlerAnzeige
     public void ShowError(Material errorMat, AudioClip errorClip)
     {
         StartCoroutine(ErrorRoutine(errorMat, errorClip));

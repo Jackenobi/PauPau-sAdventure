@@ -6,12 +6,12 @@ public class SimonPuzzleManager : MonoBehaviour
 {
     public List<PuzzleButton> doorButtons;
     public List<PuzzleButton> floorButtons;
-    public float lightDelay = 1.2f; // Langsamer (vorher 0.6f)
+    public float lightDelay = 1.2f;
     public string nextSceneName;
 
     [Header("Error Feedback")]
-    public Material errorMaterial; // Rotes Material für Fehler
-    public AudioClip errorSound; // Fehler-Sound
+    public Material errorMaterial;
+    public AudioClip errorSound;
 
     private List<int> sequence = new List<int>();
     private int inputIndex = 0;
@@ -55,7 +55,7 @@ public class SimonPuzzleManager : MonoBehaviour
 
         if (button.buttonIndex != sequence[inputIndex])
         {
-            // ❌ FEHLER!
+            //FEHLER
             StartCoroutine(ShowError());
             return;
         }
@@ -82,7 +82,7 @@ public class SimonPuzzleManager : MonoBehaviour
     {
         playerCanInput = false;
 
-        // Alle Tür-Buttons rot aufleuchten
+        //TürButtons rot
         foreach (var btn in doorButtons)
         {
             btn.ShowError(errorMaterial, errorSound);
@@ -90,7 +90,7 @@ public class SimonPuzzleManager : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
 
-        // Von vorne starten (gleiche Runde!)
+        //Von vorne starten
         quest.OnRoundReset(round);
         StartCoroutine(StartRound());
     }

@@ -1,4 +1,4 @@
-public interface IQuestManager
+public interface IQuestManager//damit neues quest script geht irgendwie
 {
     void OnAnswerSelected(bool isCorrect);
 

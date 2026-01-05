@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour
     {
         int count = 0;
 
-        //items.Count -> Länge der Liste
+        //items.Count Länge der Liste
         for (int i = 0; i < items.Count; i++)
         {
             if (items[i] == type)

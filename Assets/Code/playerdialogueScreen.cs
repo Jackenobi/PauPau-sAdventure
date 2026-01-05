@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
+//Kp ob ich den noch brauche?
 public class playerdialogueScreen : MonoBehaviour
 {
     private DialogueLine currentLine;
