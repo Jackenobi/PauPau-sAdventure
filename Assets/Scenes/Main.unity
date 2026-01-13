@@ -48627,27 +48627,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: footstepReference.Path
-      value: event:/SFX/SFX_FootSteps
+      value: event:/SFX/SFX_FootSteps 2
       objectReference: {fileID: 0}
     - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: groundMaterialLayer.m_Bits
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: footstepReference.Guid.Data1
-      value: -24846201
+      value: -1274797683
       objectReference: {fileID: 0}
     - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: footstepReference.Guid.Data2
-      value: 1179504778
+      value: 1216668444
       objectReference: {fileID: 0}
     - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: footstepReference.Guid.Data3
-      value: -1832918646
+      value: 1670787713
       objectReference: {fileID: 0}
     - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: footstepReference.Guid.Data4
-      value: 108025388
+      value: -2070595082
       objectReference: {fileID: 0}
     - target: {fileID: 1506290036143713492, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48688,10 +48688,6 @@ PrefabInstance:
     - target: {fileID: 1506290036143713492, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5740834400035854311, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
-      propertyPath: pickupAudio
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5740834400035854311, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: interactHint
@@ -49073,6 +49069,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1716997458}
+    - target: {fileID: 5839076179236007815, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839076179236007815, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+      propertyPath: m_TagString
+      value: Stadt
+      objectReference: {fileID: 0}
     - target: {fileID: 5960339300873832408, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -49081,6 +49085,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1716997458}
+    - target: {fileID: 6145051871383287774, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145051871383287774, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+      propertyPath: m_TagString
+      value: Sand
+      objectReference: {fileID: 0}
     - target: {fileID: 6202208076420273393, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -49100,6 +49112,22 @@ PrefabInstance:
     - target: {fileID: 6424559242421554535, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
       propertyPath: m_VersionIndex
       value: 383
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631554833085967165, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631554833085967165, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+      propertyPath: m_TagString
+      value: Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 6692235148673228304, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6692235148673228304, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+      propertyPath: m_TagString
+      value: Stadt
       objectReference: {fileID: 0}
     - target: {fileID: 7150097388500869971, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
       propertyPath: m_Mesh

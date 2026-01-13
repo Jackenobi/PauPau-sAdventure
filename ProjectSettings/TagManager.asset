@@ -5,11 +5,14 @@ TagManager:
   serializedVersion: 3
   tags:
   - "tags f\xFCr untergr\xFCnde"
+  - Sand
+  - Stadt
+  - Forest
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - boden
   - Water
   - UI
   - 

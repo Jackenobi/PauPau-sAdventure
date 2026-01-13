@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7731025824447697633}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.9834198, z: -0, w: -0.18134385}
+  m_LocalRotation: {x: -0, y: -0.9834199, z: 0, w: -0.18134303}
   m_LocalPosition: {x: 45.390423, y: -0.5799999, z: 246.2866}
   m_LocalScale: {x: 0.72102547, y: 0.80281943, z: 0.67667437}
   m_ConstrainProportionsScale: 0
@@ -133,6 +133,13 @@ MonoBehaviour:
   referenceCamera: {fileID: 0}
   interactable: {fileID: 0}
   interactHint: {fileID: 0}
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1001 &1342086621192552275
 PrefabInstance:
   m_ObjectHideFlags: 0
