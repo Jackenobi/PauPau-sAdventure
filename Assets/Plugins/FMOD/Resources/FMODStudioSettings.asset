@@ -403,8 +403,14 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - ATMO
+  - Dialogue
+  - Musik
+  - SFX
+  - UI
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

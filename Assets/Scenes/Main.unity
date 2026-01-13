@@ -493,14 +493,234 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 485542873248379418, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 485542873248379418, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 967369467
+      objectReference: {fileID: 0}
+    - target: {fileID: 485542873248379418, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1327852351
+      objectReference: {fileID: 0}
+    - target: {fileID: 485542873248379418, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1859784087
+      objectReference: {fileID: 0}
+    - target: {fileID: 485542873248379418, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1143158140
+      objectReference: {fileID: 0}
+    - target: {fileID: 879135702153018507, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 879135702153018507, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 967369467
+      objectReference: {fileID: 0}
+    - target: {fileID: 879135702153018507, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1327852351
+      objectReference: {fileID: 0}
+    - target: {fileID: 879135702153018507, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1859784087
+      objectReference: {fileID: 0}
+    - target: {fileID: 879135702153018507, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1143158140
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
       propertyPath: m_Name
       value: Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145507015984161113, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145507015984161113, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 967369467
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145507015984161113, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1327852351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145507015984161113, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1859784087
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145507015984161113, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1143158140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405736714565661227, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405736714565661227, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 967369467
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405736714565661227, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1327852351
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405736714565661227, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1859784087
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405736714565661227, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1143158140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681646163719397680, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681646163719397680, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681646163719397680, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681646163719397680, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681646163719397680, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 3557923728979213138, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 3557923728979213138, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 967369467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3557923728979213138, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1327852351
+      objectReference: {fileID: 0}
+    - target: {fileID: 3557923728979213138, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1859784087
+      objectReference: {fileID: 0}
+    - target: {fileID: 3557923728979213138, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1143158140
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662980541930888516, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662980541930888516, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 967369467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662980541930888516, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1327852351
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662980541930888516, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1859784087
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662980541930888516, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1143158140
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121354463589006376, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Opossum
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121354463589006376, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1236399753
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121354463589006376, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1232127547
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121354463589006376, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -342285937
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121354463589006376, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 499761214
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691554467089575988, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691554467089575988, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691554467089575988, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691554467089575988, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691554467089575988, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
       objectReference: {fileID: 0}
     - target: {fileID: 7741490452856731457, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 8415035166416224392, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415035166416224392, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 967369467
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415035166416224392, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1327852351
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415035166416224392, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1859784087
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415035166416224392, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1143158140
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510139899058725603, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510139899058725603, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 967369467
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510139899058725603, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1327852351
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510139899058725603, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1859784087
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510139899058725603, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1143158140
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1767,14 +1987,194 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 618579826659178386, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Opossum
+      objectReference: {fileID: 0}
+    - target: {fileID: 618579826659178386, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1236399753
+      objectReference: {fileID: 0}
+    - target: {fileID: 618579826659178386, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1232127547
+      objectReference: {fileID: 0}
+    - target: {fileID: 618579826659178386, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -342285937
+      objectReference: {fileID: 0}
+    - target: {fileID: 618579826659178386, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 499761214
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
       propertyPath: m_Name
       value: opossum
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063594909170345712, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Opossum
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063594909170345712, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1236399753
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063594909170345712, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1232127547
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063594909170345712, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -342285937
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063594909170345712, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 499761214
+      objectReference: {fileID: 0}
+    - target: {fileID: 3236950836217471884, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Opossum
+      objectReference: {fileID: 0}
+    - target: {fileID: 3236950836217471884, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1236399753
+      objectReference: {fileID: 0}
+    - target: {fileID: 3236950836217471884, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1232127547
+      objectReference: {fileID: 0}
+    - target: {fileID: 3236950836217471884, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -342285937
+      objectReference: {fileID: 0}
+    - target: {fileID: 3236950836217471884, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 499761214
       objectReference: {fileID: 0}
     - target: {fileID: 3515617118618331796, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 4462814263532352351, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462814263532352351, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 967369467
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462814263532352351, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1327852351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462814263532352351, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1859784087
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462814263532352351, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1143158140
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382912076524044736, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382912076524044736, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382912076524044736, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382912076524044736, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382912076524044736, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907909692049399737, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Opossum
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907909692049399737, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1236399753
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907909692049399737, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1232127547
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907909692049399737, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -342285937
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907909692049399737, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 499761214
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612976834142039792, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Opossum
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612976834142039792, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1236399753
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612976834142039792, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1232127547
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612976834142039792, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -342285937
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612976834142039792, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 499761214
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082729296765089975, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Opossum
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082729296765089975, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1236399753
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082729296765089975, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1232127547
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082729296765089975, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -342285937
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082729296765089975, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 499761214
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849117009731545143, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849117009731545143, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849117009731545143, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849117009731545143, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849117009731545143, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2473,6 +2873,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!114 &335073076 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 618579826659178386, guid: c14bf59f306b36041a944258a51cf7af, type: 3}
@@ -3424,10 +3831,170 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mouse
       objectReference: {fileID: 0}
+    - target: {fileID: 1381263604903489530, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381263604903489530, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381263604903489530, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381263604903489530, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381263604903489530, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579974095003599840, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579974095003599840, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579974095003599840, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579974095003599840, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579974095003599840, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114077960411670613, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Maus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114077960411670613, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1828427415
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114077960411670613, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1325085541
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114077960411670613, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -625831001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114077960411670613, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1828756611
+      objectReference: {fileID: 0}
     - target: {fileID: 3472872684444578296, guid: ae3e722de5c241646a21c772385480da, type: 3}
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 4366799432121595176, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Maus
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366799432121595176, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1828427415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366799432121595176, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1325085541
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366799432121595176, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -625831001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366799432121595176, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1828756611
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403051766088452250, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Maus
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403051766088452250, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1828427415
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403051766088452250, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1325085541
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403051766088452250, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -625831001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403051766088452250, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1828756611
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017481917589586902, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017481917589586902, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017481917589586902, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017481917589586902, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017481917589586902, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950212300198528521, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Maus
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950212300198528521, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1828427415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950212300198528521, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1325085541
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950212300198528521, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -625831001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950212300198528521, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1828756611
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198484647136805508, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Maus
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198484647136805508, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1828427415
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198484647136805508, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1325085541
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198484647136805508, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -625831001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198484647136805508, guid: ae3e722de5c241646a21c772385480da, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1828756611
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4173,6 +4740,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!114 &722421425 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1145507015984161113, guid: 1b3cccd3874d6f247a7db93bc4a63d57, type: 3}
@@ -4240,6 +4814,26 @@ PrefabInstance:
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 3865646692929648944, guid: ef6c10e77325cd4498abb0b7785e120c, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Hund
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865646692929648944, guid: ef6c10e77325cd4498abb0b7785e120c, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1591509751
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865646692929648944, guid: ef6c10e77325cd4498abb0b7785e120c, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1124889620
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865646692929648944, guid: ef6c10e77325cd4498abb0b7785e120c, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -1693541724
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865646692929648944, guid: ef6c10e77325cd4498abb0b7785e120c, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -370450559
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4415,6 +5009,106 @@ PrefabInstance:
       propertyPath: m_Name
       value: Schwein
       objectReference: {fileID: 0}
+    - target: {fileID: 3661457036715483116, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661457036715483116, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661457036715483116, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661457036715483116, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661457036715483116, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537538580495002516, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schwein
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537538580495002516, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1268800327
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537538580495002516, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1172330287
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537538580495002516, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1302685334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537538580495002516, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 1935369892
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020566880222142007, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schwein
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020566880222142007, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1268800327
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020566880222142007, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1172330287
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020566880222142007, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1302685334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020566880222142007, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 1935369892
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746178024204943248, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schwein
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746178024204943248, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1268800327
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746178024204943248, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1172330287
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746178024204943248, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1302685334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746178024204943248, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 1935369892
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118131392312177700, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118131392312177700, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118131392312177700, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118131392312177700, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 8118131392312177700, guid: 8857c2e1dbefe9a48b2d2bacb3887403, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4558,6 +5252,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!1 &826328928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 865214122290705956, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
@@ -6009,7 +6710,7 @@ Transform:
   m_GameObject: {fileID: 1082929881}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.9, y: 112.87161, z: 290.81}
+  m_LocalPosition: {x: 55.24, y: 112.3, z: 289.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6102,6 +6803,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!43 &1083873699
 Mesh:
   m_ObjectHideFlags: 0
@@ -6326,14 +7034,434 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 185528522270566556, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: "event:/Dialogue/VOICE_M\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 185528522270566556, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 2062076571
+      objectReference: {fileID: 0}
+    - target: {fileID: 185528522270566556, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1187392983
+      objectReference: {fileID: 0}
+    - target: {fileID: 185528522270566556, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -80327785
+      objectReference: {fileID: 0}
+    - target: {fileID: 185528522270566556, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -952640580
+      objectReference: {fileID: 0}
+    - target: {fileID: 333095554719759089, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 333095554719759089, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 333095554719759089, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 333095554719759089, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 333095554719759089, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 879910966157330389, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Ente
+      objectReference: {fileID: 0}
+    - target: {fileID: 879910966157330389, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 151989791
+      objectReference: {fileID: 0}
+    - target: {fileID: 879910966157330389, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1267933094
+      objectReference: {fileID: 0}
+    - target: {fileID: 879910966157330389, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1438974625
+      objectReference: {fileID: 0}
+    - target: {fileID: 879910966157330389, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 1585768105
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
       propertyPath: m_Name
       value: "M\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197407083794601767, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: "event:/Dialogue/VOICE_M\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197407083794601767, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 2062076571
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197407083794601767, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1187392983
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197407083794601767, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -80327785
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197407083794601767, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -952640580
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519172110768026368, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: "event:/Dialogue/VOICE_M\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519172110768026368, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 2062076571
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519172110768026368, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1187392983
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519172110768026368, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -80327785
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519172110768026368, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -952640580
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702973919731140595, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702973919731140595, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702973919731140595, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702973919731140595, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702973919731140595, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914678266451049544, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914678266451049544, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914678266451049544, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914678266451049544, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914678266451049544, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915724687842571238, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Taube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915724687842571238, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1015842236
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915724687842571238, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1150995197
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915724687842571238, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -958950265
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915724687842571238, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -625914866
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450496502091876417, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Taube
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450496502091876417, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1015842236
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450496502091876417, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1150995197
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450496502091876417, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -958950265
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450496502091876417, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -625914866
       objectReference: {fileID: 0}
     - target: {fileID: 3683429841931999010, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 3835191957436347441, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835191957436347441, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835191957436347441, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835191957436347441, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835191957436347441, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944555790377627194, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Ente
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944555790377627194, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 151989791
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944555790377627194, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1267933094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944555790377627194, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1438974625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944555790377627194, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 1585768105
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549211946779474639, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: "event:/Dialogue/VOICE_M\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549211946779474639, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 2062076571
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549211946779474639, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1187392983
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549211946779474639, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -80327785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549211946779474639, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -952640580
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617808918793161056, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617808918793161056, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617808918793161056, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617808918793161056, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617808918793161056, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728332807760939652, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728332807760939652, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728332807760939652, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728332807760939652, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728332807760939652, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167113126808148874, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Ente
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167113126808148874, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 151989791
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167113126808148874, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1267933094
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167113126808148874, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1438974625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167113126808148874, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 1585768105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211156595436538515, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Taube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211156595436538515, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1015842236
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211156595436538515, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1150995197
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211156595436538515, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -958950265
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211156595436538515, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -625914866
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278596099902991541, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Taube
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278596099902991541, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1015842236
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278596099902991541, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1150995197
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278596099902991541, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -958950265
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278596099902991541, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -625914866
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906996700426251336, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: "event:/Dialogue/VOICE_M\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906996700426251336, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 2062076571
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906996700426251336, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1187392983
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906996700426251336, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -80327785
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906996700426251336, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -952640580
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036699807004816354, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: "event:/Dialogue/VOICE_M\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036699807004816354, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 2062076571
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036699807004816354, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1187392983
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036699807004816354, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -80327785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036699807004816354, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -952640580
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083536471983269397, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: "event:/Dialogue/VOICE_M\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083536471983269397, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 2062076571
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083536471983269397, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1187392983
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083536471983269397, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -80327785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083536471983269397, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -952640580
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854793938574945988, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Path
+      value: "event:/Dialogue/VOICE_M\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854793938574945988, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 2062076571
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854793938574945988, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1187392983
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854793938574945988, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -80327785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854793938574945988, guid: 8c41cf39544a65840a87af7ea2e78963, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -952640580
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6413,6 +7541,30 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a2fe46f68387fbf44bb2a814e08b6c5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 39765759746559534, guid: a2fe46f68387fbf44bb2a814e08b6c5a, type: 3}
+      propertyPath: text
+      value: You need a map before I can bring you somewhere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 39765759746559534, guid: a2fe46f68387fbf44bb2a814e08b6c5a, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Frosch
+      objectReference: {fileID: 0}
+    - target: {fileID: 39765759746559534, guid: a2fe46f68387fbf44bb2a814e08b6c5a, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -699503225
+      objectReference: {fileID: 0}
+    - target: {fileID: 39765759746559534, guid: a2fe46f68387fbf44bb2a814e08b6c5a, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1083683109
+      objectReference: {fileID: 0}
+    - target: {fileID: 39765759746559534, guid: a2fe46f68387fbf44bb2a814e08b6c5a, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -290244207
+      objectReference: {fileID: 0}
+    - target: {fileID: 39765759746559534, guid: a2fe46f68387fbf44bb2a814e08b6c5a, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 2142086566
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2fe46f68387fbf44bb2a814e08b6c5a, type: 3}
       propertyPath: m_Name
@@ -7208,6 +8360,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!1 &1233353726
 GameObject:
   m_ObjectHideFlags: 0
@@ -8244,9 +9403,169 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 719443202197479570, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 719443202197479570, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 719443202197479570, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 719443202197479570, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 719443202197479570, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
       propertyPath: m_Name
       value: Bauarbeiter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009513948384351088, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Katze
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009513948384351088, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1561568620
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009513948384351088, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1336824414
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009513948384351088, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 456972732
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009513948384351088, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 33080898
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306072294970984177, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306072294970984177, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306072294970984177, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306072294970984177, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306072294970984177, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837686314812630937, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Katze
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837686314812630937, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1561568620
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837686314812630937, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1336824414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837686314812630937, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 456972732
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837686314812630937, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 33080898
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978367506739536184, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Katze
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978367506739536184, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1561568620
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978367506739536184, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1336824414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978367506739536184, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 456972732
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978367506739536184, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 33080898
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666974478791476575, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Katze
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666974478791476575, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1561568620
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666974478791476575, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1336824414
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666974478791476575, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 456972732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666974478791476575, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 33080898
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773534468587215155, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Katze
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773534468587215155, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1561568620
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773534468587215155, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1336824414
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773534468587215155, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 456972732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773534468587215155, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 33080898
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031673697885609917, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Katze
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031673697885609917, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1561568620
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031673697885609917, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1336824414
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031673697885609917, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 456972732
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031673697885609917, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 33080898
       objectReference: {fileID: 0}
     - target: {fileID: 9186422244000756009, guid: 6c330ca28a885064db00894ac06477c9, type: 3}
       propertyPath: dialogueScreen
@@ -8887,6 +10206,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!43 &1560703088
 Mesh:
   m_ObjectHideFlags: 0
@@ -9223,6 +10549,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1630097562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8096876224317971071, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+  m_PrefabInstance: {fileID: 8912884820792353294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1630097566
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630097562}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2361792123923386051, guid: 21ba6ae59e1c2e345a2b5ff06ac33a8e, type: 3}
 --- !u!1 &1645519866
 GameObject:
   m_ObjectHideFlags: 0
@@ -9584,6 +10937,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!1 &1700873020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4723280767966646398, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
@@ -10171,6 +11531,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!135 &1792291651
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10453,6 +11820,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &1872451141
 GameObject:
   m_ObjectHideFlags: 0
@@ -46626,6 +48000,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!1 &2116706079
 GameObject:
   m_ObjectHideFlags: 0
@@ -47029,6 +48410,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7779472887142871118, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8462278965381211321, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_Color.a
       value: 0.9019608
@@ -47240,6 +48625,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: footstepReference.Path
+      value: event:/SFX/SFX_FootSteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: groundMaterialLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: footstepReference.Guid.Data1
+      value: -24846201
+      objectReference: {fileID: 0}
+    - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: footstepReference.Guid.Data2
+      value: 1179504778
+      objectReference: {fileID: 0}
+    - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: footstepReference.Guid.Data3
+      value: -1832918646
+      objectReference: {fileID: 0}
+    - target: {fileID: 971549538990779568, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: footstepReference.Guid.Data4
+      value: 108025388
+      objectReference: {fileID: 0}
     - target: {fileID: 1506290036143713492, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.390423
@@ -47279,6 +48688,10 @@ PrefabInstance:
     - target: {fileID: 1506290036143713492, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740834400035854311, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
+      propertyPath: pickupAudio
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5740834400035854311, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: interactHint
@@ -47358,6 +48771,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: "b\xE4r"
       objectReference: {fileID: 0}
+    - target: {fileID: 5487272122150385815, guid: 79dc702b3f05caf429365147504f8c42, type: 3}
+      propertyPath: voiceEvent.Path
+      value: "event:/Dialogue/VOICE_B\xE4r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487272122150385815, guid: 79dc702b3f05caf429365147504f8c42, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: -1834696226
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487272122150385815, guid: 79dc702b3f05caf429365147504f8c42, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1290134350
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487272122150385815, guid: 79dc702b3f05caf429365147504f8c42, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -1089866817
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487272122150385815, guid: 79dc702b3f05caf429365147504f8c42, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 1416867709
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -47371,13 +48804,73 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1233353727}
     m_Modifications:
+    - target: {fileID: 370857070724744601, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Tiger
+      objectReference: {fileID: 0}
+    - target: {fileID: 370857070724744601, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 210738095
+      objectReference: {fileID: 0}
+    - target: {fileID: 370857070724744601, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1147813146
+      objectReference: {fileID: 0}
+    - target: {fileID: 370857070724744601, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1827045024
+      objectReference: {fileID: 0}
+    - target: {fileID: 370857070724744601, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 532046653
+      objectReference: {fileID: 0}
     - target: {fileID: 1403506025142020946, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 3308847110151368269, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308847110151368269, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308847110151368269, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308847110151368269, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308847110151368269, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
     - target: {fileID: 4779908537059010434, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
       propertyPath: m_Name
       value: Tiger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827211924027087678, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Tiger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827211924027087678, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 210738095
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827211924027087678, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1147813146
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827211924027087678, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1827045024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827211924027087678, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 532046653
       objectReference: {fileID: 0}
     - target: {fileID: 5268778158084209976, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47418,6 +48911,66 @@ PrefabInstance:
     - target: {fileID: 5268778158084209976, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374007527436559243, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Tiger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374007527436559243, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 210738095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374007527436559243, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1147813146
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374007527436559243, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1827045024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374007527436559243, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 532046653
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062089880516484829, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062089880516484829, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062089880516484829, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062089880516484829, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062089880516484829, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485594317725266999, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Tiger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485594317725266999, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 210738095
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485594317725266999, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1147813146
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485594317725266999, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1827045024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485594317725266999, guid: 10c82cf5c07b2ce43b95f093db6885e6, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 532046653
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47607,7 +49160,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8096876224317971071, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1630097566}
   m_SourcePrefab: {fileID: 100100000, guid: 8b8549b83298fb4409e8ea7928df416f, type: 3}
 --- !u!1001 &9147560025421099159
 PrefabInstance:

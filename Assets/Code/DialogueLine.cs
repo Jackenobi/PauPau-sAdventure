@@ -1,13 +1,17 @@
 using UnityEngine;
+using FMODUnity;
 
 public class DialogueLine : MonoBehaviour
 {
     [TextArea]
     public string text;
     public DialogueChoice[] choices;
-   
+
     [Header("Speaker")]
     public string speakerName;
+
+    [Header("Voice (FMOD)")]
+    public EventReference voiceEvent;
 
 
     // Portraits

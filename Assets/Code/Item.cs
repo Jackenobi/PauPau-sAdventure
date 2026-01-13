@@ -1,37 +1,39 @@
-using UnityEngine;
+ï»¿using UnityEngine;
+using FMODUnity;
 
 public class Item : Interactable
-
 {
-
     public ItemType type;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("FMOD")]
+    public EventReference pickupEvent;
 
-    // Update is called once per frame
-    void Update()
-    {
-     
-    }
-
-    //override erweitert/überschreibt die basis Funktion
     public override void Interact()
     {
         base.Interact();
-        Debug.Log("Interacted with Item ");
-        Destroy(gameObject);
-        GameObject.FindFirstObjectByType<Inventory>().AddItem(this);
 
-        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/SFX/ItemPickup", gameObject); //sound ohne emitter
+        //  FMOD Sound (2D oder 3D â€“ je nach Event)
+        if (!pickupEvent.IsNull)
+        {
+            RuntimeManager.PlayOneShot(pickupEvent, transform.position);
+        }
+
+        //  Ins Inventar
+        Inventory inventory = GameObject.FindFirstObjectByType<Inventory>();
+        if (inventory != null)
+        {
+            inventory.AddItem(this);
+        }
+
+        //  Item entfernen
+        Destroy(gameObject);
     }
 }
 
-
-public enum ItemType //enumeration = Aufzählung
+public enum ItemType
 {
-    Tape, Egg, Map, Kid
+    Tape,
+    Egg,
+    Map,
+    Kid
 }

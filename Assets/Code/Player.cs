@@ -1,9 +1,9 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class Player : MonoBehaviour
 {
-    // Variabeln
     public PlayerInput input;
     private InputAction moveAction;
     private InputAction interactAction;
@@ -12,16 +12,14 @@ public class Player : MonoBehaviour
     public Animator animator;
 
     public float speed = 5f;
-
     public Transform referenceCamera;
 
     public Interactable interactable;
     public InteractHintUI interactHint;
 
+    [Header("FMOD Audio")]
+    public EventReference pickupEvent;
 
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moveAction = input.actions.FindAction("Move");
@@ -32,14 +30,24 @@ public class Player : MonoBehaviour
 
     private void InteractAction_performed(InputAction.CallbackContext obj)
     {
-        if(interactable != null)
+        if (interactable != null)
         {
             interactable.Interact();
+
+            //  FMOD Pickup Sound
+            if (pickupEvent.IsNull == false)
+            {
+                RuntimeManager.PlayOneShot(pickupEvent, transform.position);
+            }
+
+            //  Hint sofort ausblenden
+            if (interactHint != null)
+                interactHint.Hide();
+
+            interactable = null;
         }
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         Vector2 inputDirection = moveAction.ReadValue<Vector2>();
@@ -49,20 +57,17 @@ public class Player : MonoBehaviour
         forward.Normalize();
         Vector3 right = referenceCamera.right;
 
-        //wie viel auf forward + wie viel auf right
         Vector3 moveDirection = forward * inputDirection.y + right * inputDirection.x;
-        moveDirection.y = 0f; // keine höhenveränderung
+        moveDirection.y = 0f;
         moveDirection.Normalize();
 
         controller.Move(moveDirection * Time.deltaTime * speed);
+
         if (!controller.isGrounded)
-            controller.Move(new Vector3(0, -1, 0)); // gravity
+            controller.Move(Vector3.down);
 
         if (inputDirection != Vector2.zero)
-        {
-            //transform (klein) verweist auf "mein" Transform
             transform.forward = Vector3.Slerp(transform.forward, moveDirection, 0.1f);
-        }
 
         animator.SetFloat("speed", moveDirection.magnitude * speed);
     }
@@ -90,7 +95,4 @@ public class Player : MonoBehaviour
             interactHint.Hide();
         }
     }
-
-
-
 }

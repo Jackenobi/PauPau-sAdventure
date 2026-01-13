@@ -5,27 +5,27 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using FMODUnity;
+using FMOD.Studio;
 
 public class DialogueScreen : MonoBehaviour
 {
     private DialogueLine currentLine;
     private string currentSpeaker;
 
-    public event System.Action<string> onChoiceSelected;
-
     [Header("UI Panel")]
     public GameObject panel;
 
     [Header("Dialogue Layout")]
-    public GameObject leftContainer;   // NPC
-    public GameObject rightContainer;  // Player
+    public GameObject leftContainer;
+    public GameObject rightContainer;
 
-    [Header("NPC (Left) UI")]
+    [Header("NPC UI")]
     public TMP_Text leftNameTMP;
     public TMP_Text leftDialogueTMP;
     public Image npcPortrait;
 
-    [Header("Player (Right) UI")]
+    [Header("Player UI")]
     public TMP_Text rightNameTMP;
     public TMP_Text rightDialogueTMP;
     public Image playerPortrait;
@@ -38,11 +38,6 @@ public class DialogueScreen : MonoBehaviour
     public CinemachineInputAxisController cinemachineController;
     public PlayerInput input;
 
-    [Header("Quest Manager")]
-    public MonoBehaviour questManager;
-    private IQuestManager quest;
-
-
     [Header("Player Name")]
     public string playerName = "PaoPao";
 
@@ -52,43 +47,41 @@ public class DialogueScreen : MonoBehaviour
 
     private Coroutine portraitPulseRoutine;
 
-    void Awake()
-    {
-        quest = questManager as IQuestManager;
 
-        if (quest == null)
-        {
-            Debug.LogError("DialogueScreen: QuestManager implements kein IQuestManager!");
-        }
-    }
+    // FMOD
 
+    private EventInstance voiceInstance;
+
+
+    // SHOW DIALOGUE
 
     public void ShowDialogue(DialogueLine dialogue, string npcFallbackName)
     {
         currentLine = dialogue;
         bool isPlayer = dialogue.player;
 
+        // Speaker Name
 
-        string resolvedSpeakerName =
+        currentSpeaker =
             !string.IsNullOrWhiteSpace(dialogue.speakerName)
                 ? dialogue.speakerName
                 : (isPlayer ? playerName : npcFallbackName);
 
-        currentSpeaker = resolvedSpeakerName;
 
+        // Reset UI
 
-        // RESET UI
         leftContainer.SetActive(false);
         rightContainer.SetActive(false);
         npcPortrait.gameObject.SetActive(false);
         playerPortrait.gameObject.SetActive(false);
 
 
-        // PLAYER  RECHTS
+        // Player
+
         if (isPlayer)
         {
             rightContainer.SetActive(true);
-            rightNameTMP.text = resolvedSpeakerName;
+            rightNameTMP.text = currentSpeaker;
             rightDialogueTMP.text = dialogue.text;
 
             if (dialogue.playerPortrait != null)
@@ -99,11 +92,12 @@ public class DialogueScreen : MonoBehaviour
             }
         }
 
-        // NPC  LINKS
+        // NPC
+
         else
         {
             leftContainer.SetActive(true);
-            leftNameTMP.text = resolvedSpeakerName;
+            leftNameTMP.text = currentSpeaker;
             leftDialogueTMP.text = dialogue.text;
 
             if (dialogue.npcPortrait != null)
@@ -115,12 +109,17 @@ public class DialogueScreen : MonoBehaviour
         }
 
 
-        // CHOICES  CONTINUE
+        // Play Voice
+
+        PlayVoice(dialogue);
+
+
+        // Choices / Continue
+
         bool hasChoices = dialogue.choices != null && dialogue.choices.Length > 0;
 
-        // Alles aus
-        for (int i = 0; i < choiceButtons.Length; i++)
-            choiceButtons[i].SetActive(false);
+        foreach (var btn in choiceButtons)
+            btn.SetActive(false);
 
         continueButton.SetActive(false);
 
@@ -141,15 +140,30 @@ public class DialogueScreen : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(continueButton);
         }
 
-       
-        // INPUT & CAMERA 
         input.SwitchCurrentActionMap("UI");
         cinemachineController.enabled = false;
         panel.SetActive(true);
     }
 
+    // FMOD VOICE
+   
+    void PlayVoice(DialogueLine line)
+    {
+        if (!line.voiceEvent.IsNull)
+        {
+            voiceInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            voiceInstance.release();
+
+            voiceInstance = RuntimeManager.CreateInstance(line.voiceEvent);
+            voiceInstance.start();
+        }
+    }
+
     public void HideDialogue()
     {
+        voiceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        voiceInstance.release();
+
         input.SwitchCurrentActionMap("Player");
         panel.SetActive(false);
         cinemachineController.enabled = true;
@@ -157,37 +171,23 @@ public class DialogueScreen : MonoBehaviour
 
     public void SelectChoice(int index)
     {
-        onChoiceSelected?.Invoke(currentLine.choices[index].id);
-
-        if (questManager != null)
-        {
-            quest.OnAnswerSelected(currentLine.choices[index].isCorrect);
-        }
-
         if (currentLine.choices[index].nextLine != null)
-        {
             ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
-        }
         else
-        {
             HideDialogue();
-        }
     }
 
     public void Continue()
     {
         if (currentLine.nextLine != null)
-        {
             ShowDialogue(currentLine.nextLine, currentSpeaker);
-        }
         else
-        {
             HideDialogue();
-        }
     }
 
-
-    // PORTRAIT PULSE
+    
+    // Portrait Pulse
+   
     void PulsePortrait(Image portrait)
     {
         if (portraitPulseRoutine != null)
@@ -198,14 +198,14 @@ public class DialogueScreen : MonoBehaviour
 
     IEnumerator PulseRoutine(Transform target)
     {
-        Vector3 originalScale = target.localScale;
-        Vector3 targetScale = originalScale * pulseScale;
+        Vector3 original = target.localScale;
+        Vector3 targetScale = original * pulseScale;
 
         float t = 0f;
         while (t < pulseDuration)
         {
             t += Time.deltaTime;
-            target.localScale = Vector3.Lerp(originalScale, targetScale, t / pulseDuration);
+            target.localScale = Vector3.Lerp(original, targetScale, t / pulseDuration);
             yield return null;
         }
 
@@ -213,10 +213,10 @@ public class DialogueScreen : MonoBehaviour
         while (t < pulseDuration)
         {
             t += Time.deltaTime;
-            target.localScale = Vector3.Lerp(targetScale, originalScale, t / pulseDuration);
+            target.localScale = Vector3.Lerp(targetScale, original, t / pulseDuration);
             yield return null;
         }
 
-        target.localScale = originalScale;
+        target.localScale = original;
     }
 }
