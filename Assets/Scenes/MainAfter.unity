@@ -47334,6 +47334,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6103841829953318, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 182597073584741510, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c988d565a0c6b124bb44d47c621e47fd, type: 3}
+    - target: {fileID: 924120497489719562, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412707276037600468, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2218932226591414178, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: input
       value: 
@@ -47418,12 +47434,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3496714607853931370, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531686114822934644, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908749191078060039, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4081161704482784338, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4719063377425496276, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7779472887142871118, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682174578430008314, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8788651707981698848, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
@@ -47438,6 +47474,14 @@ PrefabInstance:
       propertyPath: cinemachineController
       value: 
       objectReference: {fileID: 1927349029}
+    - target: {fileID: 8938364207794283421, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051303175523672650, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ef14cf99a3e7b6f439b04d6bffa13169, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

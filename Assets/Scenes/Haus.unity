@@ -1858,7 +1858,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 63.4
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2268,7 +2268,7 @@ MonoBehaviour:
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 936144164}
-  player: 0
+  player: 1
 --- !u!64 &1180228990
 MeshCollider:
   m_ObjectHideFlags: 0
