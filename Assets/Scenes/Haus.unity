@@ -119,6 +119,64 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17737306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17737307}
+  - component: {fileID: 17737308}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17737307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17737306}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17737308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17737306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Oh, I know them! They''ve sent me because you might be able to help me. '
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 1761902958}
+  player: 1
 --- !u!64 &38948927
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -361,6 +419,123 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7691749903964229229, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!1 &258296725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258296726}
+  - component: {fileID: 258296727}
+  m_Layer: 0
+  m_Name: 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258296726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258296725}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &258296727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258296725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Let me see my dear... mhmm yes, yes. I know this egg.
+  choices: []
+  speakerName: Laura
+  voiceEvent:
+    Guid:
+      Data1: 249723083
+      Data2: 1255745896
+      Data3: 1849889156
+      Data4: -1610596202
+    Path: event:/Dialogue/VOICE_Huhn
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 686614891}
+  player: 0
+--- !u!1 &304835875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 304835876}
+  - component: {fileID: 304835877}
+  m_Layer: 0
+  m_Name: 11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &304835876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304835875}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &304835877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304835875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: You need to find something shiny and round "to prove you worthy". It's rather
+    tiny and somewhere in this house.
+  choices: []
+  speakerName: Laura
+  voiceEvent:
+    Guid:
+      Data1: 249723083
+      Data2: 1255745896
+      Data3: 1849889156
+      Data4: -1610596202
+    Path: event:/Dialogue/VOICE_Huhn
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 1924810684}
+  player: 0
 --- !u!1001 &351998942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -370,32 +545,44 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3120348
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3120348
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3120348
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70.41
+      value: 70.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.56
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 237.9
+      value: 237.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.10219824
+      value: -0.99235827
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 6.716956e-17
+      value: -5.3208955e-17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.99476403
+      value: -0.123389885
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -5.465388e-17
+      value: -6.831986e-17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -403,23 +590,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 191.732
+      value: 14.176
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6629797300637803691, guid: 74f2d2c5083b62943a3c41f846cf5067, type: 3}
+    - target: {fileID: -5754084199372789682, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6938283687354842970, guid: 74f2d2c5083b62943a3c41f846cf5067, type: 3}
     - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: text
-      value: schaffst du's?
+      value: Are you visiting again kids?
       objectReference: {fileID: 0}
     - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: nextLine
       value: 
+      objectReference: {fileID: 351998944}
+    - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: npcPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+    - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: speakerName
+      value: Laura
+      objectReference: {fileID: 0}
+    - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Huhn
       objectReference: {fileID: 0}
     - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: choices.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 249723083
+      objectReference: {fileID: 0}
+    - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1255745896
+      objectReference: {fileID: 0}
+    - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1849889156
+      objectReference: {fileID: 0}
+    - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1610596202
       objectReference: {fileID: 0}
     - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: choices.Array.data[0].text
@@ -447,31 +670,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_Name
-      value: Tiger
+      value: Huhn
       objectReference: {fileID: 0}
     - target: {fileID: 4440010045702313247, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_Radius
-      value: 2.26
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 4440010045702313247, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_Center.x
-      value: -0.19
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 4440010045702313247, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_Center.y
-      value: 2.35
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 4440010045702313247, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_Center.z
-      value: 1.17
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: text
-      value: schlecht
+      value: Don't worry my child, I mainly stay inside these walls. I don't know
+        that many people, only these two nice kids who help my with my chores from
+        time to time.
       objectReference: {fileID: 0}
     - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: nextLine
       value: 
+      objectReference: {fileID: 17737308}
+    - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: npcPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+    - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: speakerName
+      value: Laura
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Huhn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 249723083
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1255745896
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: 1849889156
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -1610596202
       objectReference: {fileID: 0}
     - target: {fileID: 6768503315861516673, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: namenpc
@@ -483,23 +740,87 @@ PrefabInstance:
       objectReference: {fileID: 161123914}
     - target: {fileID: 7169640750805234846, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: text
-      value: cool
+      value: No, sorry. My name is PaoPao. I hope it's okay to come into your house
+        like this... I didn't know that anyone was living here.
       objectReference: {fileID: 0}
     - target: {fileID: 7169640750805234846, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: player
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7169640750805234846, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: nextLine
       value: 
+      objectReference: {fileID: 351998943}
+    - target: {fileID: 7169640750805234846, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: npcPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+    - target: {fileID: 7169640750805234846, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Affe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169640750805234846, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 1411458782
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169640750805234846, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1259466299
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169640750805234846, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -952263790
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169640750805234846, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: -177416928
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7198671087862903908, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
     - {fileID: 6568381864734957133, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
     - {fileID: 5279663398341323784, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 528350692}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1087924717}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 17737307}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1761902957}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 258296726}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 686614890}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 520938221}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1150784249}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 936144163}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 747229833}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 304835876}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1924810683}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1819993840}
   m_SourcePrefab: {fileID: 100100000, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
 --- !u!114 &351998943 stripped
 MonoBehaviour:
@@ -528,7 +849,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6768503315861516673, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
   m_PrefabInstance: {fileID: 351998942}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1819993836}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a9d4ddbfd410ee40a9dd0dd0b86d04e, type: 3}
@@ -545,6 +866,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &351998947 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+  m_PrefabInstance: {fileID: 351998942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &365832258
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -567,6 +893,184 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8552134717624371188, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!1 &387647168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387647169}
+  - component: {fileID: 387647170}
+  m_Layer: 0
+  m_Name: 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &387647169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387647168}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1087924717}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &387647170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387647168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Aaah finally I can see again.
+  choices: []
+  speakerName: Laura
+  voiceEvent:
+    Guid:
+      Data1: 249723083
+      Data2: 1255745896
+      Data3: 1849889156
+      Data4: -1610596202
+    Path: event:/Dialogue/VOICE_Huhn
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 1639449488}
+  player: 1
+--- !u!1 &520938220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 520938221}
+  - component: {fileID: 520938222}
+  m_Layer: 0
+  m_Name: 7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &520938221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520938220}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &520938222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520938220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Yes. I''ve been searching for this egg myself actually.
+
+    Before I tell
+    you everything, you have to help me first.'
+  choices: []
+  speakerName: Laura
+  voiceEvent:
+    Guid:
+      Data1: 249723083
+      Data2: 1255745896
+      Data3: 1849889156
+      Data4: -1610596202
+    Path: event:/Dialogue/VOICE_Huhn
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 1150784250}
+  player: 0
+--- !u!1 &528350691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528350692}
+  - component: {fileID: 528350693}
+  m_Layer: 0
+  m_Name: itemMissing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528350692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528350691}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -1.6543612e-24, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1344265255}
+  m_Father: {fileID: 625386027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528350693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528350691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: What am I even looking for?
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 1344265256}
+  player: 1
 --- !u!1 &561656553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4214726985332892257, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
@@ -968,6 +1472,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &625386027 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+  m_PrefabInstance: {fileID: 351998942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &676639317
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -990,6 +1499,122 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5308210633308118684, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!1 &686172754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 686172755}
+  - component: {fileID: 686172756}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &686172755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686172754}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1087924717}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &686172756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686172754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: yeees, yes, give it to me.
+  choices: []
+  speakerName: Laura
+  voiceEvent:
+    Guid:
+      Data1: 249723083
+      Data2: 1255745896
+      Data3: 1849889156
+      Data4: -1610596202
+    Path: event:/Dialogue/VOICE_Huhn
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 387647170}
+  player: 1
+--- !u!1 &686614889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 686614890}
+  - component: {fileID: 686614891}
+  m_Layer: 0
+  m_Name: 6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &686614890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686614889}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &686614891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686614889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: REALLY?
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 520938222}
+  player: 1
 --- !u!1001 &734073044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1070,6 +1695,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &747229832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 747229833}
+  - component: {fileID: 747229834}
+  m_Layer: 0
+  m_Name: 10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &747229833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747229832}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &747229834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747229832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: NOTHING! I'll help you! What do you need?
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 304835877}
+  player: 1
 --- !u!64 &781964549
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1266,6 +1949,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!1 &936144162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936144163}
+  - component: {fileID: 936144164}
+  m_Layer: 0
+  m_Name: 9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &936144163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936144162}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &936144164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936144162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: What did you say?
+  choices: []
+  speakerName: Laura
+  voiceEvent:
+    Guid:
+      Data1: 249723083
+      Data2: 1255745896
+      Data3: 1849889156
+      Data4: -1610596202
+    Path: event:/Dialogue/VOICE_Huhn
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 747229834}
+  player: 0
 --- !u!1 &1038132745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,6 +2150,125 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7807538432633192378, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!1 &1087924716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087924717}
+  - component: {fileID: 1087924718}
+  m_Layer: 0
+  m_Name: QuestDone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087924717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087924716}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -1.6543612e-24, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 686172755}
+  - {fileID: 387647169}
+  - {fileID: 1639449487}
+  m_Father: {fileID: 625386027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087924718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087924716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Is this it?
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 686172756}
+  player: 1
+--- !u!1 &1150784248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1150784249}
+  - component: {fileID: 1150784250}
+  m_Layer: 0
+  m_Name: 8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1150784249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150784248}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1150784250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150784248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: What a surprise...
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 936144164}
+  player: 0
 --- !u!64 &1180228990
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2428,6 +3288,64 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6473797609063418579, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!1 &1344265254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1344265255}
+  - component: {fileID: 1344265256}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1344265255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344265254}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 528350692}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1344265256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344265254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: I told you, it's shiny, round and tiny!
+  choices: []
+  speakerName: Laura
+  voiceEvent:
+    Guid:
+      Data1: 249723083
+      Data2: 1255745896
+      Data3: 1849889156
+      Data4: -1610596202
+    Path: event:/Dialogue/VOICE_Huhn
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 1
 --- !u!64 &1373228916
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2567,6 +3485,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89875cdc57c54474a8a74efd9b2a3b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1639449486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639449487}
+  - component: {fileID: 1639449488}
+  m_Layer: 0
+  m_Name: 3 und dann cutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1639449487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639449486}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1087924717}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1639449488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639449486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Come closer. My family gave me this old scroll with our family's prophecy.
+    I'll read it for you...
+  choices: []
+  speakerName: Laura
+  voiceEvent:
+    Guid:
+      Data1: 249723083
+      Data2: 1255745896
+      Data3: 1849889156
+      Data4: -1610596202
+    Path: event:/Dialogue/VOICE_Huhn
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 1
 --- !u!64 &1677526503
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2611,6 +3588,68 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2228417370725966487, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!1 &1761902956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761902957}
+  - component: {fileID: 1761902958}
+  m_Layer: 0
+  m_Name: 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1761902957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761902956}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1761902958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761902956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'I''ve found this really strange egg on the shore. It''s way bigger than
+    any other eggs and the pattern doesn''t look familiar either. Maybe it''s really
+    old?
+
+'
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 258296727}
+  player: 1
 --- !u!64 &1814677838
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2633,6 +3672,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8385836491182413749, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!1 &1819993836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+  m_PrefabInstance: {fileID: 351998942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1819993840
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819993836}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6938283687354842970, guid: 74f2d2c5083b62943a3c41f846cf5067, type: 3}
 --- !u!1 &1844666118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,6 +3845,64 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7387706064836869012, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!1 &1924810682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924810683}
+  - component: {fileID: 1924810684}
+  m_Layer: 0
+  m_Name: 12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1924810683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924810682}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1924810684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924810682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Finding things is my speciality! I'll be back in no time.
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 0}
+  player: 1
 --- !u!64 &1930693175
 MeshCollider:
   m_ObjectHideFlags: 0

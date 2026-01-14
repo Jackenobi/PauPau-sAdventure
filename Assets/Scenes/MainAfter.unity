@@ -1100,6 +1100,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 262900195}
+  - {fileID: 1596001561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170752755
@@ -1220,6 +1221,13 @@ MonoBehaviour:
   text: I'll wait here for you.
   choices: []
   speakerName: Victor
+  voiceEvent:
+    Guid:
+      Data1: -699503225
+      Data2: 1083683109
+      Data3: -290244207
+      Data4: 2142086566
+    Path: event:/Dialogue/VOICE_Frosch
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
@@ -2741,6 +2749,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &360200973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +2802,7 @@ GameObject:
   - component: {fileID: 362024088}
   - component: {fileID: 362024087}
   - component: {fileID: 362024086}
+  - component: {fileID: 362024089}
   m_Layer: 0
   m_Name: "br\xFCckeHeil"
   m_TagString: Untagged
@@ -2863,6 +2879,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &362024089
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362024085}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8848793703484380122, guid: c5d9e657bb51dd14a877fd620dd74ec5, type: 3}
 --- !u!1 &365206715
 GameObject:
   m_ObjectHideFlags: 0
@@ -4072,6 +4110,13 @@ MonoBehaviour:
   text: Pack your things kid, we are going on an adventure!
   choices: []
   speakerName: Victor
+  voiceEvent:
+    Guid:
+      Data1: -699503225
+      Data2: 1083683109
+      Data3: -290244207
+      Data4: 2142086566
+    Path: event:/Dialogue/VOICE_Frosch
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
@@ -4488,6 +4533,13 @@ MonoBehaviour:
     id: 
     isCorrect: 0
   speakerName: Victor
+  voiceEvent:
+    Guid:
+      Data1: -699503225
+      Data2: 1083683109
+      Data3: -290244207
+      Data4: 2142086566
+    Path: event:/Dialogue/VOICE_Frosch
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
@@ -4659,6 +4711,13 @@ MonoBehaviour:
   text: ...Be careful, okay?
   choices: []
   speakerName: Ingo
+  voiceEvent:
+    Guid:
+      Data1: -1561568620
+      Data2: 1336824414
+      Data3: 456972732
+      Data4: 33080898
+    Path: event:/Dialogue/VOICE_Katze
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
@@ -4831,6 +4890,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!43 &720143617
 Mesh:
   m_ObjectHideFlags: 0
@@ -5160,6 +5226,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &826328928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 865214122290705956, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
@@ -7020,6 +7093,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!43 &1083873699
 Mesh:
   m_ObjectHideFlags: 0
@@ -8291,6 +8371,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &1249411914
 GameObject:
   m_ObjectHideFlags: 0
@@ -9356,6 +9443,13 @@ MonoBehaviour:
   text: Ahoi PaoPao, do you wanna go somewhere?
   choices: []
   speakerName: Victor
+  voiceEvent:
+    Guid:
+      Data1: -699503225
+      Data2: 1083683109
+      Data3: -290244207
+      Data4: 2142086566
+    Path: event:/Dialogue/VOICE_Frosch
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 1496855286}
@@ -9633,6 +9727,13 @@ MonoBehaviour:
   text: YESS I've got this really old map. Can you bring me there?
   choices: []
   speakerName: Victor
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 1863405510}
@@ -9792,6 +9893,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &1596001555
 GameObject:
   m_ObjectHideFlags: 0
@@ -9935,12 +10043,12 @@ Transform:
   m_GameObject: {fileID: 1596001555}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.84419566, z: -0, w: -0.5360352}
-  m_LocalPosition: {x: -23.252, y: -2.65, z: 220.91}
-  m_LocalScale: {x: 1.495, y: 1.495, z: 1.495}
+  m_LocalPosition: {x: 68.29893, y: -17.945, z: -27.690186}
+  m_LocalScale: {x: 1.4950001, y: 1.495, z: 1.4950001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 640969785}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 133571135}
   m_LocalEulerAnglesHint: {x: 0, y: 244.828, z: 0}
 --- !u!1 &1596275602
 GameObject:
@@ -10409,6 +10517,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &1700873020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4723280767966646398, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
@@ -10666,6 +10781,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!135 &1792291651
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10953,6 +11075,13 @@ MonoBehaviour:
   text: WOW I've never seen a map old like this! But I'll get you there for sure!
   choices: []
   speakerName: Victor
+  voiceEvent:
+    Guid:
+      Data1: -699503225
+      Data2: 1083683109
+      Data3: -290244207
+      Data4: 2142086566
+    Path: event:/Dialogue/VOICE_Frosch
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 598301358}
@@ -46934,6 +47063,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  pickupEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &2116706079
 GameObject:
   m_ObjectHideFlags: 0
@@ -47620,8 +47756,7 @@ SceneRoots:
   - {fileID: 1520367862}
   - {fileID: 133571135}
   - {fileID: 1040097267}
-  - {fileID: 360200974}
   - {fileID: 485464864}
   - {fileID: 1954895459}
   - {fileID: 362024088}
-  - {fileID: 1596001561}
+  - {fileID: 360200974}

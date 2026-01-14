@@ -8,6 +8,7 @@ public class soundmenu : MonoBehaviour
     public Slider master;
     public Slider SFX;
     public Slider music;
+    public Slider voice;
 
     //public InputActionReference lookAction; // für Mausempfindlichkeit
 
@@ -31,6 +32,12 @@ public class soundmenu : MonoBehaviour
             PlayerPrefs.SetFloat("musicVolume", newValue);
         });
         music.value = PlayerPrefs.GetFloat("musicVolume", 0.5f);
+
+        voice.onValueChanged.AddListener((newValue) =>
+        {
+            PlayerPrefs.SetFloat("voiceVolume", newValue);
+        });
+        voice.value = PlayerPrefs.GetFloat("voiceVolume", 0.5f);
         //to do: fmod volume anpassen
         //Stimmen hinzufügen als slider und hier
     }

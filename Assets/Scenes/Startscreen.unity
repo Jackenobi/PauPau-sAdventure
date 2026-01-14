@@ -513,7 +513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &355946929
 Transform:
   m_ObjectHideFlags: 0
@@ -557,11 +557,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1387580209
-      Data2: 1300055452
-      Data3: 695496376
-      Data4: -1398065796
-    Path: event:/Music/OST_PaoPaosEggventure
+      Data1: 367112436
+      Data2: 1295630429
+      Data3: -537642091
+      Data4: -406811281
+    Path: event:/ATMOS/ATMO_Ocean
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -569,9 +569,7 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
-  Params:
-  - Name: Scene
-    Value: 0
+  Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -4123,6 +4121,7 @@ GameObject:
   - component: {fileID: 2076898495}
   - component: {fileID: 2076898494}
   - component: {fileID: 2076898497}
+  - component: {fileID: 2076898498}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4248,6 +4247,20 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &2076898498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076898493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 355946928}
 --- !u!1 &2084587913
 GameObject:
   m_ObjectHideFlags: 0
