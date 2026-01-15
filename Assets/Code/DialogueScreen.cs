@@ -13,6 +13,20 @@ public class DialogueScreen : MonoBehaviour
     private DialogueLine currentLine;
     private string currentSpeaker;
 
+    [Header("Quest Manager")]
+    public MonoBehaviour questManagerObject;
+
+    private IQuestManager questManager;
+
+    void Start()
+    {
+        // Hol dir das Interface vom MonoBehaviour
+        if (questManagerObject != null)
+            questManager = questManagerObject.GetComponent<IQuestManager>();
+
+        panel.SetActive(false);
+    }
+
     [Header("UI Panel")]
     public GameObject panel;
 
@@ -171,6 +185,12 @@ public class DialogueScreen : MonoBehaviour
 
     public void SelectChoice(int index)
     {
+        // Quest Manager über richtige/falsche Antwort informieren
+        if (questManager != null && currentLine.choices.Length > 0)
+        {
+            questManager.OnAnswerSelected(currentLine.choices[index].isCorrect);
+        }
+
         if (currentLine.choices[index].nextLine != null)
             ShowDialogue(currentLine.choices[index].nextLine, currentSpeaker);
         else

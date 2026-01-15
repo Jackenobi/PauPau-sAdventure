@@ -7,13 +7,10 @@ public class Player : MonoBehaviour
     public PlayerInput input;
     private InputAction moveAction;
     private InputAction interactAction;
-
     public CharacterController controller;
     public Animator animator;
-
     public float speed = 5f;
     public Transform referenceCamera;
-
     public Interactable interactable;
     public InteractHintUI interactHint;
 
@@ -24,7 +21,6 @@ public class Player : MonoBehaviour
     {
         moveAction = input.actions.FindAction("Move");
         interactAction = input.actions.FindAction("Interact");
-
         interactAction.performed += InteractAction_performed;
     }
 
@@ -34,33 +30,35 @@ public class Player : MonoBehaviour
         {
             interactable.Interact();
 
-            //  FMOD Pickup Sound
-            if (pickupEvent.IsNull == false)
+            // FMOD Pickup Sound NUR für Items
+            Item item = interactable.GetComponent<Item>();
+            if (item != null && !pickupEvent.IsNull)
             {
                 RuntimeManager.PlayOneShot(pickupEvent, transform.position);
             }
 
-            //  Hint sofort ausblenden
-            if (interactHint != null)
-                interactHint.Hide();
-
-            interactable = null;
+            // Hint ausblenden NUR wenn es ein Item war (wird zerstört)
+            // NPCs bleiben, also Hint bleibt auch
+            if (item != null)
+            {
+                if (interactHint != null)
+                    interactHint.Hide();
+                interactable = null;
+            }
+            // Wenn es ein NPC ist, bleibt interactable gesetzt!
         }
     }
 
     void Update()
     {
         Vector2 inputDirection = moveAction.ReadValue<Vector2>();
-
         Vector3 forward = referenceCamera.forward;
         forward.y = 0;
         forward.Normalize();
         Vector3 right = referenceCamera.right;
-
         Vector3 moveDirection = forward * inputDirection.y + right * inputDirection.x;
         moveDirection.y = 0f;
         moveDirection.Normalize();
-
         controller.Move(moveDirection * Time.deltaTime * speed);
 
         if (!controller.isGrounded)

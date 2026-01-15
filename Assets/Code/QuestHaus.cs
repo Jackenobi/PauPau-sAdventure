@@ -3,8 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class QuestHaus : MonoBehaviour, IQuestManager
-
+public class QuestHaus : MonoBehaviour
 {
     [Header("UI")]
     public DialogueScreen dialogueScreen;
@@ -17,34 +16,38 @@ public class QuestHaus : MonoBehaviour, IQuestManager
     public AudioSource hausAudioSource;
     public AudioClip hausEntrySound;
 
-    [Header("Quest: Haus NPC")]
-    public NPCs hausNPC;
-    public Item mapItem; // Das Map-Item das man bekommt
-    public DialogueLine[] hausQuestions; // 3 Fragen später
-    public DialogueLine hausWrongAnswer;
-    public DialogueLine hausComplete;
+    [Header("Quest: Huhn")]
+    public NPCs huhn;
+    public Item shinyItem; // Das Item im Raum
+    public DialogueLine huhnStart; // Erstes Gespräch - startet Quest
+    public DialogueLine huhnNoItem; // Wenn Item noch nicht gefunden
+    public DialogueLine huhnComplete; // Wenn Item abgegeben wird
+    public DialogueLine huhnToNextScene; // Letzte Line → lädt Scene
 
     [Header("Scene Management")]
-    public string mainSceneName = "Prophecy";
-    public Vector3 spawnPositionInMain; // Wo Player in Main spawnen soll
+    public string nextSceneName = "MainAfter";
 
     private bool hausQuestStarted = false;
     private bool hausQuestDone = false;
     private TMP_Text questTMP;
-    private int correctAnswers = 0;
+    private GameObject questDisplay;
 
     void Start()
     {
-        // EingangsSound
+        // Eingangs-Sound abspielen
         if (hausAudioSource != null && hausEntrySound != null)
         {
             hausAudioSource.PlayOneShot(hausEntrySound);
         }
 
-        // NPC
-        if (hausNPC != null)
+        // Huhn registrieren
+        if (huhn != null)
         {
-            hausNPC.onInteracted += OnHausNPCTalked;
+            huhn.onInteracted += OnHuhnTalked;
+
+            // Start-Dialog setzen
+            if (huhnStart != null)
+                huhn.dialogue = huhnStart;
         }
 
         // Blackscreen setup
@@ -54,105 +57,85 @@ public class QuestHaus : MonoBehaviour, IQuestManager
             blackScreen.gameObject.SetActive(false);
         }
 
-        // Map Item verstecken aber brauch ich nicht mehr.egal
-        if (mapItem != null)
-            mapItem.gameObject.SetActive(false);
+        // Shiny Item verstecken (falls du es spawnen willst)
+        // Falls es schon in der Scene platziert ist, lass das weg
+        // if (shinyItem != null)
+        //     shinyItem.gameObject.SetActive(true);
     }
 
-    private void OnHausNPCTalked()
+    private void OnHuhnTalked()
     {
+        // Erstes Gespräch - Quest starten
         if (!hausQuestStarted)
         {
             hausQuestStarted = true;
-            StartCoroutine(Questhaus());
+            StartCoroutine(StartHausQuest());
             return;
         }
 
-        if (hausQuestStarted && !hausQuestDone)
+        // Quest läuft, aber Item noch nicht gefunden
+        if (hausQuestStarted && !hausQuestDone && !inventory.HasItem(ItemType.ShinyObject))
         {
-            if (correctAnswers < hausQuestions.Length)
-                hausNPC.dialogue = hausQuestions[correctAnswers];
+            if (huhnNoItem != null)
+                huhn.dialogue = huhnNoItem;
             return;
         }
 
+        // Quest abschließen - Item wird abgegeben
+        if (hausQuestStarted && !hausQuestDone && inventory.HasItem(ItemType.ShinyObject))
+        {
+            hausQuestDone = true;
+
+            if (huhnComplete != null)
+                huhn.dialogue = huhnComplete;
+
+            // Quest abschließen
+            StartCoroutine(CompleteHausQuest());
+            return;
+        }
+
+        // Nach Quest abgeschlossen - zur nächsten Scene
         if (hausQuestDone)
         {
-            if (hausComplete != null)
-                hausNPC.dialogue = hausComplete;
+            if (huhnToNextScene != null)
+            {
+                huhn.dialogue = huhnToNextScene;
+
+                // Warte bis Dialog zu Ende ist, dann Scene laden
+                StartCoroutine(WaitForDialogueAndLoadScene());
+            }
         }
     }
 
-    IEnumerator Questhaus()
+    IEnumerator StartHausQuest()
     {
         yield return new WaitForSeconds(0.1f);
 
-        GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
+        // Questlog erstellen
+        questDisplay = Instantiate(questDisplayPrefab, questScreen);
         questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
-        questTMP.text = "Answer the questions";
+        questTMP.text = "Find the shiny object";
 
-        correctAnswers = 0;
-
-        if (hausQuestions != null && hausQuestions.Length > 0)
-            hausNPC.dialogue = hausQuestions[0];
+        // Shiny Item aktivieren (falls versteckt)
+        if (shinyItem != null && !shinyItem.gameObject.activeSelf)
+            shinyItem.gameObject.SetActive(true);
     }
 
-    public void OnAnswerSelected(bool isCorrect)
+    IEnumerator CompleteHausQuest()
     {
-        if (!hausQuestStarted || hausQuestDone)
-            return;
+        yield return new WaitForSeconds(0.5f);
 
-        if (isCorrect)
-        {
-            correctAnswers++;
-            questTMP.text = $"Answer the questions ({correctAnswers}/1)";
-
-            if (correctAnswers >= 1)
-            {
-                hausQuestDone = true;
-                questTMP.text = "Quest complete!";
-
-                // Map Item fällt weg eig.
-                if (mapItem != null)
-                    mapItem.gameObject.SetActive(true);
-
-                if (hausComplete != null)
-                    hausNPC.dialogue = hausComplete;
-
-                // Nach kurzer Zeit zurück zur Main Scene
-                StartCoroutine(ReturnToMain());
-            }
-            else
-            {
-                if (correctAnswers < hausQuestions.Length)
-                    hausNPC.dialogue = hausQuestions[correctAnswers];
-            }
-        }
-        else
-        {
-            correctAnswers = 0;
-            questTMP.text = "Wrong answer! Starting over...";
-
-            if (hausWrongAnswer != null)
-                hausNPC.dialogue = hausWrongAnswer;
-
-            StartCoroutine(ResetHausQuest());
-        }
+        if (questTMP != null)
+            questTMP.text = "Quest complete! Talk to the chicken again.";
     }
 
-    IEnumerator ResetHausQuest()
+    IEnumerator WaitForDialogueAndLoadScene()
     {
-        yield return new WaitForSeconds(2f);
-        questTMP.text = "Answer the questions";
-
-        if (hausQuestions != null && hausQuestions.Length > 0)
-            hausNPC.dialogue = hausQuestions[0];
-    }
-
-    IEnumerator ReturnToMain()
-    {
+        // Warte kurz damit Dialog angezeigt wird
         yield return new WaitForSeconds(3f);
 
-        questTMP.text = "Returning outside...";
+        if (questTMP != null)
+            questTMP.text = "Returning outside...";
 
         // Blackscreen einblenden
         if (blackScreen != null)
@@ -172,28 +155,7 @@ public class QuestHaus : MonoBehaviour, IQuestManager
 
         yield return new WaitForSeconds(2f);
 
-        // Speichere dass Map aufgesammelt wurde
-        PlayerPrefs.SetInt("HasMapItem", 1);
-        PlayerPrefs.Save();
-
-        SceneManager.LoadScene(mainSceneName);
+        // Scene laden
+        SceneManager.LoadScene(nextSceneName);
     }
-
-    // IQuestManager 
-
-    public void StartQuest(string questId)
-    {
-        //Quest startet NICHT über ID absichtlich leer
-    }
-
-    public void UpdateQuestProgress(string questId, int current, int total)
-    {
-        // Wird hier nicht benutzt
-    }
-
-    public void CompleteQuest(string questId)
-    {
-        // Wird hier nicht benutzt
-    }
-
 }

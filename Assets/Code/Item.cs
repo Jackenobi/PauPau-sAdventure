@@ -35,5 +35,6 @@ public enum ItemType
     Tape,
     Egg,
     Map,
-    Kid
+    Kid,
+    ShinyObject,
 }

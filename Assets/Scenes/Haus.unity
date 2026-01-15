@@ -599,7 +599,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -6629797300637803691, guid: 74f2d2c5083b62943a3c41f846cf5067, type: 3}
+      objectReference: {fileID: 2100000, guid: d5231dcb394147741b3f4de9d7ce1122, type: 2}
     - target: {fileID: -5754084199372789682, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2754,6 +2754,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8513859187771203891, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1903412209}
+    - targetCorrespondingSourceObject: {fileID: 8513859187771203891, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1903412212}
     - targetCorrespondingSourceObject: {fileID: 5245042011116262203, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 781964549}
@@ -3735,14 +3738,13 @@ MonoBehaviour:
   blackScreen: {fileID: 161123911}
   hausAudioSource: {fileID: 0}
   hausEntrySound: {fileID: 0}
-  hausNPC: {fileID: 351998945}
-  mapItem: {fileID: 0}
-  hausQuestions:
-  - {fileID: 351998946}
-  hausWrongAnswer: {fileID: 351998943}
-  hausComplete: {fileID: 351998944}
-  mainSceneName: Prophecy
-  spawnPositionInMain: {x: 0, y: 0, z: 0}
+  huhn: {fileID: 351998945}
+  shinyItem: {fileID: 1903412212}
+  huhnStart: {fileID: 351998946}
+  huhnNoItem: {fileID: 528350693}
+  huhnComplete: {fileID: 1087924718}
+  huhnToNextScene: {fileID: 1639449488}
+  nextSceneName: Prophecy
 --- !u!4 &1844666120
 Transform:
   m_ObjectHideFlags: 0
@@ -3845,6 +3847,26 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7387706064836869012, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!114 &1903412212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200415063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4782d2c6c4888c142a947fb3ac50666c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 4
+  pickupEvent:
+    Guid:
+      Data1: -1379319142
+      Data2: 1211238273
+      Data3: -902808187
+      Data4: 963651165
+    Path: event:/SFX/SFX_PickUp
 --- !u!1 &1924810682
 GameObject:
   m_ObjectHideFlags: 0

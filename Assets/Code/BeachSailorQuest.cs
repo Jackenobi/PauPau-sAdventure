@@ -1,43 +1,35 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class BeachSailorQuest : MonoBehaviour, IQuestManager
 {
     [Header("UI")]
-    public DialogueScreen dialogueScreen;
     public Transform questScreen;
     public GameObject questDisplayPrefab;
     public CanvasGroup blackScreen;
 
-    [Header("Audio")]
-    public AudioSource audioSource;
-    public AudioClip successSound;
+    [Header("NPC & Dialogue")]
+    public NPCs frosch;
+    public DialogueLine froschQuestion; // Die Frage mit Choices
 
-    [Header("NPC")]
-    public NPCs sailorNPC;
-
-    [Header("Dialogue")]
-    public DialogueLine sailorIntro;      // Dialog VOR der Frage
-    public DialogueLine sailorQuestion;   // Dialog MIT Choices
-    public DialogueLine sailorComplete;   // Optional nach Abschluss
-
-    [Header("Scene Transition")]
-    public string nextSceneName = "NextScene";
+    [Header("Scene")]
+    public string nextSceneName = "Main";
 
     private TMP_Text questTMP;
-
-    private bool introShown = false;
     private bool questStarted = false;
     private bool questCompleted = false;
 
     void Start()
     {
-        if (sailorNPC != null)
+        if (frosch != null)
         {
-            sailorNPC.onInteracted += OnSailorTalked;
-            sailorNPC.dialogue = sailorIntro; 
+            frosch.onInteracted += OnFroschTalked;
+
+            // Setze die Frage als Start-Dialog
+            if (froschQuestion != null)
+                frosch.dialogue = froschQuestion;
         }
 
         if (blackScreen != null)
@@ -45,93 +37,81 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
             blackScreen.alpha = 0f;
             blackScreen.gameObject.SetActive(false);
         }
-
-        // QuestUI
-        GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
-        questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
-        questTMP.text = "Talk to the sailor at the beach";
     }
 
-    private void OnSailorTalked()
+    private void OnFroschTalked()
     {
-        //IntroDialog
-        if (!introShown)
-        {
-            introShown = true;
-            sailorNPC.dialogue = sailorIntro;
-            return;
-        }
-
-        //Frage starten
         if (!questStarted)
         {
             questStarted = true;
-            questTMP.text = "Answer the sailor's question";
-            sailorNPC.dialogue = sailorQuestion;
-            return;
-        }
-
-        //Nach Abschluss
-        if (questCompleted && sailorComplete != null)
-        {
-            sailorNPC.dialogue = sailorComplete;
+            StartCoroutine(StartQuest());
         }
     }
 
+    IEnumerator StartQuest()
+    {
+        // Questlog erstellen
+        GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
+        questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
+        questTMP.text = "Answer the frog's question";
+
+        yield return null;
+    }
+
+    // Wird vom DialogueScreen aufgerufen bei Choice-Auswahl
     public void OnAnswerSelected(bool isCorrect)
     {
-        if (!questStarted || questCompleted)
+        if (questCompleted)
             return;
 
         if (isCorrect)
         {
             questCompleted = true;
-            questTMP.text = "Quest complete!";
 
-            if (sailorComplete != null)
-                sailorNPC.dialogue = sailorComplete;
+            if (questTMP != null)
+                questTMP.text = "Correct! Returning to beach...";
 
-            StartCoroutine(CompleteQuest());
+            // Scene laden
+            StartCoroutine(LoadNextScene());
         }
         else
         {
-            // falsche Antwort , Frage erneut
-            questTMP.text = "Wrong answer. Try again.";
-            sailorNPC.dialogue = sailorQuestion;
+            if (questTMP != null)
+                questTMP.text = "Wrong answer! Try again.";
+
+            // Dialog zurücksetzen zur Frage
+            if (frosch != null && froschQuestion != null)
+                frosch.dialogue = froschQuestion;
         }
     }
 
-    IEnumerator CompleteQuest()
+    IEnumerator LoadNextScene()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
 
-        // Sound
-        if (audioSource != null && successSound != null)
-        {
-            audioSource.PlayOneShot(successSound);
-        }
-
-        // Blackscreen Fade In
+        // Blackscreen einblenden
         if (blackScreen != null)
         {
             blackScreen.gameObject.SetActive(true);
-            float t = 0f;
-            while (t < 1f)
+            float fadeTime = 1f;
+            float elapsed = 0f;
+
+            while (elapsed < fadeTime)
             {
-                t += Time.deltaTime;
-                blackScreen.alpha = t;
+                elapsed += Time.deltaTime;
+                blackScreen.alpha = Mathf.Lerp(0f, 1f, elapsed / fadeTime);
                 yield return null;
             }
             blackScreen.alpha = 1f;
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         SceneManager.LoadScene(nextSceneName);
     }
+
+    // Interface-Methoden (werden nicht benutzt, müssen aber da sein)
     public void StartQuest(string questId) { }
     public void UpdateQuestProgress(string questId, int current, int total) { }
     public void CompleteQuest(string questId) { }
-
 }
-
