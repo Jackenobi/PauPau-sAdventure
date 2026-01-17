@@ -1,0 +1,1553 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &213559091320170702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7478815960657242562}
+  - component: {fileID: 6091157148195227296}
+  m_Layer: 0
+  m_Name: 3egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7478815960657242562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213559091320170702}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7811892988446306494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6091157148195227296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213559091320170702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Wow, good job! I was looking for them all day.
+  choices: []
+  speakerName: Wolf
+  voiceEvent:
+    Guid:
+      Data1: -1015842236
+      Data2: 1150995197
+      Data3: -958950265
+      Data4: -625914866
+    Path: event:/Dialogue/VOICE_Taube
+  npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 5941096529259759905}
+  player: 0
+--- !u!1 &372179427875418916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7666425671924149072}
+  - component: {fileID: 7205241667415660439}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7666425671924149072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372179427875418916}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37894206224262210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7205241667415660439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372179427875418916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Can I help you?
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 4922847055806305287}
+  player: 1
+--- !u!1 &647862680720544308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7811892988446306494}
+  - component: {fileID: 4787765313399922791}
+  m_Layer: 0
+  m_Name: NPCalleggs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7811892988446306494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647862680720544308}
+  serializedVersion: 2
+  m_LocalRotation: {x: 7.186059e-17, y: -0.07821824, z: 4.8320328e-17, w: -0.99693626}
+  m_LocalPosition: {x: -0.022166608, y: 0.24830972, z: 0.12301916}
+  m_LocalScale: {x: 0.93858224, y: 0.93858206, z: 0.93858224}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8989295636128519079}
+  - {fileID: 7478815960657242562}
+  - {fileID: 5848773526053809931}
+  - {fileID: 3038324063894262598}
+  - {fileID: 536360719156854959}
+  - {fileID: 7685705158172379313}
+  - {fileID: 2819339471669312438}
+  m_Father: {fileID: 8491932133153067124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4787765313399922791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647862680720544308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Got all the eggs? We are in a hurry!
+  choices: []
+  speakerName: Benni
+  voiceEvent:
+    Guid:
+      Data1: 2062076571
+      Data2: 1187392983
+      Data3: -80327785
+      Data4: -952640580
+    Path: "event:/Dialogue/VOICE_M\xF6we"
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 8864637816138578901}
+  player: 0
+--- !u!1 &1013598874645369533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2819339471669312438}
+  - component: {fileID: 6356674521989184653}
+  m_Layer: 0
+  m_Name: 8egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2819339471669312438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013598874645369533}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7811892988446306494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6356674521989184653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013598874645369533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: '...
+
+'
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 0}
+  player: 1
+--- !u!1 &1709065472260720545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3532826030322452873}
+  - component: {fileID: 2850384521115599745}
+  m_Layer: 0
+  m_Name: 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3532826030322452873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709065472260720545}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37894206224262210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2850384521115599745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709065472260720545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Eight eggs are missing. '
+  choices: []
+  speakerName: Phoenix
+  voiceEvent:
+    Guid:
+      Data1: 151989791
+      Data2: 1267933094
+      Data3: 1438974625
+      Data4: 1585768105
+    Path: event:/Dialogue/VOICE_Ente
+  npcPortrait: {fileID: 21300000, guid: b0147b47f585f8a4089425b1a689a44f, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 4857773735813750719}
+  player: 0
+--- !u!1 &1852054794031879319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6274801515930150017}
+  - component: {fileID: 5061383377805451745}
+  m_Layer: 0
+  m_Name: 7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6274801515930150017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852054794031879319}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37894206224262210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5061383377805451745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852054794031879319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: ..thank you.
+  choices: []
+  speakerName: Wolf
+  voiceEvent:
+    Guid:
+      Data1: -1015842236
+      Data2: 1150995197
+      Data3: -958950265
+      Data4: -625914866
+    Path: event:/Dialogue/VOICE_Taube
+  npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 1565591704126645829}
+  player: 0
+--- !u!1 &2419877779057024942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8391233338580914877}
+  - component: {fileID: 5551351796302432363}
+  m_Layer: 0
+  m_Name: 4egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8391233338580914877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2419877779057024942}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6615626979011087699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5551351796302432363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2419877779057024942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: (...the boss will fire me this time for sure)
+  choices: []
+  speakerName: Benni
+  voiceEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &3654577227653619016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8989295636128519079}
+  - component: {fileID: 8864637816138578901}
+  m_Layer: 0
+  m_Name: 2egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8989295636128519079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654577227653619016}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7811892988446306494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8864637816138578901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654577227653619016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Yep, all eight eggs.
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 6091157148195227296}
+  player: 1
+--- !u!1 &4397153870051229458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7685705158172379313}
+  - component: {fileID: 8860776467390965411}
+  m_Layer: 0
+  m_Name: 7egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7685705158172379313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4397153870051229458}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7811892988446306494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8860776467390965411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4397153870051229458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Yeah, we appreaciate your help but you have to leave now. No unauthorized
+    animals allowed, read the sign.
+  choices: []
+  speakerName: Benni
+  voiceEvent:
+    Guid:
+      Data1: 2062076571
+      Data2: 1187392983
+      Data3: -80327785
+      Data4: -952640580
+    Path: "event:/Dialogue/VOICE_M\xF6we"
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 6356674521989184653}
+  player: 0
+--- !u!1 &4549911788577463558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2167567610190816521}
+  - component: {fileID: 4857773735813750719}
+  m_Layer: 0
+  m_Name: 6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2167567610190816521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549911788577463558}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37894206224262210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4857773735813750719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549911788577463558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: That's right. And you better get them back for us!
+  choices: []
+  speakerName: Benni
+  voiceEvent:
+    Guid:
+      Data1: 2062076571
+      Data2: 1187392983
+      Data3: -80327785
+      Data4: -952640580
+    Path: "event:/Dialogue/VOICE_M\xF6we"
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 5061383377805451745}
+  player: 0
+--- !u!1 &5862558982512354707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8093237836034995500}
+  - component: {fileID: 1565591704126645829}
+  m_Layer: 0
+  m_Name: 8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8093237836034995500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862558982512354707}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37894206224262210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565591704126645829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862558982512354707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Okay I'll help you but I'll need some info on this egg afterwards!
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 1834479247988604778}
+  player: 1
+--- !u!1 &6152332507367746502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4294843322207316532}
+  - component: {fileID: 4922847055806305287}
+  m_Layer: 0
+  m_Name: 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4294843322207316532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6152332507367746502}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37894206224262210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4922847055806305287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6152332507367746502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Oh if you ask this nicely, sure, you can help us. Wolf, tell him what's up!
+  choices: []
+  speakerName: Benni
+  voiceEvent:
+    Guid:
+      Data1: 2062076571
+      Data2: 1187392983
+      Data3: -80327785
+      Data4: -952640580
+    Path: "event:/Dialogue/VOICE_M\xF6we"
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 2238782256322378347}
+  player: 0
+--- !u!1 &6235117729526045799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6555397857977432280}
+  - component: {fileID: 4917957558849184860}
+  m_Layer: 0
+  m_Name: "m\xF6we after"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6555397857977432280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235117729526045799}
+  serializedVersion: 2
+  m_LocalRotation: {x: 7.186059e-17, y: -0.07821824, z: 4.8320328e-17, w: -0.99693626}
+  m_LocalPosition: {x: -0.022166608, y: 0.24830972, z: 0.12301916}
+  m_LocalScale: {x: 0.93858224, y: 0.93858206, z: 0.93858224}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8491932133153067124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4917957558849184860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235117729526045799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: You have to leave.
+  choices: []
+  speakerName: Benni
+  voiceEvent:
+    Guid:
+      Data1: 2062076571
+      Data2: 1187392983
+      Data3: -80327785
+      Data4: -952640580
+    Path: "event:/Dialogue/VOICE_M\xF6we"
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &6653036089010233146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37894206224262210}
+  - component: {fileID: 1407603808273279920}
+  m_Layer: 0
+  m_Name: NPC1Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37894206224262210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6653036089010233146}
+  serializedVersion: 2
+  m_LocalRotation: {x: 7.186059e-17, y: -0.07821824, z: 4.8320328e-17, w: -0.99693626}
+  m_LocalPosition: {x: -0.022166608, y: 0.24830972, z: 0.12301916}
+  m_LocalScale: {x: 0.93858224, y: 0.93858206, z: 0.93858224}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7666425671924149072}
+  - {fileID: 4294843322207316532}
+  - {fileID: 2422252088861159656}
+  - {fileID: 3712196140871426817}
+  - {fileID: 3532826030322452873}
+  - {fileID: 2167567610190816521}
+  - {fileID: 6274801515930150017}
+  - {fileID: 8093237836034995500}
+  - {fileID: 7868130236847588206}
+  m_Father: {fileID: 8491932133153067124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1407603808273279920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6653036089010233146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Hey, you, come here for a second!
+  choices: []
+  speakerName: Benni
+  voiceEvent:
+    Guid:
+      Data1: 2062076571
+      Data2: 1187392983
+      Data3: -80327785
+      Data4: -952640580
+    Path: "event:/Dialogue/VOICE_M\xF6we"
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 7205241667415660439}
+  player: 0
+--- !u!1 &6684485715600124534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7868130236847588206}
+  - component: {fileID: 1834479247988604778}
+  m_Layer: 0
+  m_Name: 9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7868130236847588206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6684485715600124534}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37894206224262210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1834479247988604778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6684485715600124534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: sure.
+  choices: []
+  speakerName: Phoenix
+  voiceEvent:
+    Guid:
+      Data1: 151989791
+      Data2: 1267933094
+      Data3: 1438974625
+      Data4: 1585768105
+    Path: event:/Dialogue/VOICE_Ente
+  npcPortrait: {fileID: 21300000, guid: b0147b47f585f8a4089425b1a689a44f, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &6810714817787041313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5848773526053809931}
+  - component: {fileID: 5941096529259759905}
+  m_Layer: 0
+  m_Name: 4egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5848773526053809931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810714817787041313}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7811892988446306494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5941096529259759905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810714817787041313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Now I need some help from you.
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 1271025580941014636}
+  player: 1
+--- !u!1 &7062040775453419885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583116814011672827}
+  - component: {fileID: 2319429962962952937}
+  m_Layer: 0
+  m_Name: 2egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1583116814011672827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062040775453419885}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6615626979011087699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2319429962962952937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062040775453419885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Not yet, sorry.
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 4732490509069571935}
+  player: 1
+--- !u!1 &7157310213661243873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3038324063894262598}
+  - component: {fileID: 1271025580941014636}
+  m_Layer: 0
+  m_Name: 5egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3038324063894262598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157310213661243873}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7811892988446306494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1271025580941014636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157310213661243873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Have you seen an egg like this before? You've got all kind of eggs here.
+    You must know SOMETHING. right?
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 451623841533701017}
+  player: 1
+--- !u!1 &7233714562273858744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536360719156854959}
+  - component: {fileID: 451623841533701017}
+  m_Layer: 0
+  m_Name: 6egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &536360719156854959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233714562273858744}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7811892988446306494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &451623841533701017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233714562273858744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: I know all the eggs here. Never seen one like yours.
+  choices: []
+  speakerName: Phoenix
+  voiceEvent:
+    Guid:
+      Data1: 151989791
+      Data2: 1267933094
+      Data3: 1438974625
+      Data4: 1585768105
+    Path: event:/Dialogue/VOICE_Ente
+  npcPortrait: {fileID: 21300000, guid: b0147b47f585f8a4089425b1a689a44f, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 8860776467390965411}
+  player: 0
+--- !u!1 &8091864633217985942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6615626979011087699}
+  - component: {fileID: 2454095778764015441}
+  m_Layer: 0
+  m_Name: NPCnoegg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6615626979011087699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091864633217985942}
+  serializedVersion: 2
+  m_LocalRotation: {x: 7.186059e-17, y: -0.07821824, z: 4.8320328e-17, w: -0.99693626}
+  m_LocalPosition: {x: -0.022166608, y: 0.24830972, z: 0.12301916}
+  m_LocalScale: {x: 0.93858224, y: 0.93858206, z: 0.93858224}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1583116814011672827}
+  - {fileID: 8809771894885119959}
+  - {fileID: 8391233338580914877}
+  m_Father: {fileID: 8491932133153067124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2454095778764015441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091864633217985942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Got all the eggs? We are in a hurry!
+  choices: []
+  speakerName: Benni
+  voiceEvent:
+    Guid:
+      Data1: 2062076571
+      Data2: 1187392983
+      Data3: -80327785
+      Data4: -952640580
+    Path: "event:/Dialogue/VOICE_M\xF6we"
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 2319429962962952937}
+  player: 0
+--- !u!1 &8093508096959207273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3712196140871426817}
+  - component: {fileID: 2795766348927938049}
+  m_Layer: 0
+  m_Name: 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3712196140871426817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093508096959207273}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37894206224262210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2795766348927938049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093508096959207273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Somehow some of our eggs got lost, Phoenix counted them today.
+  choices: []
+  speakerName: Wolf
+  voiceEvent:
+    Guid:
+      Data1: -1015842236
+      Data2: 1150995197
+      Data3: -958950265
+      Data4: -625914866
+    Path: event:/Dialogue/VOICE_Taube
+  npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 2850384521115599745}
+  player: 0
+--- !u!1 &8454229587394134032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2422252088861159656}
+  - component: {fileID: 2238782256322378347}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2422252088861159656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454229587394134032}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37894206224262210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2238782256322378347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454229587394134032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Okay boss.. '
+  choices: []
+  speakerName: Wolf
+  voiceEvent:
+    Guid:
+      Data1: -1015842236
+      Data2: 1150995197
+      Data3: -958950265
+      Data4: -625914866
+    Path: event:/Dialogue/VOICE_Taube
+  npcPortrait: {fileID: 21300000, guid: dcaea53f55bca4e489d0abb433b79314, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 2795766348927938049}
+  player: 0
+--- !u!1 &8647036383400740045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8809771894885119959}
+  - component: {fileID: 4732490509069571935}
+  m_Layer: 0
+  m_Name: 3egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8809771894885119959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8647036383400740045}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 2.3041602e-25, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6615626979011087699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4732490509069571935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8647036383400740045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Get going!
+  choices: []
+  speakerName: Benni
+  voiceEvent:
+    Guid:
+      Data1: 2062076571
+      Data2: 1187392983
+      Data3: -80327785
+      Data4: -952640580
+    Path: "event:/Dialogue/VOICE_M\xF6we"
+  npcPortrait: {fileID: 21300000, guid: 418dc329fad3b5d489b25d5fd2586a9a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 5551351796302432363}
+  player: 0
+--- !u!1001 &8238172462939715487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1679001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1679
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1679001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.956505
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.58
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -34.818542
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.13544388
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.990785
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -195.569
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2360306837559816608, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9eac3756886377b48b575c2418e8e95a, type: 2}
+    - target: {fileID: 919132149155446097, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_Name
+      value: "m\xF6we"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365128100509710175, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.32
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 37894206224262210}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6615626979011087699}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7811892988446306494}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6555397857977432280}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1233787523117395414}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6371529792469630882}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5212316345632627928}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1726049684269650233}
+  m_SourcePrefab: {fileID: 100100000, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+--- !u!4 &8491932133153067124 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+  m_PrefabInstance: {fileID: 8238172462939715487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9120554389417757390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 513861168b17c4d4db15bcf9e246b17b, type: 3}
+  m_PrefabInstance: {fileID: 8238172462939715487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1233787523117395414
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120554389417757390}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc71621c17e914a45b06002596c18ee3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &6371529792469630882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120554389417757390}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.09, y: 5.52, z: 1.25}
+  m_Center: {x: -0.02, y: 0.46, z: 0}
+--- !u!136 &5212316345632627928
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120554389417757390}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.62
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.25, z: -0.29}
+--- !u!114 &1726049684269650233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120554389417757390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9d4ddbfd410ee40a9dd0dd0b86d04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namenpc: Benni
+  dialogue: {fileID: 1407603808273279920}
+  portrait: {fileID: 0}
+  dialogueScreen: {fileID: 0}
+  hasSpoken: 0

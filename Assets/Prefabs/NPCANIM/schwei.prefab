@@ -1,0 +1,722 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &472833513695867295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124512335265512111}
+  - component: {fileID: 3008646798300144124}
+  m_Layer: 0
+  m_Name: 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124512335265512111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472833513695867295}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7973418186306245372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3008646798300144124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472833513695867295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: That must be the biggest egg I've ever seen! Keep me updated. I'm getting
+    curious, too.
+  choices: []
+  speakerName: Christ
+  voiceEvent:
+    Guid:
+      Data1: -1268800327
+      Data2: 1172330287
+      Data3: 1302685334
+      Data4: 1935369892
+    Path: event:/Dialogue/VOICE_Schwein
+  npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 5834647269355931148}
+  player: 0
+--- !u!1 &1241840801010592968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9031834092468537098}
+  - component: {fileID: 5841570859976961977}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9031834092468537098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241840801010592968}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7973418186306245372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5841570859976961977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241840801010592968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Oh I would love to but I can't. I need to find the parents of this egg.
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 3008646798300144124}
+  player: 1
+--- !u!1 &1443749394190428933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3400022017788830797}
+  - component: {fileID: 849208503870489373}
+  m_Layer: 0
+  m_Name: NPC3During
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3400022017788830797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443749394190428933}
+  serializedVersion: 2
+  m_LocalRotation: {x: -1.5951332e-18, y: -0.13464488, z: 8.6580915e-17, w: -0.9908939}
+  m_LocalPosition: {x: -0.07768178, y: 0.09731276, z: 0.20575324}
+  m_LocalScale: {x: 1.0518676, y: 1.0518677, z: 1.0518676}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1142284000409790870}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849208503870489373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443749394190428933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: If you can't find the parents I can cook the egg for you. HAHA, just joking.
+  choices: []
+  speakerName: Christ
+  voiceEvent:
+    Guid:
+      Data1: -1268800327
+      Data2: 1172330287
+      Data3: 1302685334
+      Data4: 1935369892
+    Path: event:/Dialogue/VOICE_Schwein
+  npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &2539081742181077720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5208054502518071719}
+  - component: {fileID: 5118085254249265542}
+  m_Layer: 0
+  m_Name: A2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5208054502518071719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539081742181077720}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4164198301054706053}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5118085254249265542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539081742181077720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Oh how eggciting that is!
+  choices: []
+  speakerName: Christ
+  voiceEvent:
+    Guid:
+      Data1: -1268800327
+      Data2: 1172330287
+      Data3: 1302685334
+      Data4: 1935369892
+    Path: event:/Dialogue/VOICE_Schwein
+  npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 7630868448302949849}
+  player: 0
+--- !u!1 &4529733129498154425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7973418186306245372}
+  - component: {fileID: 2894365546980368640}
+  m_Layer: 0
+  m_Name: NPC3Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7973418186306245372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529733129498154425}
+  serializedVersion: 2
+  m_LocalRotation: {x: -1.5951332e-18, y: -0.13464488, z: 8.6580915e-17, w: -0.9908939}
+  m_LocalPosition: {x: -0.07768178, y: 0.09731276, z: 0.20575324}
+  m_LocalScale: {x: 1.0518676, y: 1.0518677, z: 1.0518676}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9031834092468537098}
+  - {fileID: 1124512335265512111}
+  - {fileID: 7478395871109890152}
+  m_Father: {fileID: 1142284000409790870}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2894365546980368640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529733129498154425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Oh PaoPao, are you coming over for dinner again?
+  choices: []
+  speakerName: Christ
+  voiceEvent:
+    Guid:
+      Data1: -1268800327
+      Data2: 1172330287
+      Data3: 1302685334
+      Data4: 1935369892
+    Path: event:/Dialogue/VOICE_Schwein
+  npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 5841570859976961977}
+  player: 0
+--- !u!1 &4942694637287894634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7478395871109890152}
+  - component: {fileID: 5834647269355931148}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7478395871109890152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4942694637287894634}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7973418186306245372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5834647269355931148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4942694637287894634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Will do.
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 0}
+  player: 1
+--- !u!1 &6411740415832881585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4164198301054706053}
+  - component: {fileID: 4342237040710957533}
+  m_Layer: 0
+  m_Name: NPC3After
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4164198301054706053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411740415832881585}
+  serializedVersion: 2
+  m_LocalRotation: {x: -1.5951332e-18, y: -0.13464488, z: 8.6580915e-17, w: -0.9908939}
+  m_LocalPosition: {x: -0.07768178, y: 0.09731276, z: 0.20575324}
+  m_LocalScale: {x: 1.0518676, y: 1.0518677, z: 1.0518676}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6780761449450541267}
+  - {fileID: 5208054502518071719}
+  - {fileID: 3731766790279697641}
+  m_Father: {fileID: 1142284000409790870}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4342237040710957533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411740415832881585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Found an eggspert yet? ... get it??
+  choices: []
+  speakerName: Christ
+  voiceEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 3892683965281898669}
+  player: 0
+--- !u!1 &8702601150341981317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3731766790279697641}
+  - component: {fileID: 7630868448302949849}
+  m_Layer: 0
+  m_Name: A3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3731766790279697641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702601150341981317}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4164198301054706053}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7630868448302949849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702601150341981317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Don't overdo these jokes please... Anyway, I'll be back soon!
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 0}
+  player: 1
+--- !u!1 &9123931313894427631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6780761449450541267}
+  - component: {fileID: 3892683965281898669}
+  m_Layer: 0
+  m_Name: A1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6780761449450541267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9123931313894427631}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4164198301054706053}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3892683965281898669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9123931313894427631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Haha good one, Christ. I actually found one and I've got this cool map now.
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 59b3cda3d14254440b66d50317162ce3, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 5118085254249265542}
+  player: 1
+--- !u!1001 &599132967477235325
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3359
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3359
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3359
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.49
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 208.52
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.32818565
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9446133
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -141.683
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5034610084208989732, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a08f4af7c8d65b49a9533e3700b9790, type: 2}
+    - target: {fileID: 919132149155446097, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_Name
+      value: schwei
+      objectReference: {fileID: 0}
+    - target: {fileID: 3497628192635381879, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.87
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7973418186306245372}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3400022017788830797}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4164198301054706053}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2840072179295351382}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8363778680329152253}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7905178518228354776}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9050283241816454952}
+  m_SourcePrefab: {fileID: 100100000, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+--- !u!1 &329296669843256108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+  m_PrefabInstance: {fileID: 599132967477235325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2840072179295351382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329296669843256108}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.61, y: 6.45, z: 1.57}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &8363778680329152253
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329296669843256108}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.66
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0.18, y: 1.55, z: -0.94}
+--- !u!95 &7905178518228354776
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329296669843256108}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dabd743b5b57a044b85df6e61a4e0415, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9050283241816454952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329296669843256108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9d4ddbfd410ee40a9dd0dd0b86d04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namenpc: Christ
+  dialogue: {fileID: 2894365546980368640}
+  portrait: {fileID: 0}
+  dialogueScreen: {fileID: 0}
+  hasSpoken: 0
+--- !u!4 &1142284000409790870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0deb1b8fbd347a14883e55324218688a, type: 3}
+  m_PrefabInstance: {fileID: 599132967477235325}
+  m_PrefabAsset: {fileID: 0}

@@ -15,14 +15,15 @@ public class QuestHaus : MonoBehaviour
     [Header("Audio")]
     public AudioSource hausAudioSource;
     public AudioClip hausEntrySound;
+    public QuestSoundManager questSoundManager;
 
     [Header("Quest: Huhn")]
     public NPCs huhn;
-    public Item shinyItem; // Das Item im Raum
-    public DialogueLine huhnStart; // Erstes Gespräch - startet Quest
-    public DialogueLine huhnNoItem; // Wenn Item noch nicht gefunden
-    public DialogueLine huhnComplete; // Wenn Item abgegeben wird
-    public DialogueLine huhnToNextScene; // Letzte Line → lädt Scene
+    public Item shinyItem;
+    public DialogueLine huhnStart;
+    public DialogueLine huhnNoItem;
+    public DialogueLine huhnComplete;
+    public DialogueLine huhnToNextScene;
 
     [Header("Scene Management")]
     public string nextSceneName = "MainAfter";
@@ -56,11 +57,6 @@ public class QuestHaus : MonoBehaviour
             blackScreen.alpha = 0f;
             blackScreen.gameObject.SetActive(false);
         }
-
-        // Shiny Item verstecken (falls du es spawnen willst)
-        // Falls es schon in der Scene platziert ist, lass das weg
-        // if (shinyItem != null)
-        //     shinyItem.gameObject.SetActive(true);
     }
 
     private void OnHuhnTalked()
@@ -124,6 +120,10 @@ public class QuestHaus : MonoBehaviour
     IEnumerator CompleteHausQuest()
     {
         yield return new WaitForSeconds(0.5f);
+
+        // Quest Complete Sound abspielen
+        if (questSoundManager != null)
+            questSoundManager.PlayQuestComplete();
 
         if (questTMP != null)
             questTMP.text = "Quest complete! Talk to the chicken again.";

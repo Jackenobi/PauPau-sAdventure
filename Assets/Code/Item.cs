@@ -12,20 +12,27 @@ public class Item : Interactable
     {
         base.Interact();
 
-        //  FMOD Sound (2D oder 3D – je nach Event)
+        // FMOD Sound
         if (!pickupEvent.IsNull)
         {
             RuntimeManager.PlayOneShot(pickupEvent, transform.position);
         }
 
-        //  Ins Inventar
+        // Player Animation triggern
+        Player player = GameObject.FindFirstObjectByType<Player>();
+        if (player != null && player.animator != null)
+        {
+            player.animator.SetTrigger("Pickup"); // Trigger im Animator
+        }
+
+        // Ins Inventar
         Inventory inventory = GameObject.FindFirstObjectByType<Inventory>();
         if (inventory != null)
         {
             inventory.AddItem(this);
         }
 
-        //  Item entfernen
+        // Item entfernen
         Destroy(gameObject);
     }
 }

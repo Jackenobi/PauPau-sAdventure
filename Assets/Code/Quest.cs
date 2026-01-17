@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Quest : MonoBehaviour, IQuestManager
-
 {
     [Header("UI")]
     public DialogueScreen dialogueScreen;
@@ -12,6 +11,9 @@ public class Quest : MonoBehaviour, IQuestManager
     public GameObject questDisplayPrefab;
     public Inventory inventory;
     public CanvasGroup blackScreen;
+
+    [Header("Audio")]
+    public QuestSoundManager questSoundManager;
 
     [Header("Quest: Nachbarn")]
     public NPCs[] nachbarn;
@@ -298,6 +300,11 @@ public class Quest : MonoBehaviour, IQuestManager
     IEnumerator CompleteNeighborQuest()
     {
         yield return new WaitForSeconds(1f);
+
+        // Quest Complete Sound abspielen
+        if (questSoundManager != null)
+            questSoundManager.PlayQuestComplete();
+
         bauarbeiterQuestActive = true;
         if (bauarbeiterDuring != null)
             bauarbeiter.dialogue = bauarbeiterDuring;
@@ -356,6 +363,10 @@ public class Quest : MonoBehaviour, IQuestManager
     IEnumerator CompleteBauarbeiterQuest()
     {
         bauarbeiterQuestDone = true;
+
+        // Quest Complete Sound abspielen
+        if (questSoundManager != null)
+            questSoundManager.PlayQuestComplete();
 
         if (blackScreen != null)
         {
@@ -446,6 +457,11 @@ public class Quest : MonoBehaviour, IQuestManager
     IEnumerator CompleteSeemannQuest()
     {
         seemannQuestDone = true;
+
+        // Quest Complete Sound abspielen
+        if (questSoundManager != null)
+            questSoundManager.PlayQuestComplete();
+
         yield return new WaitForSeconds(1f);
         questTMP.text = "Setting sail...";
 
@@ -549,6 +565,11 @@ public class Quest : MonoBehaviour, IQuestManager
             yield break;
 
         yield return new WaitForSeconds(0.5f);
+
+        // Quest Complete Sound abspielen
+        if (questSoundManager != null)
+            questSoundManager.PlayQuestComplete();
+
         foreach (var obj in rewardObjects)
         {
             if (obj != null)
@@ -620,6 +641,11 @@ public class Quest : MonoBehaviour, IQuestManager
             if (correctAnswers >= 3)
             {
                 schafQuestDone = true;
+
+                // Quest Complete Sound abspielen
+                if (questSoundManager != null)
+                    questSoundManager.PlayQuestComplete();
+
                 questTMP.text = "Quest complete!";
                 if (schafComplete != null)
                     schaf.dialogue = schafComplete;
@@ -632,6 +658,10 @@ public class Quest : MonoBehaviour, IQuestManager
         }
         else
         {
+            // Quest Fail Sound abspielen (optional)
+            if (questSoundManager != null)
+                questSoundManager.PlayQuestFail();
+
             correctAnswers = 0;
             questTMP.text = "Wrong answer! Starting over...";
             if (schafWrongAnswer != null)
@@ -725,6 +755,10 @@ public class Quest : MonoBehaviour, IQuestManager
 
     IEnumerator CompleteOpossumQuest()
     {
+        // Quest Complete Sound abspielen
+        if (questSoundManager != null)
+            questSoundManager.PlayQuestComplete();
+
         questTMP.text = "You found the opossum!";
         yield return new WaitForSeconds(2f);
 
@@ -827,8 +861,13 @@ public class Quest : MonoBehaviour, IQuestManager
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(waldSceneName);
     }
+
     public void StartQuest(string questId) { }
     public void UpdateQuestProgress(string questId, int current, int total) { }
     public void CompleteQuest(string questId) { }
 
+    public bool IsNachbarnQuestDone()
+    {
+        return nachbarnQuestDone;
+    }
 }

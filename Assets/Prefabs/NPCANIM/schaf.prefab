@@ -1,0 +1,932 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &79577115314464266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7652341947492786140}
+  - component: {fileID: 5501559436638894431}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7652341947492786140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79577115314464266}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5301449759676936753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5501559436638894431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79577115314464266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Really, how?
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 6915957076184508988}
+  player: 1
+--- !u!1 &654072386910560964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9144500207916697144}
+  - component: {fileID: 6449662117315600496}
+  m_Layer: 0
+  m_Name: Frage 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9144500207916697144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654072386910560964}
+  serializedVersion: 2
+  m_LocalRotation: {x: -3.688829e-17, y: 0.10211283, z: 7.834579e-17, w: -0.9947729}
+  m_LocalPosition: {x: -0.055738367, y: 0.26000214, z: -0.017086286}
+  m_LocalScale: {x: 1.0961698, y: 1.09617, z: 1.0961698}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049359728984198105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6449662117315600496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654072386910560964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: letzte frage 1+1
+  choices:
+  - text: 6
+    nextLine: {fileID: 4851168295115014996}
+    id: 
+    isCorrect: 0
+  - text: 4
+    nextLine: {fileID: 4851168295115014996}
+    id: 
+    isCorrect: 0
+  - text: 2
+    nextLine: {fileID: 5468719595868507160}
+    id: 
+    isCorrect: 1
+  speakerName: Marco
+  voiceEvent:
+    Guid:
+      Data1: 967369467
+      Data2: 1327852351
+      Data3: 1859784087
+      Data4: -1143158140
+    Path: event:/Dialogue/VOICE_Schaf
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &2043234949817303284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6835693107989799942}
+  - component: {fileID: 7166606171934411629}
+  m_Layer: 0
+  m_Name: Frage 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6835693107989799942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043234949817303284}
+  serializedVersion: 2
+  m_LocalRotation: {x: -3.688829e-17, y: 0.10211283, z: 7.834579e-17, w: -0.9947729}
+  m_LocalPosition: {x: -0.055738367, y: 0.26000214, z: -0.017086286}
+  m_LocalScale: {x: 1.0961698, y: 1.09617, z: 1.0961698}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049359728984198105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7166606171934411629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043234949817303284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'YIPPI! Answer me three questions.
+
+    What of these animals doesn''t lay
+    eggs?'
+  choices:
+  - text: Platypus
+    nextLine: {fileID: 4851168295115014996}
+    id: 
+    isCorrect: 0
+  - text: Turtle
+    nextLine: {fileID: 4851168295115014996}
+    id: 
+    isCorrect: 0
+  - text: Bunny
+    nextLine: {fileID: 6759487774108191490}
+    id: 
+    isCorrect: 1
+  speakerName: Marco
+  voiceEvent:
+    Guid:
+      Data1: 967369467
+      Data2: 1327852351
+      Data3: 1859784087
+      Data4: -1143158140
+    Path: event:/Dialogue/VOICE_Schaf
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &4943839339797078840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5678462631401321539}
+  - component: {fileID: 5468719595868507160}
+  m_Layer: 0
+  m_Name: QuestFertig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5678462631401321539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943839339797078840}
+  serializedVersion: 2
+  m_LocalRotation: {x: -3.688829e-17, y: 0.10211283, z: 7.834578e-17, w: -0.9947729}
+  m_LocalPosition: {x: -0.055738367, y: 0.26000214, z: -0.017086286}
+  m_LocalScale: {x: 1.0961698, y: 1.09617, z: 1.0961698}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049359728984198105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5468719595868507160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943839339797078840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Good job! Now talk to my friend and after that we will show you our secret.
+  choices: []
+  speakerName: Marco
+  voiceEvent:
+    Guid:
+      Data1: 967369467
+      Data2: 1327852351
+      Data3: 1859784087
+      Data4: -1143158140
+    Path: event:/Dialogue/VOICE_Schaf
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &5035168863333935672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6685512573388863813}
+  - component: {fileID: 6915957076184508988}
+  m_Layer: 0
+  m_Name: 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6685512573388863813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035168863333935672}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5301449759676936753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6915957076184508988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035168863333935672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: WE KNOW A SECRET SPOT ON THIS ISLAND HEHEHEE
+  choices: []
+  speakerName: Jana
+  voiceEvent:
+    Guid:
+      Data1: 1236399753
+      Data2: 1232127547
+      Data3: -342285937
+      Data4: 499761214
+    Path: event:/Dialogue/VOICE_Opossum
+  npcPortrait: {fileID: 21300000, guid: 2daebb62d5d21cd4f8da84075add2b78, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 3674267802286731327}
+  player: 0
+--- !u!1 &6234118573988760623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6886362457986421965}
+  - component: {fileID: 8097902382059294680}
+  m_Layer: 0
+  m_Name: NPC1After
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6886362457986421965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6234118573988760623}
+  serializedVersion: 2
+  m_LocalRotation: {x: -3.688829e-17, y: 0.10211283, z: 7.834578e-17, w: -0.9947729}
+  m_LocalPosition: {x: -0.055738367, y: 0.26000214, z: -0.017086286}
+  m_LocalScale: {x: 1.0961698, y: 1.09617, z: 1.0961698}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049359728984198105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8097902382059294680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6234118573988760623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Have you seen Jana? I bet she is hiding again!
+  choices: []
+  speakerName: Marco
+  voiceEvent:
+    Guid:
+      Data1: 967369467
+      Data2: 1327852351
+      Data3: 1859784087
+      Data4: -1143158140
+    Path: event:/Dialogue/VOICE_Schaf
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &6888103706069665183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2877690134072860419}
+  - component: {fileID: 4851168295115014996}
+  m_Layer: 0
+  m_Name: FalscheA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2877690134072860419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888103706069665183}
+  serializedVersion: 2
+  m_LocalRotation: {x: -3.688829e-17, y: 0.10211283, z: 7.834579e-17, w: -0.9947729}
+  m_LocalPosition: {x: -0.055738367, y: 0.26000214, z: -0.017086286}
+  m_LocalScale: {x: 1.0961698, y: 1.09617, z: 1.0961698}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049359728984198105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4851168295115014996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888103706069665183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Wrooong, try again!
+  choices: []
+  speakerName: Marco
+  voiceEvent:
+    Guid:
+      Data1: 967369467
+      Data2: 1327852351
+      Data3: 1859784087
+      Data4: -1143158140
+    Path: event:/Dialogue/VOICE_Schaf
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &7309665015425773869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5301449759676936753}
+  - component: {fileID: 3759944240900655660}
+  m_Layer: 0
+  m_Name: NPC1Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5301449759676936753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309665015425773869}
+  serializedVersion: 2
+  m_LocalRotation: {x: -3.688829e-17, y: 0.10211283, z: 7.834578e-17, w: -0.9947729}
+  m_LocalPosition: {x: -0.055738367, y: 0.26000214, z: -0.017086286}
+  m_LocalScale: {x: 1.0961698, y: 1.09617, z: 1.0961698}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 751890737974903407}
+  - {fileID: 2660646689889949887}
+  - {fileID: 7652341947492786140}
+  - {fileID: 6685512573388863813}
+  - {fileID: 8464131969531143670}
+  m_Father: {fileID: 1049359728984198105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3759944240900655660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309665015425773869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Wow what's that big egg?
+  choices: []
+  speakerName: Marco
+  voiceEvent:
+    Guid:
+      Data1: 967369467
+      Data2: 1327852351
+      Data3: 1859784087
+      Data4: -1143158140
+    Path: event:/Dialogue/VOICE_Schaf
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 3487204275476376209}
+  player: 0
+--- !u!1 &7405994951589422759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8464131969531143670}
+  - component: {fileID: 3674267802286731327}
+  m_Layer: 0
+  m_Name: 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8464131969531143670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405994951589422759}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5301449759676936753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3674267802286731327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405994951589422759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: We will show you, but play with us first! Just say when you're ready.
+  choices: []
+  speakerName: Marco
+  voiceEvent:
+    Guid:
+      Data1: 967369467
+      Data2: 1327852351
+      Data3: 1859784087
+      Data4: -1143158140
+    Path: event:/Dialogue/VOICE_Schaf
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &7474017964239630872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145642176903221071}
+  - component: {fileID: 6759487774108191490}
+  m_Layer: 0
+  m_Name: Frage 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1145642176903221071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474017964239630872}
+  serializedVersion: 2
+  m_LocalRotation: {x: -3.688829e-17, y: 0.10211283, z: 7.834579e-17, w: -0.9947729}
+  m_LocalPosition: {x: -0.055738367, y: 0.26000214, z: -0.017086286}
+  m_LocalScale: {x: 1.0961698, y: 1.09617, z: 1.0961698}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049359728984198105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6759487774108191490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474017964239630872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Next question. What is the largest animal?
+  choices:
+  - text: Blue whale
+    nextLine: {fileID: 6449662117315600496}
+    id: 
+    isCorrect: 1
+  - text: Elephant
+    nextLine: {fileID: 4851168295115014996}
+    id: 
+    isCorrect: 0
+  - text: Whale shark
+    nextLine: {fileID: 4851168295115014996}
+    id: 
+    isCorrect: 0
+  speakerName: Marco
+  voiceEvent:
+    Guid:
+      Data1: 967369467
+      Data2: 1327852351
+      Data3: 1859784087
+      Data4: -1143158140
+    Path: event:/Dialogue/VOICE_Schaf
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 0}
+  player: 0
+--- !u!1 &7720363480071505089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 751890737974903407}
+  - component: {fileID: 3487204275476376209}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &751890737974903407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7720363480071505089}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5301449759676936753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3487204275476376209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7720363480071505089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Hey kids. I am trying to find it's parents or some clues to where it belongs
+    but I had no luck yet.
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 288940882946059977}
+  player: 1
+--- !u!1 &8242748448485355987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2660646689889949887}
+  - component: {fileID: 288940882946059977}
+  m_Layer: 0
+  m_Name: 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2660646689889949887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242748448485355987}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5301449759676936753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &288940882946059977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242748448485355987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: hehe, we might be able to help.
+  choices: []
+  speakerName: Marco
+  voiceEvent:
+    Guid:
+      Data1: 967369467
+      Data2: 1327852351
+      Data3: 1859784087
+      Data4: -1143158140
+    Path: event:/Dialogue/VOICE_Schaf
+  npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  nextLine: {fileID: 5501559436638894431}
+  player: 0
+--- !u!1001 &656024026657418290
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.179993
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.609999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.37001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.61616844
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.78761446
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -103.926
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_Name
+      value: schaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420467227174136917, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0df7f942ae94b3b43b228471e5d77a44, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5301449759676936753}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6835693107989799942}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1145642176903221071}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9144500207916697144}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2877690134072860419}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5678462631401321539}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6886362457986421965}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7380563477614735046}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 601731795512019008}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5752531723715971773}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1828805027616369759}
+  m_SourcePrefab: {fileID: 100100000, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+--- !u!1 &422146157297553763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+  m_PrefabInstance: {fileID: 656024026657418290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7380563477614735046
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422146157297553763}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b9e4e24261a5d041b89f3e7b4b9b450, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &601731795512019008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422146157297553763}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.75, y: 3.39, z: 1}
+  m_Center: {x: 0, y: 0.54, z: 0}
+--- !u!135 &5752531723715971773
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422146157297553763}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.94
+  m_Center: {x: 0, y: 0.99, z: -0.6}
+--- !u!114 &1828805027616369759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422146157297553763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9d4ddbfd410ee40a9dd0dd0b86d04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namenpc: Marco
+  dialogue: {fileID: 3759944240900655660}
+  portrait: {fileID: 0}
+  dialogueScreen: {fileID: 0}
+  hasSpoken: 0
+--- !u!4 &1049359728984198105 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0477a84210e09fc4ba50540475035d57, type: 3}
+  m_PrefabInstance: {fileID: 656024026657418290}
+  m_PrefabAsset: {fileID: 0}
