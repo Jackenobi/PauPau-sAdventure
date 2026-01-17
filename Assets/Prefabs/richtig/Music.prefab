@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1742821088827868617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5533566719585371748}
+  - component: {fileID: 6985500493589029162}
+  - component: {fileID: 4540409233346223046}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5533566719585371748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742821088827868617}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.50684, y: 9.5, z: -12.556669}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6985500493589029162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742821088827868617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fb7a6734d64964380962d607139df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMusicEvent:
+    Guid:
+      Data1: 1387580209
+      Data2: 1300055452
+      Data3: 695496376
+      Data4: -1398065796
+    Path: event:/Music/OST_PaoPaosEggventure
+  sceneParameterName: Scene
+  fadeOutDuration: 2
+  fadeInDuration: 2
+--- !u!114 &4540409233346223046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742821088827868617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1736ea12146406740991640fd34e84ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneConfigs:
+  - sceneName: Startscreen
+    useMainMusicWithParameters: 0
+    musicEvent:
+      Guid:
+        Data1: -1329830190
+        Data2: 1101194068
+        Data3: -1740716885
+        Data4: 56661699
+      Path: event:/Music/OST_Menue
+    musicAreaParameter: 
+    ambienceEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+  - sceneName: Intro
+    useMainMusicWithParameters: 0
+    musicEvent:
+      Guid:
+        Data1: -1329830190
+        Data2: 1101194068
+        Data3: -1740716885
+        Data4: 56661699
+      Path: event:/Music/OST_Menue
+    musicAreaParameter: 
+    ambienceEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+  - sceneName: Main
+    useMainMusicWithParameters: 1
+    musicEvent:
+      Guid:
+        Data1: 1387580209
+        Data2: 1300055452
+        Data3: 695496376
+        Data4: -1398065796
+      Path: event:/Music/OST_PaoPaosEggventure
+    musicAreaParameter: Beach
+    ambienceEvent:
+      Guid:
+        Data1: 367112436
+        Data2: 1295630429
+        Data3: -537642091
+        Data4: -406811281
+      Path: event:/ATMOS/ATMO_Ocean
+  - sceneName: Haus
+    useMainMusicWithParameters: 0
+    musicEvent:
+      Guid:
+        Data1: 1087356977
+        Data2: 1220766206
+        Data3: -591459672
+        Data4: 604634815
+      Path: event:/Music/OST_Jungle
+    musicAreaParameter: 
+    ambienceEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+  - sceneName: Prophecy
+    useMainMusicWithParameters: 0
+    musicEvent:
+      Guid:
+        Data1: -885324485
+        Data2: 1211166654
+        Data3: -2116289622
+        Data4: 1064701525
+      Path: event:/ATMOS/ATMO_TorchJungle
+    musicAreaParameter: 
+    ambienceEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+  - sceneName: MainAfter
+    useMainMusicWithParameters: 1
+    musicEvent:
+      Guid:
+        Data1: -885324485
+        Data2: 1211166654
+        Data3: -2116289622
+        Data4: 1064701525
+      Path: event:/ATMOS/ATMO_TorchJungle
+    musicAreaParameter: 
+    ambienceEvent:
+      Guid:
+        Data1: 367112436
+        Data2: 1295630429
+        Data3: -537642091
+        Data4: -406811281
+      Path: event:/ATMOS/ATMO_Ocean
+  - sceneName: Tempeleingang
+    useMainMusicWithParameters: 0
+    musicEvent:
+      Guid:
+        Data1: 1087356977
+        Data2: 1220766206
+        Data3: -591459672
+        Data4: 604634815
+      Path: event:/Music/OST_Jungle
+    musicAreaParameter: 
+    ambienceEvent:
+      Guid:
+        Data1: -1261716352
+        Data2: 1180250900
+        Data3: 115358619
+        Data4: 348650675
+      Path: event:/ATMOS/ATMO_Jungle
+  - sceneName: Outro
+    useMainMusicWithParameters: 0
+    musicEvent:
+      Guid:
+        Data1: -1329830190
+        Data2: 1101194068
+        Data3: -1740716885
+        Data4: 56661699
+      Path: event:/Music/OST_Menue
+    musicAreaParameter: 
+    ambienceEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+  - sceneName: Credits
+    useMainMusicWithParameters: 0
+    musicEvent:
+      Guid:
+        Data1: -1329830190
+        Data2: 1101194068
+        Data3: -1740716885
+        Data4: 56661699
+      Path: event:/Music/OST_Menue
+    musicAreaParameter: 
+    ambienceEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
