@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using FMODUnity;
 using FMOD.Studio;
-using System.Collections;
 
 /// <summary>
 /// Sound Menu mit FMOD VCA Kontrolle
@@ -29,23 +28,33 @@ public class SoundMenu : MonoBehaviour
     private VCA sfxVCA;
     private VCA voiceVCA;
 
+    private bool vcasLoaded = false;
+
+    void Awake()
+    {
+        // VCAs SO FRÜH WIE MÖGLICH laden!
+        Debug.Log("[SoundMenu] Awake - Loading VCAs immediately...");
+        LoadVCAs();
+    }
+
     void Start()
     {
-        // Warte bis FMOD bereit ist
-        StartCoroutine(InitializeWhenReady());
+        // Falls VCAs in Awake nicht geladen wurden, nochmal versuchen
+        if (!vcasLoaded)
+        {
+            Debug.LogWarning("[SoundMenu] VCAs not loaded in Awake, trying again in Start...");
+            LoadVCAs();
+        }
+
+        // Slider initialisieren
+        InitializeSliders();
     }
 
     /// <summary>
-    /// Wartet bis FMOD bereit ist, dann lädt VCAs und Slider
+    /// Initialisiert alle Slider mit gespeicherten Werten
     /// </summary>
-    private System.Collections.IEnumerator InitializeWhenReady()
+    private void InitializeSliders()
     {
-        // Warte 1 Frame damit FMOD initialisiert ist
-        yield return null;
-
-        // FMOD VCAs laden
-        LoadVCAs();
-
         // Master Slider
         if (masterSlider != null)
         {
@@ -77,6 +86,8 @@ public class SoundMenu : MonoBehaviour
             voiceSlider.onValueChanged.AddListener(OnVoiceVolumeChanged);
             OnVoiceVolumeChanged(voiceSlider.value);
         }
+
+        Debug.Log("[SoundMenu] All sliders initialized");
     }
 
     /// <summary>
@@ -100,12 +111,19 @@ public class SoundMenu : MonoBehaviour
 
             if (!masterVCA.isValid() || !musicVCA.isValid() || !sfxVCA.isValid() || !voiceVCA.isValid())
             {
-                Debug.LogError("[SoundMenu] Some VCAs are INVALID! Check VCA paths in Inspector!");
+                Debug.LogError("[SoundMenu] Some VCAs are INVALID! Check VCA paths in Inspector and FMOD Studio!");
+                vcasLoaded = false;
+            }
+            else
+            {
+                vcasLoaded = true;
+                Debug.Log("[SoundMenu] All VCAs loaded successfully!");
             }
         }
         catch (System.Exception e)
         {
             Debug.LogError($"[SoundMenu] Failed to load FMOD VCAs: {e.Message}");
+            vcasLoaded = false;
         }
     }
 

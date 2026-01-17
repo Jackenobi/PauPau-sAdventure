@@ -16,17 +16,18 @@ public class MusicManager : MonoBehaviour
     public string sceneParameterName = "Scene";
 
     [Header("Fade Settings")]
-    [Tooltip("Fade-Out Dauer in Sekunden")]
-    public float fadeOutDuration = 2f;
+    [Tooltip("Fade-Out Dauer in Sekunden (schnell!)")]
+    public float fadeOutDuration = 0.5f;
 
-    [Tooltip("Fade-In Dauer in Sekunden")]
-    public float fadeInDuration = 2f;
+    [Tooltip("Fade-In Dauer in Sekunden (schnell!)")]
+    public float fadeInDuration = 0.5f;
 
     private EventInstance currentMusicInstance;
     private bool isMusicPlaying = false;
-    private bool isUsingParameterMusic = false; // Ob wir die Main Music mit Parametern nutzen
+    private bool isUsingParameterMusic = false;
     private string currentScene = "";
     private Coroutine fadeCoroutine;
+    private float targetVolume = 1f; // Ziel-Volume für Fades
 
     void Awake()
     {
@@ -58,7 +59,7 @@ public class MusicManager : MonoBehaviour
             return;
         }
 
-        // Fade out alte Musik falls vorhanden
+        // Crossfade wenn andere Musik läuft
         if (currentMusicInstance.isValid() && isMusicPlaying)
         {
             StartCoroutine(CrossfadeToMainMusic());
@@ -68,13 +69,13 @@ public class MusicManager : MonoBehaviour
         StopCurrentMusic();
 
         currentMusicInstance = RuntimeManager.CreateInstance(mainMusicEvent);
-        currentMusicInstance.setVolume(0f);
         currentMusicInstance.start();
         isMusicPlaying = true;
         isUsingParameterMusic = true;
 
+        // Fade In
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-        fadeCoroutine = StartCoroutine(FadeVolume(0f, 1f, fadeInDuration));
+        fadeCoroutine = StartCoroutine(FadeIn());
 
         Debug.Log("[MusicManager] Main music started with fade-in");
     }
@@ -85,19 +86,18 @@ public class MusicManager : MonoBehaviour
     private IEnumerator CrossfadeToMainMusic()
     {
         // Fade Out alte Musik
-        yield return StartCoroutine(FadeVolume(1f, 0f, fadeOutDuration));
+        yield return StartCoroutine(FadeOut());
         StopCurrentMusic();
 
         yield return new WaitForSeconds(0.1f);
 
         // Main Music starten
         currentMusicInstance = RuntimeManager.CreateInstance(mainMusicEvent);
-        currentMusicInstance.setVolume(0f);
         currentMusicInstance.start();
         isMusicPlaying = true;
         isUsingParameterMusic = true;
 
-        yield return StartCoroutine(FadeVolume(0f, 1f, fadeInDuration));
+        yield return StartCoroutine(FadeIn());
 
         Debug.Log("[MusicManager] Crossfaded to main music");
     }
@@ -145,7 +145,7 @@ public class MusicManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Spielt einfache Musik ohne Parameter (für Haus, Tempel, etc.)
+    /// Spielt einfache Musik ohne Parameter (für Haus, Tempel, Startscreen, etc.)
     /// </summary>
     public void PlaySimpleMusic(EventReference musicEvent)
     {
@@ -166,7 +166,7 @@ public class MusicManager : MonoBehaviour
         // Fade Out alte Musik
         if (currentMusicInstance.isValid() && isMusicPlaying)
         {
-            yield return StartCoroutine(FadeVolume(1f, 0f, fadeOutDuration));
+            yield return StartCoroutine(FadeOut());
             StopCurrentMusic();
         }
 
@@ -175,35 +175,62 @@ public class MusicManager : MonoBehaviour
 
         // Neue Musik starten mit Fade In
         currentMusicInstance = RuntimeManager.CreateInstance(newMusicEvent);
-        currentMusicInstance.setVolume(0f);
         currentMusicInstance.start();
         isMusicPlaying = true;
         isUsingParameterMusic = isParameterMusic;
 
-        yield return StartCoroutine(FadeVolume(0f, 1f, fadeInDuration));
+        yield return StartCoroutine(FadeIn());
 
         Debug.Log($"[MusicManager] Crossfaded to music: {newMusicEvent.Path}");
     }
 
     /// <summary>
-    /// Fade Volume Coroutine
+    /// Fade In - nutzt Volume Multiplier statt direktes setVolume
+    /// So werden VCAs respektiert!
     /// </summary>
-    private IEnumerator FadeVolume(float startVolume, float targetVolume, float duration)
+    private IEnumerator FadeIn()
     {
         if (!currentMusicInstance.isValid())
             yield break;
 
         float elapsed = 0f;
+        targetVolume = 1f;
 
-        while (elapsed < duration)
+        while (elapsed < fadeInDuration)
         {
             elapsed += Time.deltaTime;
-            float volume = Mathf.Lerp(startVolume, targetVolume, elapsed / duration);
+            float volume = Mathf.Lerp(0f, targetVolume, elapsed / fadeInDuration);
+
+            // Nutze Volume als Multiplier - VCAs bleiben wirksam!
             currentMusicInstance.setVolume(volume);
             yield return null;
         }
 
         currentMusicInstance.setVolume(targetVolume);
+    }
+
+    /// <summary>
+    /// Fade Out
+    /// </summary>
+    private IEnumerator FadeOut()
+    {
+        if (!currentMusicInstance.isValid())
+            yield break;
+
+        // Hole aktuelles Volume
+        currentMusicInstance.getVolume(out float currentVolume, out float _);
+
+        float elapsed = 0f;
+
+        while (elapsed < fadeOutDuration)
+        {
+            elapsed += Time.deltaTime;
+            float volume = Mathf.Lerp(currentVolume, 0f, elapsed / fadeOutDuration);
+            currentMusicInstance.setVolume(volume);
+            yield return null;
+        }
+
+        currentMusicInstance.setVolume(0f);
     }
 
     /// <summary>
@@ -227,14 +254,20 @@ public class MusicManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Setzt die Lautstärke der Musik (0.0 - 1.0)
+    /// Stoppt Musik mit Fade Out
     /// </summary>
-    public void SetMusicVolume(float volume)
+    public void StopMusicWithFade()
     {
-        if (currentMusicInstance.isValid())
+        if (currentMusicInstance.isValid() && isMusicPlaying)
         {
-            currentMusicInstance.setVolume(Mathf.Clamp01(volume));
+            StartCoroutine(StopMusicFadeCoroutine());
         }
+    }
+
+    private IEnumerator StopMusicFadeCoroutine()
+    {
+        yield return StartCoroutine(FadeOut());
+        StopCurrentMusic();
     }
 
     /// <summary>
@@ -245,6 +278,7 @@ public class MusicManager : MonoBehaviour
         if (currentMusicInstance.isValid())
         {
             currentMusicInstance.setPaused(pause);
+            Debug.Log($"[MusicManager] Music paused: {pause}");
         }
     }
 
