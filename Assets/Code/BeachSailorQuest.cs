@@ -69,7 +69,7 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
             questCompleted = true;
 
             if (questTMP != null)
-                questTMP.text = "Correct! Returning to beach...";
+                questTMP.text = "Let's Go!";
 
             // Scene laden
             StartCoroutine(LoadNextScene());
