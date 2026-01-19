@@ -61,37 +61,28 @@ public class DialogueScreen : MonoBehaviour
 
     private Coroutine portraitPulseRoutine;
 
-
     // FMOD
-
     private EventInstance voiceInstance;
 
-
     // SHOW DIALOGUE
-
     public void ShowDialogue(DialogueLine dialogue, string npcFallbackName)
     {
         currentLine = dialogue;
         bool isPlayer = dialogue.player;
 
         // Speaker Name
-
         currentSpeaker =
             !string.IsNullOrWhiteSpace(dialogue.speakerName)
                 ? dialogue.speakerName
                 : (isPlayer ? playerName : npcFallbackName);
 
-
         // Reset UI
-
         leftContainer.SetActive(false);
         rightContainer.SetActive(false);
         npcPortrait.gameObject.SetActive(false);
         playerPortrait.gameObject.SetActive(false);
 
-
         // Player
-
         if (isPlayer)
         {
             rightContainer.SetActive(true);
@@ -105,9 +96,7 @@ public class DialogueScreen : MonoBehaviour
                 PulsePortrait(playerPortrait);
             }
         }
-
         // NPC
-
         else
         {
             leftContainer.SetActive(true);
@@ -122,14 +111,10 @@ public class DialogueScreen : MonoBehaviour
             }
         }
 
-
         // Play Voice
-
         PlayVoice(dialogue);
 
-
         // Choices / Continue
-
         bool hasChoices = dialogue.choices != null && dialogue.choices.Length > 0;
 
         foreach (var btn in choiceButtons)
@@ -154,13 +139,16 @@ public class DialogueScreen : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(continueButton);
         }
 
+        // ========= CURSOR EINSCHALTEN =========
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         input.SwitchCurrentActionMap("UI");
         cinemachineController.enabled = false;
         panel.SetActive(true);
     }
 
     // FMOD VOICE
-   
     void PlayVoice(DialogueLine line)
     {
         if (!line.voiceEvent.IsNull)
@@ -177,6 +165,10 @@ public class DialogueScreen : MonoBehaviour
     {
         voiceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         voiceInstance.release();
+
+        // ========= CURSOR AUSSCHALTEN =========
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
         input.SwitchCurrentActionMap("Player");
         panel.SetActive(false);
@@ -205,9 +197,7 @@ public class DialogueScreen : MonoBehaviour
             HideDialogue();
     }
 
-    
     // Portrait Pulse
-   
     void PulsePortrait(Image portrait)
     {
         if (portraitPulseRoutine != null)

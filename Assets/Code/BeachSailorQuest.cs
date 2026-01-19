@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class BeachSailorQuest : MonoBehaviour, IQuestManager
 {
@@ -17,6 +18,13 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
     [Header("Scene")]
     public string nextSceneName = "Main";
 
+    [Header("Blackscreen & Sound")]
+    [Tooltip("FMOD Event das beim Blackscreen abgespielt wird")]
+    public EventReference transitionSound;
+
+    [Tooltip("Dauer des Blackscreens (in Sekunden)")]
+    public float blackscreenDuration = 5f;
+
     private TMP_Text questTMP;
     private bool questStarted = false;
     private bool questCompleted = false;
@@ -26,7 +34,6 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
         if (frosch != null)
         {
             frosch.onInteracted += OnFroschTalked;
-
             // Setze die Frage als Start-Dialog
             if (froschQuestion != null)
                 frosch.dialogue = froschQuestion;
@@ -54,7 +61,6 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
         GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
         questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
         questTMP.text = "Answer the frog's question";
-
         yield return null;
     }
 
@@ -67,7 +73,6 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
         if (isCorrect)
         {
             questCompleted = true;
-
             if (questTMP != null)
                 questTMP.text = "Let's Go!";
 
@@ -89,13 +94,32 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
     {
         yield return new WaitForSeconds(2f);
 
-        // Blackscreen einblenden
+        // ========= PLAYER EINFRIEREN =========
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            // Player Movement deaktivieren
+            var playerMovement = player.GetComponent<Player>();
+            if (playerMovement != null)
+                playerMovement.enabled = false;
+
+            // Optional: Rigidbody stoppen
+            var rb = player.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
+        }
+
+        // ========= BLACKSCREEN EINBLENDEN =========
         if (blackScreen != null)
         {
             blackScreen.gameObject.SetActive(true);
+
+            // Fade In (1 Sekunde)
             float fadeTime = 1f;
             float elapsed = 0f;
-
             while (elapsed < fadeTime)
             {
                 elapsed += Time.deltaTime;
@@ -105,8 +129,16 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
             blackScreen.alpha = 1f;
         }
 
-        yield return new WaitForSeconds(1f);
+        // ========= FMOD SOUND ABSPIELEN =========
+        if (!transitionSound.IsNull)
+        {
+            RuntimeManager.PlayOneShot(transitionSound);
+        }
 
+        // ========= BLACKSCREEN HALTEN =========
+        yield return new WaitForSeconds(blackscreenDuration);
+
+        // ========= SCENE LADEN =========
         SceneManager.LoadScene(nextSceneName);
     }
 
@@ -114,4 +146,12 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
     public void StartQuest(string questId) { }
     public void UpdateQuestProgress(string questId, int current, int total) { }
     public void CompleteQuest(string questId) { }
+
+    void OnDestroy()
+    {
+        if (frosch != null)
+        {
+            frosch.onInteracted -= OnFroschTalked;
+        }
+    }
 }

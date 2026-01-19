@@ -2035,7 +2035,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.062768094, y: -0.007552575, z: 0.00047501098, w: 0.9979995}
-  m_LocalPosition: {x: 23.3, y: 6.04, z: 218.18}
+  m_LocalPosition: {x: 23.3, y: 3.58, z: 218.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2260,6 +2260,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!1 &365206715
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,6 +4320,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!1 &776793769
 GameObject:
   m_ObjectHideFlags: 0
@@ -4490,6 +4492,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!1 &826328928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 865214122290705956, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
@@ -6140,6 +6143,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!43 &1083873699
 Mesh:
   m_ObjectHideFlags: 0
@@ -6995,6 +6999,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!1 &1233353726
 GameObject:
   m_ObjectHideFlags: 0
@@ -8465,6 +8470,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!4 &1560607864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4154366018944974724, guid: 50e42391cb9bf7a48b6ddc03903624f1, type: 3}
@@ -8946,6 +8952,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!1 &1700873020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4723280767966646398, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
@@ -9567,6 +9574,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!135 &1792291651
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9919,6 +9927,7 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  freezeDuration: 1
 --- !u!1 &1872451141
 GameObject:
   m_ObjectHideFlags: 0
@@ -46088,6 +46097,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!43 &2116669012
 Mesh:
   m_ObjectHideFlags: 0
@@ -47370,7 +47380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4514266856076275476, guid: ed2dc88c21569b344b1dad6bb6030c8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.04
+      value: 3.58
       objectReference: {fileID: 0}
     - target: {fileID: 4514266856076275476, guid: ed2dc88c21569b344b1dad6bb6030c8d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -47451,7 +47461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1506290036143713492, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6
+      value: 1.14
       objectReference: {fileID: 0}
     - target: {fileID: 1506290036143713492, guid: 0a43384f3f1af9c44846a119697f78ed, type: 3}
       propertyPath: m_LocalPosition.z
