@@ -181,7 +181,7 @@ public class MusicManager : MonoBehaviour
 
         yield return StartCoroutine(FadeIn());
 
-        Debug.Log($"[MusicManager] Crossfaded to music: {newMusicEvent.Path}");
+        Debug.Log("[MusicManager] Crossfaded to new music");
     }
 
     /// <summary>

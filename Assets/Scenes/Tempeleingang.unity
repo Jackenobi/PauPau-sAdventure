@@ -296,6 +296,86 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: errorSound.Path
+      value: event:/SFX/SFX_LightFAIL
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: doorLightSound.Path
+      value: event:/SFX/SFX_Light1 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: buttonPressSound.Path
+      value: event:/SFX/SFX_Light1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: errorSound.Guid.Data1
+      value: 715551393
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: errorSound.Guid.Data2
+      value: 1110207824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: errorSound.Guid.Data3
+      value: -334437501
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: errorSound.Guid.Data4
+      value: 2032926554
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: questCompleteSound.Path
+      value: event:/SFX/SFX_JunlgePuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: doorLightSound.Guid.Data1
+      value: 1673745132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: doorLightSound.Guid.Data2
+      value: 1129762040
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: doorLightSound.Guid.Data3
+      value: -706624833
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: doorLightSound.Guid.Data4
+      value: 1967945953
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: buttonPressSound.Guid.Data1
+      value: -1365345654
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: buttonPressSound.Guid.Data2
+      value: 1183231902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: buttonPressSound.Guid.Data3
+      value: 1422271641
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: buttonPressSound.Guid.Data4
+      value: 1741861726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: questCompleteSound.Guid.Data1
+      value: 1921919950
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: questCompleteSound.Guid.Data2
+      value: 1093700501
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: questCompleteSound.Guid.Data3
+      value: -41127013
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: questCompleteSound.Guid.Data4
+      value: -1448035467
+      objectReference: {fileID: 0}
     - target: {fileID: 6050281756216624131, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
       propertyPath: m_Name
       value: Sound
@@ -305,6 +385,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+--- !u!114 &84050162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+  m_PrefabInstance: {fileID: 84050161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 749030bdadd568240b263c5892b9e043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &85200492
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +632,7 @@ MonoBehaviour:
   isFloorButton: 1
   baseMaterial: {fileID: 2100000, guid: 70083ff7936f01145916539bfafc9d59, type: 2}
   glowMaterial: {fileID: 2100000, guid: 51f31b47e9dfedc45b1c5c8f90034f0b, type: 2}
-  audioSource: {fileID: 587802113}
+  audioSource: {fileID: 0}
 --- !u!65 &107642947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -982,6 +1073,66 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &270558956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270558959}
+  - component: {fileID: 270558958}
+  - component: {fileID: 270558957}
+  m_Layer: 0
+  m_Name: VisualScripting SceneVariables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &270558957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270558956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765181c9ef4b24d32a4f7cbd2ef370dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &270558958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270558956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!4 &270558959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270558956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330637764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1240,7 @@ MonoBehaviour:
   isFloorButton: 1
   baseMaterial: {fileID: 2100000, guid: a6306e662d7c9da4e9cbe81ddfc3cdc4, type: 2}
   glowMaterial: {fileID: 2100000, guid: 51f31b47e9dfedc45b1c5c8f90034f0b, type: 2}
-  audioSource: {fileID: 1774538932}
+  audioSource: {fileID: 0}
 --- !u!65 &330637772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1169,6 +1320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questScreen: {fileID: 161123911}
   questDisplayPrefab: {fileID: 763360668861488951, guid: 898cbe3d4cc95fc4a8540852ec3d6e70, type: 3}
+  questSoundManager: {fileID: 84050162}
   puzzleManager: {fileID: 1407965349}
   nextSceneName: Outro
 --- !u!1 &587802111
@@ -3612,7 +3764,7 @@ MonoBehaviour:
   - {fileID: 330637771}
   - {fileID: 2023663453}
   lightDelay: 1.2
-  nextSceneName: 
+  nextSceneName: Outro
   errorMaterial: {fileID: 2100000, guid: 2179d66463b2ccc4cb4893716a579299, type: 2}
   errorSound: {fileID: 0}
 --- !u!1 &1592668155 stripped
@@ -4275,7 +4427,7 @@ MonoBehaviour:
   isFloorButton: 1
   baseMaterial: {fileID: 2100000, guid: 280f2f0be791d794f840c76185c3dcfb, type: 2}
   glowMaterial: {fileID: 2100000, guid: 51f31b47e9dfedc45b1c5c8f90034f0b, type: 2}
-  audioSource: {fileID: 85200494}
+  audioSource: {fileID: 0}
 --- !u!65 &1942896541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4469,7 +4621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonIndex: 0
   isFloorButton: 0
-  baseMaterial: {fileID: 2100000, guid: 280f2f0be791d794f840c76185c3dcfb, type: 2}
+  baseMaterial: {fileID: 2100000, guid: 2179d66463b2ccc4cb4893716a579299, type: 2}
   glowMaterial: {fileID: 2100000, guid: 51f31b47e9dfedc45b1c5c8f90034f0b, type: 2}
   audioSource: {fileID: 1122571195}
 --- !u!1 &2023663446
@@ -4579,7 +4731,7 @@ MonoBehaviour:
   isFloorButton: 1
   baseMaterial: {fileID: 2100000, guid: 8497c27aa23471a468f08499d2755698, type: 2}
   glowMaterial: {fileID: 2100000, guid: 51f31b47e9dfedc45b1c5c8f90034f0b, type: 2}
-  audioSource: {fileID: 943427503}
+  audioSource: {fileID: 0}
 --- !u!65 &2023663454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4663,3 +4815,4 @@ SceneRoots:
   - {fileID: 2129662391}
   - {fileID: 759036836}
   - {fileID: 84050161}
+  - {fileID: 270558959}

@@ -5232,6 +5232,14 @@ MonoBehaviour:
   frosch: {fileID: 1560607868}
   froschQuestion: {fileID: 1463445544}
   nextSceneName: Tempeleingang
+  transitionSound:
+    Guid:
+      Data1: -710332629
+      Data2: 1101476916
+      Data3: 727395232
+      Data4: 330437117
+    Path: event:/SFX/SFX_Boot
+  blackscreenDuration: 5
 --- !u!1001 &980248870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46866,6 +46874,26 @@ PrefabInstance:
     - target: {fileID: 5304692269550258164, guid: f458c5e086c3c0747bb54e65887ad7f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459496355271634641, guid: f458c5e086c3c0747bb54e65887ad7f1, type: 3}
+      propertyPath: voiceEvent.Path
+      value: event:/Dialogue/VOICE_Schlange
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459496355271634641, guid: f458c5e086c3c0747bb54e65887ad7f1, type: 3}
+      propertyPath: voiceEvent.Guid.Data1
+      value: 480866432
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459496355271634641, guid: f458c5e086c3c0747bb54e65887ad7f1, type: 3}
+      propertyPath: voiceEvent.Guid.Data2
+      value: 1162798932
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459496355271634641, guid: f458c5e086c3c0747bb54e65887ad7f1, type: 3}
+      propertyPath: voiceEvent.Guid.Data3
+      value: -2087377783
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459496355271634641, guid: f458c5e086c3c0747bb54e65887ad7f1, type: 3}
+      propertyPath: voiceEvent.Guid.Data4
+      value: 361350097
       objectReference: {fileID: 0}
     - target: {fileID: 7690147774479403715, guid: f458c5e086c3c0747bb54e65887ad7f1, type: 3}
       propertyPath: dialogue

@@ -233,6 +233,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 734073045}
+    - target: {fileID: 2218932226591414178, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: soundPanel
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2310127321489003747, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -316,6 +320,10 @@ PrefabInstance:
     - target: {fileID: 4081161704482784338, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451256161174734529, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7779472887142871118, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_IsActive
@@ -699,14 +707,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: text
-      value: Don't worry my child, I mainly stay inside these walls. I don't know
-        that many people, only these two nice kids who help my with my chores from
-        time to time.
+      value: 'Don''t worry my child, I mainly stay inside these walls. '
       objectReference: {fileID: 0}
     - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: nextLine
       value: 
-      objectReference: {fileID: 17737308}
+      objectReference: {fileID: 870115126}
     - target: {fileID: 5454211159243808586, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: npcPortrait
       value: 
@@ -796,6 +802,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1087924717}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 870115127}
     - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       insertIndex: -1
       addedObject: {fileID: 17737307}
@@ -957,9 +966,9 @@ MonoBehaviour:
       Data4: -1610596202
     Path: event:/Dialogue/VOICE_Huhn
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 1639449488}
-  player: 1
+  player: 0
 --- !u!1 &520938220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1086,7 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 1344265256}
   player: 1
 --- !u!1 &561656553 stripped
@@ -1563,9 +1572,9 @@ MonoBehaviour:
       Data4: -1610596202
     Path: event:/Dialogue/VOICE_Huhn
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 387647170}
-  player: 1
+  player: 0
 --- !u!1 &686614889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,6 +1793,65 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5731547941117289742, guid: ec3ac638d95d6324c8b4f4d6c36a885e, type: 3}
+--- !u!1 &870115125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 870115127}
+  - component: {fileID: 870115126}
+  m_Layer: 0
+  m_Name: 2.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &870115126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: I don't know that many people, only these two nice kids who help my with
+    my chores from time to time.
+  choices: []
+  speakerName: Laura
+  voiceEvent:
+    Guid:
+      Data1: 249723083
+      Data2: 1255745896
+      Data3: 1849889156
+      Data4: -1610596202
+    Path: event:/Dialogue/VOICE_Huhn
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  nextLine: {fileID: 17737308}
+  player: 0
+--- !u!4 &870115127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870115125}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &895292508
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2068,11 +2136,106 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sound
       objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[5].musicEvent.Path
+      value: event:/Music/OST_Jungle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[7].musicEvent.Path
+      value: event:/Music/OST_Outro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[8].musicEvent.Path
+      value: event:/Music/OST_Credits
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[6].ambienceEvent.Path
+      value: event:/ATMOS/ATMO_TorchJungle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[5].musicEvent.Guid.Data1
+      value: 1087356977
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[5].musicEvent.Guid.Data2
+      value: 1220766206
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[5].musicEvent.Guid.Data3
+      value: -591459672
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[5].musicEvent.Guid.Data4
+      value: 604634815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[7].musicEvent.Guid.Data1
+      value: -2019134752
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[7].musicEvent.Guid.Data2
+      value: 1203630496
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[7].musicEvent.Guid.Data3
+      value: 551994782
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[7].musicEvent.Guid.Data4
+      value: -1215305864
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[8].musicEvent.Guid.Data1
+      value: 508663709
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[8].musicEvent.Guid.Data2
+      value: 1075812398
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[8].musicEvent.Guid.Data3
+      value: -1253699701
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[8].musicEvent.Guid.Data4
+      value: -1742644841
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[6].ambienceEvent.Guid.Data1
+      value: -885324485
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[6].ambienceEvent.Guid.Data2
+      value: 1211166654
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[6].ambienceEvent.Guid.Data3
+      value: -2116289622
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[6].ambienceEvent.Guid.Data4
+      value: 1064701525
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+      propertyPath: sceneConfigs.Array.data[5].useMainMusicWithParameters
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+--- !u!114 &999190001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5940846786470733595, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
+  m_PrefabInstance: {fileID: 999190000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 749030bdadd568240b263c5892b9e043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1038132745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,7 +2437,7 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 686172756}
   player: 1
 --- !u!1 &1150784248
@@ -3414,7 +3577,7 @@ MonoBehaviour:
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}
-  player: 1
+  player: 0
 --- !u!64 &1373228916
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3764,9 +3927,9 @@ MonoBehaviour:
       Data4: -1610596202
     Path: event:/Dialogue/VOICE_Huhn
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
-  player: 1
+  player: 0
 --- !u!64 &1677526503
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3958,7 +4121,7 @@ MonoBehaviour:
   blackScreen: {fileID: 161123911}
   hausAudioSource: {fileID: 0}
   hausEntrySound: {fileID: 0}
-  questSoundManager: {fileID: 0}
+  questSoundManager: {fileID: 999190001}
   huhn: {fileID: 351998945}
   shinyItem: {fileID: 1903412212}
   huhnStart: {fileID: 351998946}
@@ -4088,6 +4251,7 @@ MonoBehaviour:
       Data3: -902808187
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
+  freezeDuration: 1
 --- !u!1 &1924810682
 GameObject:
   m_ObjectHideFlags: 0

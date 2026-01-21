@@ -56,7 +56,7 @@ public class SceneAudioLoader : MonoBehaviour
             return;
         }
 
-        Debug.Log($"[SceneAudioLoader] Config found! UseMainMusic: {config.useMainMusicWithParameters}, MusicEvent: {config.musicEvent.Path}");
+        Debug.Log($"[SceneAudioLoader] Config found! UseMainMusic: {config.useMainMusicWithParameters}, MusicEvent assigned: {!config.musicEvent.IsNull}");
 
         // MUSIK
         if (config.useMainMusicWithParameters)
@@ -77,7 +77,7 @@ public class SceneAudioLoader : MonoBehaviour
         }
         else if (!config.musicEvent.IsNull)
         {
-            Debug.Log($"[SceneAudioLoader] Playing simple music: {config.musicEvent.Path}");
+            Debug.Log("[SceneAudioLoader] Playing simple music");
             if (MusicManager.Instance != null)
             {
                 MusicManager.Instance.PlaySimpleMusic(config.musicEvent);
@@ -95,7 +95,7 @@ public class SceneAudioLoader : MonoBehaviour
         // AMBIENCE
         if (!config.ambienceEvent.IsNull)
         {
-            Debug.Log($"[SceneAudioLoader] Playing ambience: {config.ambienceEvent.Path}");
+            Debug.Log("[SceneAudioLoader] Playing ambience");
             if (AmbienceManager.Instance != null)
             {
                 AmbienceManager.Instance.PlayAmbienceForScene(config.ambienceEvent);

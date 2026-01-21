@@ -9,6 +9,9 @@ public class FinalQuestSimon : MonoBehaviour, IQuestManager
     public Transform questScreen;
     public GameObject questDisplayPrefab;
 
+    [Header("Audio")]
+    public QuestSoundManager questSoundManager;
+
     [Header("Puzzle")]
     public SimonPuzzleManager puzzleManager;
 
@@ -24,6 +27,7 @@ public class FinalQuestSimon : MonoBehaviour, IQuestManager
     }
 
     public void OnAnswerSelected(bool isCorrect) { }
+
     public void CompleteQuest(string questId) { }
 
     public void StartQuest()
@@ -35,6 +39,7 @@ public class FinalQuestSimon : MonoBehaviour, IQuestManager
         GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
         questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
         questTMP.text = "Door Puzzle (Round 1 / 3)";
+
         puzzleManager.StartPuzzle(this);
     }
 
@@ -43,14 +48,22 @@ public class FinalQuestSimon : MonoBehaviour, IQuestManager
         questTMP.text = $"Door Puzzle (Round {round + 1} / 3)";
     }
 
-    //Fehler-Reset
+    // Fehler-Reset
     public void OnRoundReset(int round)
     {
+        // Fehler-Sound abspielen
+        if (questSoundManager != null)
+            questSoundManager.PlayError();
+
         questTMP.text = $"Wrong! Try again - Round {round + 1} / 3";
     }
 
     public void OnPuzzleCompleted()
     {
+        // Quest Complete Sound abspielen
+        if (questSoundManager != null)
+            questSoundManager.PlayQuestComplete();
+
         questTMP.text = "YOU DID IT!";
         StartCoroutine(LoadNextScene());
     }

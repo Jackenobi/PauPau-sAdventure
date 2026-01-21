@@ -7,18 +7,18 @@ public class QuestSoundManager : MonoBehaviour
     public EventReference questCompleteSound;
     public EventReference questFailSound;
 
+    [Header("Simon Puzzle Sounds")]
+    public EventReference buttonPressSound;
+    public EventReference doorLightSound;
+    public EventReference errorSound;
+
     public void PlayQuestComplete()
     {
-        Debug.Log("PlayQuestComplete called!");
-        Debug.Log("Event is null: " + questCompleteSound.IsNull);
-        Debug.Log("Event path: " + questCompleteSound.Path);
-
         if (!questCompleteSound.IsNull)
         {
             FMOD.Studio.EventInstance instance = RuntimeManager.CreateInstance(questCompleteSound);
             instance.start();
             instance.release();
-            Debug.Log("Sound should be playing now!");
         }
         else
         {
@@ -28,8 +28,6 @@ public class QuestSoundManager : MonoBehaviour
 
     public void PlayQuestFail()
     {
-        Debug.Log("PlayQuestFail called!");
-
         if (!questFailSound.IsNull)
         {
             RuntimeManager.PlayOneShot(questFailSound);
@@ -37,6 +35,45 @@ public class QuestSoundManager : MonoBehaviour
         else
         {
             Debug.LogError("Quest Fail Sound is NULL!");
+        }
+    }
+
+    // Neuer Sound für Button-Drücke
+    public void PlayButtonPress()
+    {
+        if (!buttonPressSound.IsNull)
+        {
+            RuntimeManager.PlayOneShot(buttonPressSound);
+        }
+        else
+        {
+            Debug.LogWarning("Button Press Sound is NULL!");
+        }
+    }
+
+    // Neuer Sound für Tür-Lichter
+    public void PlayDoorLight()
+    {
+        if (!doorLightSound.IsNull)
+        {
+            RuntimeManager.PlayOneShot(doorLightSound);
+        }
+        else
+        {
+            Debug.LogWarning("Door Light Sound is NULL!");
+        }
+    }
+
+    // Neuer Sound für Fehler
+    public void PlayError()
+    {
+        if (!errorSound.IsNull)
+        {
+            RuntimeManager.PlayOneShot(errorSound);
+        }
+        else
+        {
+            Debug.LogWarning("Error Sound is NULL!");
         }
     }
 }

@@ -1,11 +1,10 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class InteractHintUI : MonoBehaviour
 {
-    public TMP_Text hintText;
+    public Image hintImage;
 
     [Header("Pulse")]
     public float pulseScale = 1.2f;
@@ -16,13 +15,13 @@ public class InteractHintUI : MonoBehaviour
 
     void Awake()
     {
-        originalScale = hintText.transform.localScale;
-        hintText.gameObject.SetActive(false);
+        originalScale = hintImage.transform.localScale;
+        hintImage.gameObject.SetActive(false);
     }
 
     public void Show()
     {
-        hintText.gameObject.SetActive(true);
+        hintImage.gameObject.SetActive(true);
 
         if (pulseRoutine != null)
             StopCoroutine(pulseRoutine);
@@ -32,7 +31,7 @@ public class InteractHintUI : MonoBehaviour
 
     public void Hide()
     {
-        hintText.gameObject.SetActive(false);
+        hintImage.gameObject.SetActive(false);
     }
 
     IEnumerator Pulse()
@@ -43,7 +42,7 @@ public class InteractHintUI : MonoBehaviour
         while (t < pulseDuration)
         {
             t += Time.deltaTime;
-            hintText.transform.localScale =
+            hintImage.transform.localScale =
                 Vector3.Lerp(originalScale, targetScale, t / pulseDuration);
             yield return null;
         }
@@ -52,11 +51,11 @@ public class InteractHintUI : MonoBehaviour
         while (t < pulseDuration)
         {
             t += Time.deltaTime;
-            hintText.transform.localScale =
+            hintImage.transform.localScale =
                 Vector3.Lerp(targetScale, originalScale, t / pulseDuration);
             yield return null;
         }
 
-        hintText.transform.localScale = originalScale;
+        hintImage.transform.localScale = originalScale;
     }
 }

@@ -71,7 +71,7 @@ public class AmbienceManager : MonoBehaviour
 
         yield return StartCoroutine(FadeVolume(0f, 1f, fadeInDuration));
 
-        Debug.Log($"[AmbienceManager] Crossfaded to ambience: {newAmbienceEvent.Path}");
+        Debug.Log("[AmbienceManager] Crossfaded to new ambience");
     }
 
     /// <summary>
