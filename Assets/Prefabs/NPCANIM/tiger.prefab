@@ -286,7 +286,7 @@ MonoBehaviour:
       Data4: 532046653
     Path: event:/Dialogue/VOICE_Tiger
   npcPortrait: {fileID: 21300000, guid: 02fc14b4773ebe14dad2353c31e54575, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
   player: 0
 --- !u!1 &1699485674384660471

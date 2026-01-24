@@ -12,20 +12,11 @@ public class DialogueScreen : MonoBehaviour
 {
     private DialogueLine currentLine;
     private string currentSpeaker;
+    private bool dialogueActive;
 
     [Header("Quest Manager")]
     public MonoBehaviour questManagerObject;
-
     private IQuestManager questManager;
-
-    void Start()
-    {
-        // Hol dir das Interface vom MonoBehaviour
-        if (questManagerObject != null)
-            questManager = questManagerObject.GetComponent<IQuestManager>();
-
-        panel.SetActive(false);
-    }
 
     [Header("UI Panel")]
     public GameObject panel;
@@ -46,7 +37,6 @@ public class DialogueScreen : MonoBehaviour
 
     [Header("Choices")]
     public GameObject[] choiceButtons;
-    public GameObject continueButton;
 
     [Header("Camera & Input")]
     public CinemachineInputAxisController cinemachineController;
@@ -61,16 +51,39 @@ public class DialogueScreen : MonoBehaviour
 
     private Coroutine portraitPulseRoutine;
 
+    // Input
+    private InputAction submitAction;
+
     // FMOD
     private EventInstance voiceInstance;
 
+    void Start()
+    {
+        if (questManagerObject != null)
+            questManager = questManagerObject.GetComponent<IQuestManager>();
+
+        submitAction = input.actions.FindAction("Submit");
+        submitAction.performed += OnSubmitPressed;
+
+        panel.SetActive(false);
+        dialogueActive = false;
+    }
+
+    void OnDestroy()
+    {
+        submitAction.performed -= OnSubmitPressed;
+    }
+
+    // =========================
     // SHOW DIALOGUE
+    // =========================
     public void ShowDialogue(DialogueLine dialogue, string npcFallbackName)
     {
+        dialogueActive = true;
         currentLine = dialogue;
+
         bool isPlayer = dialogue.player;
 
-        // Speaker Name
         currentSpeaker =
             !string.IsNullOrWhiteSpace(dialogue.speakerName)
                 ? dialogue.speakerName
@@ -111,16 +124,14 @@ public class DialogueScreen : MonoBehaviour
             }
         }
 
-        // Play Voice
+        // Voice
         PlayVoice(dialogue);
 
-        // Choices / Continue
+        // Choices
         bool hasChoices = dialogue.choices != null && dialogue.choices.Length > 0;
 
         foreach (var btn in choiceButtons)
             btn.SetActive(false);
-
-        continueButton.SetActive(false);
 
         if (hasChoices)
         {
@@ -135,11 +146,9 @@ public class DialogueScreen : MonoBehaviour
         }
         else
         {
-            continueButton.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(continueButton);
+            EventSystem.current.SetSelectedGameObject(null);
         }
 
-        // ========= CURSOR EINSCHALTEN =========
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
@@ -148,36 +157,40 @@ public class DialogueScreen : MonoBehaviour
         panel.SetActive(true);
     }
 
-    // FMOD VOICE
-    void PlayVoice(DialogueLine line)
+    // =========================
+    // SUBMIT INPUT
+    // =========================
+    private void OnSubmitPressed(InputAction.CallbackContext ctx)
     {
-        if (!line.voiceEvent.IsNull)
+        if (!dialogueActive)
+            return;
+
+        // Wenn Choices sichtbar sind → UI übernimmt
+        foreach (var btn in choiceButtons)
         {
-            voiceInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            voiceInstance.release();
-
-            voiceInstance = RuntimeManager.CreateInstance(line.voiceEvent);
-            voiceInstance.start();
+            if (btn.activeSelf)
+                return;
         }
+
+        Continue();
     }
 
-    public void HideDialogue()
+    // =========================
+    // CONTINUE
+    // =========================
+    public void Continue()
     {
-        voiceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        voiceInstance.release();
-
-        // ========= CURSOR AUSSCHALTEN =========
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
-        input.SwitchCurrentActionMap("Player");
-        panel.SetActive(false);
-        cinemachineController.enabled = true;
+        if (currentLine.nextLine != null)
+            ShowDialogue(currentLine.nextLine, currentSpeaker);
+        else
+            HideDialogue();
     }
 
+    // =========================
+    // CHOICES
+    // =========================
     public void SelectChoice(int index)
     {
-        // Quest Manager über richtige/falsche Antwort informieren
         if (questManager != null && currentLine.choices.Length > 0)
         {
             questManager.OnAnswerSelected(currentLine.choices[index].isCorrect);
@@ -189,15 +202,42 @@ public class DialogueScreen : MonoBehaviour
             HideDialogue();
     }
 
-    public void Continue()
+    // =========================
+    // HIDE
+    // =========================
+    public void HideDialogue()
     {
-        if (currentLine.nextLine != null)
-            ShowDialogue(currentLine.nextLine, currentSpeaker);
-        else
-            HideDialogue();
+        dialogueActive = false;
+
+        voiceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        voiceInstance.release();
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        input.SwitchCurrentActionMap("Player");
+        panel.SetActive(false);
+        cinemachineController.enabled = true;
     }
 
-    // Portrait Pulse
+    // =========================
+    // VOICE
+    // =========================
+    void PlayVoice(DialogueLine line)
+    {
+        if (!line.voiceEvent.IsNull)
+        {
+            voiceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            voiceInstance.release();
+
+            voiceInstance = RuntimeManager.CreateInstance(line.voiceEvent);
+            voiceInstance.start();
+        }
+    }
+
+    // =========================
+    // PORTRAIT PULSE
+    // =========================
     void PulsePortrait(Image portrait)
     {
         if (portraitPulseRoutine != null)

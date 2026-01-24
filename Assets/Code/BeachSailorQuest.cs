@@ -26,6 +26,7 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
     public float blackscreenDuration = 5f;
 
     private TMP_Text questTMP;
+    private GameObject questDisplay;
     private bool questStarted = false;
     private bool questCompleted = false;
 
@@ -58,9 +59,14 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
     IEnumerator StartQuest()
     {
         // Questlog erstellen
-        GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
+        questDisplay = Instantiate(questDisplayPrefab, questScreen);
         questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
-        questTMP.text = "Answer the frog's question";
+        questTMP.text = "Answer Victor";
+
+        // Placeholder verstecken
+        if (QuestPlaceholderManager.Instance != null)
+            QuestPlaceholderManager.Instance.OnQuestStarted();
+
         yield return null;
     }
 
@@ -82,7 +88,7 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
         else
         {
             if (questTMP != null)
-                questTMP.text = "Wrong answer! Try again.";
+                questTMP.text = "Get ready";
 
             // Dialog zurücksetzen zur Frage
             if (frosch != null && froschQuestion != null)
@@ -134,6 +140,14 @@ public class BeachSailorQuest : MonoBehaviour, IQuestManager
         {
             RuntimeManager.PlayOneShot(transitionSound);
         }
+
+        // Quest Display entfernen vor Scene-Wechsel
+        if (questDisplay != null)
+            Destroy(questDisplay);
+
+        // Placeholder anzeigen (optional, da Scene wechselt)
+        if (QuestPlaceholderManager.Instance != null)
+            QuestPlaceholderManager.Instance.OnQuestCompleted();
 
         // ========= BLACKSCREEN HALTEN =========
         yield return new WaitForSeconds(blackscreenDuration);

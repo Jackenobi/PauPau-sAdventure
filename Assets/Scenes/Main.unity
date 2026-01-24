@@ -2261,6 +2261,11 @@ MonoBehaviour:
       Data4: 963651165
     Path: event:/SFX/SFX_PickUp
   freezeDuration: 1
+--- !u!1 &342092805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4718195680585727982, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+  m_PrefabInstance: {fileID: 307615660223276627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &365206715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2352,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365206715}
   m_Mesh: {fileID: -6951951763572593422, guid: 50615aca5d18b5c4cbf38752f85b7ace, type: 3}
+--- !u!1 &390788106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1231749315294802621, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+  m_PrefabInstance: {fileID: 307615660223276627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &396214936
 GameObject:
   m_ObjectHideFlags: 0
@@ -7063,6 +7073,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2582579002958743652, guid: 204b58ee01559fa4e9e5ee969906e72a, type: 3}
+--- !u!1 &1277258856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6956517501861831640, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+  m_PrefabInstance: {fileID: 307615660223276627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1277258860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277258856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8da10323191a648b6cfa3bc4d91c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSelect: {fileID: 0}
 --- !u!114 &1279817826 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8618742861715399734, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
@@ -8606,6 +8634,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 776793770}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1629588527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8419398237201465286, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+  m_PrefabInstance: {fileID: 307615660223276627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1629588531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629588527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8da10323191a648b6cfa3bc4d91c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSelect: {fileID: 0}
 --- !u!1 &1645519866
 GameObject:
   m_ObjectHideFlags: 0
@@ -46577,10 +46623,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1233353727}
     m_Modifications:
+    - target: {fileID: 181706379091631722, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 216862634954994432, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 2667981444910336078, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 2991157840699229193, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 4754532580847461952, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 5446150526305054587, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: text
+      value: (He looks like he got no time to talk.)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446150526305054587, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: npcPortrait
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446150526305054587, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 5878391373075338634, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.68573
@@ -46621,10 +46695,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6213701640542125651, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 6548213395098701616, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
       propertyPath: m_Name
       value: katze
       objectReference: {fileID: 0}
+    - target: {fileID: 7844648343652229951, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: npcPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: bf9b4e9dfdc70604aa2aa9e14ed21d78, type: 3}
+    - target: {fileID: 8922006627945408842, guid: 035078d1c2c1df343b3a6b10b685d5c1, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46680,7 +46766,7 @@ PrefabInstance:
     - target: {fileID: 1728409010576516613, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2540914be5e55e245977e307182eecd6, type: 3}
+      objectReference: {fileID: 21300000, guid: 00ff579b22d0fb64bab9cc6ce22e36cf, type: 3}
     - target: {fileID: 1763599959519753572, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -46796,7 +46882,7 @@ PrefabInstance:
     - target: {fileID: 2953988522147579069, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: objectToSelect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 390788106}
     - target: {fileID: 3496714607853931370, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -46848,7 +46934,7 @@ PrefabInstance:
     - target: {fileID: 4048839832155682589, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: objectToSelect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 342092805}
     - target: {fileID: 4070417054045728282, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -46877,8 +46963,24 @@ PrefabInstance:
       propertyPath: masterSlider
       value: 
       objectReference: {fileID: 135634071}
+    - target: {fileID: 5392392031477357703, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5517664636854891342, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765457390282965144, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765457390282965144, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765457390282965144, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850167318231265563, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
@@ -46968,8 +47070,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1011438829524579707, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+    - {fileID: 2501258443361156292, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+    - {fileID: 2003789164766277988, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+    - {fileID: 970073553870180294, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8419398237201465286, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1629588531}
+    - targetCorrespondingSourceObject: {fileID: 6956517501861831640, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1277258860}
   m_SourcePrefab: {fileID: 100100000, guid: b0ac67364c55e4b4595cbdedec8e9dcb, type: 3}
 --- !u!1001 &450568690777826432
 PrefabInstance:
@@ -46979,6 +47090,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2116900601}
     m_Modifications:
+    - target: {fileID: 288940882946059977, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: text
+      value: Hehe, we might be able to help.
+      objectReference: {fileID: 0}
+    - target: {fileID: 288940882946059977, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 422146157297553763, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
       propertyPath: m_Name
       value: schaf
@@ -47027,6 +47146,80 @@ PrefabInstance:
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 3487204275476376209, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: text
+      value: Hey kids. I am trying to find  some clues to where the egg belongs belongs
+        but I had no luck yet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674267802286731327, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 3759944240900655660, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: text
+      value: WOW, what's that big egg?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759944240900655660, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 4851168295115014996, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: text
+      value: This doesn't sound right. Are you sure?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851168295115014996, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 5468719595868507160, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: text
+      value: OH NO! Okay... Now talk to my friend and after that we will show you
+        our secret.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468719595868507160, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 6449662117315600496, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: text
+      value: Last one! How old do opossums get?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449662117315600496, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 6449662117315600496, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: choices.Array.data[0].text
+      value: 10 years
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449662117315600496, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: choices.Array.data[1].text
+      value: 23 years
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449662117315600496, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: choices.Array.data[2].text
+      value: 2 years
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759487774108191490, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 6915957076184508988, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: text
+      value: WE KNOW A SECRET SPOT ON THIS ISLAND HEHE!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915957076184508988, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 7166606171934411629, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 8097902382059294680, guid: 3dd49cc7c7036d245a03bacdbfe81488, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -47127,6 +47320,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2116900601}
     m_Modifications:
+    - target: {fileID: 1873995235449781920, guid: b7515054bb52d9443a7b706c2285804f, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 6227292184888167917, guid: b7515054bb52d9443a7b706c2285804f, type: 3}
       propertyPath: dialogueScreen
       value: 
@@ -47242,26 +47439,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sound
       objectReference: {fileID: 0}
-    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
-      propertyPath: sceneConfigs.Array.data[7].ambienceEvent.Path
-      value: event:/ATMOS/ATMO_TorchJungle
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
-      propertyPath: sceneConfigs.Array.data[7].ambienceEvent.Guid.Data1
-      value: -885324485
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
-      propertyPath: sceneConfigs.Array.data[7].ambienceEvent.Guid.Data2
-      value: 1211166654
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
-      propertyPath: sceneConfigs.Array.data[7].ambienceEvent.Guid.Data3
-      value: -2116289622
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287548880985935187, guid: d88426ce267b25240b3ded0bbbd220a8, type: 3}
-      propertyPath: sceneConfigs.Array.data[7].ambienceEvent.Guid.Data4
-      value: 1064701525
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -47332,6 +47509,43 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2116900601}
     m_Modifications:
+    - target: {fileID: 2240381001977118192, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
+      propertyPath: text
+      value: AND THERE IS THIS SCARY OLD HOUSE! GOOD LUCK!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2240381001977118192, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 2671436553780593046, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
+      propertyPath: text
+      value: Behind them there is a tiny forest! We heard that someone old and wise
+        is living there hehe.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671436553780593046, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 4329895876189450155, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 5373046599929145049, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 6211264671346445816, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 6661918042877006696, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+    - target: {fileID: 7171284199420123067, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 7191852371126976473, guid: 30d690c3f74c7a54eb3854322d98d061, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.559998
@@ -47677,6 +47891,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2116900601}
     m_Modifications:
     - target: {fileID: 3384231114152865135, guid: f458c5e086c3c0747bb54e65887ad7f1, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 3384231114152865135, guid: f458c5e086c3c0747bb54e65887ad7f1, type: 3}
       propertyPath: voiceEvent.Path
       value: event:/Dialogue/VOICE_Schlange
       objectReference: {fileID: 0}
@@ -47761,6 +47979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: frosch
       objectReference: {fileID: 0}
+    - target: {fileID: 3908070616519334331, guid: 50e42391cb9bf7a48b6ddc03903624f1, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 4154366018944974724, guid: 50e42391cb9bf7a48b6ddc03903624f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 87.3583
@@ -47818,10 +48040,92 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2116900601}
     m_Modifications:
+    - target: {fileID: 1271025580941014636, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: text
+      value: Have you seen an egg like this before? You've got all kind of eggs here.
+        You must know SOMETHING, right?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271025580941014636, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+    - target: {fileID: 1407603808273279920, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 1565591704126645829, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: text
+      value: Okay I'll help you, but I'll need some info on this egg afterwards!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565591704126645829, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
     - target: {fileID: 1726049684269650233, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 2238782256322378347, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: text
+      value: Okay boss...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238782256322378347, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 2319429962962952937, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+    - target: {fileID: 2454095778764015441, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 2795766348927938049, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 2850384521115599745, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 4787765313399922791, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 4857773735813750719, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 4917957558849184860, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 4922847055806305287, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: text
+      value: Oh, if you ask this nicely, sure, you can help us. Wolf, tell him what's
+        up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922847055806305287, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 5061383377805451745, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: text
+      value: ...thank you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061383377805451745, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 5551351796302432363, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941096529259759905, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
     - target: {fileID: 8491932133153067124, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.956505
@@ -47862,6 +48166,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8860776467390965411, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: text
+      value: Yeah, we appreaciate your help but you have to leave now. We have to
+        get back to work.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864637816138578901, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
     - target: {fileID: 9120554389417757390, guid: 5e93026d76fd047439168a63a5cb96f2, type: 3}
       propertyPath: m_Name
       value: "m\xF6we"
@@ -47879,6 +48192,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1233353727}
     m_Modifications:
+    - target: {fileID: 4462162455672681908, guid: d2a9e151c8915564a9a6e969a14a34a8, type: 3}
+      propertyPath: text
+      value: Hmm, I don't think so. But I don't know much about eggs to be hones.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462162455672681908, guid: d2a9e151c8915564a9a6e969a14a34a8, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 5298071263191155088, guid: d2a9e151c8915564a9a6e969a14a34a8, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 6178101882104787434, guid: d2a9e151c8915564a9a6e969a14a34a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.91573
@@ -47923,6 +48248,10 @@ PrefabInstance:
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 6238036454474902299, guid: d2a9e151c8915564a9a6e969a14a34a8, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 6842892260103121744, guid: d2a9e151c8915564a9a6e969a14a34a8, type: 3}
       propertyPath: m_Name
       value: maus
@@ -47944,6 +48273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: schwei
       objectReference: {fileID: 0}
+    - target: {fileID: 849208503870489373, guid: 1837ef9215c69764ba5e4993c0e10762, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 1142284000409790870, guid: 1837ef9215c69764ba5e4993c0e10762, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.89
@@ -47983,6 +48316,18 @@ PrefabInstance:
     - target: {fileID: 1142284000409790870, guid: 1837ef9215c69764ba5e4993c0e10762, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894365546980368640, guid: 1837ef9215c69764ba5e4993c0e10762, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 3008646798300144124, guid: 1837ef9215c69764ba5e4993c0e10762, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+    - target: {fileID: 5841570859976961977, guid: 1837ef9215c69764ba5e4993c0e10762, type: 3}
+      propertyPath: text
+      value: Oh I would love to but I can't. I need to find the parents of this egg.
       objectReference: {fileID: 0}
     - target: {fileID: 9050283241816454952, guid: 1837ef9215c69764ba5e4993c0e10762, type: 3}
       propertyPath: dialogueScreen
@@ -48144,10 +48489,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1233353727}
     m_Modifications:
+    - target: {fileID: 478803181028769987, guid: 1fd42c435411125499a41817580f99f4, type: 3}
+      propertyPath: text
+      value: Hey Felix, do you know anything about this egg?
+      objectReference: {fileID: 0}
     - target: {fileID: 3750930045474124858, guid: 1fd42c435411125499a41817580f99f4, type: 3}
       propertyPath: m_Name
       value: tiger
       objectReference: {fileID: 0}
+    - target: {fileID: 4426033375904451776, guid: 1fd42c435411125499a41817580f99f4, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 4559379691892600448, guid: 1fd42c435411125499a41817580f99f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.46
@@ -48188,10 +48541,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6297747861835340720, guid: 1fd42c435411125499a41817580f99f4, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 7138849280939033133, guid: 1fd42c435411125499a41817580f99f4, type: 3}
       propertyPath: dialogueScreen
       value: 
       objectReference: {fileID: 2079571996}
+    - target: {fileID: 8601005328882796249, guid: 1fd42c435411125499a41817580f99f4, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -58,6 +58,85 @@ MonoBehaviour:
       Data3: -1590410583
       Data4: 508061233
     Path: event:/UI/UI_back
+  buttonPressSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  doorLightSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  errorSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+--- !u!1 &559391201049536652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7001172552523800072}
+  - component: {fileID: 2441411839695970970}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7001172552523800072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559391201049536652}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1015.3843, y: -526.98926, z: 231.64151}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4652131425852499332}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2441411839695970970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559391201049536652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a18dfc11bdb4a4cb2ba22477d506aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonHoverSound:
+    Guid:
+      Data1: -231763037
+      Data2: 1332736086
+      Data3: -889527910
+      Data4: -1499791902
+    Path: event:/UI/UI_Navi2
+  buttonClickSound:
+    Guid:
+      Data1: 1166028412
+      Data2: 1263252605
+      Data3: 1099945625
+      Data4: 26324543
+    Path: event:/UI/UI_Enter2
 --- !u!1 &2382829890382629984
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +354,7 @@ Transform:
   - {fileID: 9219247646784154267}
   - {fileID: 8010003573036396046}
   - {fileID: 5996278615614288026}
+  - {fileID: 7001172552523800072}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6527261838923438274
@@ -476,11 +556,11 @@ MonoBehaviour:
     musicAreaParameter: 
     ambienceEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -885324485
+        Data2: 1211166654
+        Data3: -2116289622
+        Data4: 1064701525
+      Path: event:/ATMOS/ATMO_TorchJungle
   - sceneName: Credits
     useMainMusicWithParameters: 0
     musicEvent:

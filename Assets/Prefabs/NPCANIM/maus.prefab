@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Hey, any egg updates?
+  text: Hey, any updates on the egg?
   choices: []
   speakerName: Vanessa
   voiceEvent:
@@ -115,7 +115,7 @@ MonoBehaviour:
       Data4: -1828756611
     Path: event:/Dialogue/VOICE_Maus
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 8758290009579074409}
   player: 0
 --- !u!1 &5622076096202550370
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Wow that's so cool! I'm excited to hear your stories when you get back.
+  text: Wow, that's so cool! I'm excited to hear your stories when you get back.
   choices: []
   speakerName: Vanessa
   voiceEvent:
@@ -466,7 +466,7 @@ MonoBehaviour:
       Data4: -1828756611
     Path: event:/Dialogue/VOICE_Maus
   npcPortrait: {fileID: 21300000, guid: d00af09daedba7b48968193bb3aabd91, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
   player: 0
 --- !u!1001 &5924414463174923777

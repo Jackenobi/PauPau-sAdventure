@@ -58,12 +58,13 @@ public class SceneAudioLoader : MonoBehaviour
 
         Debug.Log($"[SceneAudioLoader] Config found! UseMainMusic: {config.useMainMusicWithParameters}, MusicEvent assigned: {!config.musicEvent.IsNull}");
 
-        // MUSIK
+        // MUSIK - Automatischer Crossfade durch MusicManager
         if (config.useMainMusicWithParameters)
         {
             Debug.Log("[SceneAudioLoader] Starting main music with parameters...");
             if (MusicManager.Instance != null)
             {
+                // StartMainMusic macht automatisch Crossfade wenn andere Musik läuft
                 MusicManager.Instance.StartMainMusic();
                 if (!string.IsNullOrEmpty(config.musicAreaParameter))
                 {
@@ -80,6 +81,7 @@ public class SceneAudioLoader : MonoBehaviour
             Debug.Log("[SceneAudioLoader] Playing simple music");
             if (MusicManager.Instance != null)
             {
+                // PlaySimpleMusic macht automatisch Crossfade wenn andere Musik läuft
                 MusicManager.Instance.PlaySimpleMusic(config.musicEvent);
             }
             else
@@ -92,12 +94,13 @@ public class SceneAudioLoader : MonoBehaviour
             Debug.LogWarning("[SceneAudioLoader] No music event configured!");
         }
 
-        // AMBIENCE
+        // AMBIENCE - Automatischer Crossfade durch AmbienceManager
         if (!config.ambienceEvent.IsNull)
         {
             Debug.Log("[SceneAudioLoader] Playing ambience");
             if (AmbienceManager.Instance != null)
             {
+                // PlayAmbienceForScene macht automatisch Crossfade
                 AmbienceManager.Instance.PlayAmbienceForScene(config.ambienceEvent);
             }
         }

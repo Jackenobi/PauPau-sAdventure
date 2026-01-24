@@ -4785,7 +4785,7 @@ MonoBehaviour:
       Data4: 33080898
     Path: event:/Dialogue/VOICE_Katze
   npcPortrait: {fileID: 21300000, guid: 8d2388c63c8e2f543907b289f62b82c8, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
   player: 0
 --- !u!4 &866922786
@@ -7570,11 +7570,11 @@ MonoBehaviour:
   speakerName: PaoPao
   voiceEvent:
     Guid:
-      Data1: 967369467
-      Data2: 1327852351
-      Data3: 1859784087
-      Data4: -1143158140
-    Path: event:/Dialogue/VOICE_Schaf
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: 8d781a534709c90428ac0daff77ef99a, type: 3}
   playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
@@ -11185,7 +11185,7 @@ MonoBehaviour:
     nextLine: {fileID: 82176545}
     id: 
     isCorrect: 1
-  - text: l'll need some time
+  - text: Later
     nextLine: {fileID: 1138052467}
     id: 
     isCorrect: 0
@@ -45515,9 +45515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: YESS I've got this really old map. Can you bring me there?
+  text: YES! I've got this really old map. Can you bring me there?
   choices: []
-  speakerName: Victor
+  speakerName: PaoPao
   voiceEvent:
     Guid:
       Data1: 1411458782
@@ -45526,7 +45526,7 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: 08080a6e3f4d6e742a9ff2b9829ebb05, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 359905703}
   player: 1
 --- !u!43 &2116669012

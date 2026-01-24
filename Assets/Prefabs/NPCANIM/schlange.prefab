@@ -49,11 +49,11 @@ MonoBehaviour:
   speakerName: Emily
   voiceEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 480866432
+      Data2: 1162798932
+      Data3: -2087377783
+      Data4: 361350097
+    Path: event:/Dialogue/VOICE_Schlange
   npcPortrait: {fileID: 21300000, guid: b62f53d2a369ee64e8988edbfca48304, type: 3}
   playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
   nextLine: {fileID: 0}

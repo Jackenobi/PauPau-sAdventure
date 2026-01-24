@@ -174,7 +174,7 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1761902958}
   player: 1
 --- !u!64 &38948927
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: You need to find something shiny and round "to prove you worthy". It's rather
+  text: You need to find something shiny and round to prove your worth. It's rather
     tiny and somewhere in this house.
   choices: []
   speakerName: Laura
@@ -637,6 +637,10 @@ PrefabInstance:
       propertyPath: speakerName
       value: Laura
       objectReference: {fileID: 0}
+    - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      propertyPath: playerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
     - target: {fileID: 894385673302524397, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       propertyPath: voiceEvent.Path
       value: event:/Dialogue/VOICE_Huhn
@@ -813,6 +817,9 @@ PrefabInstance:
       addedObject: {fileID: 1761902957}
     - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 666836717}
+    - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 258296726}
     - targetCorrespondingSourceObject: {fileID: 4540979391055594602, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
       insertIndex: -1
@@ -955,7 +962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Aaah finally I can see again.
+  text: Aaah finally I can read again.
   choices: []
   speakerName: Laura
   voiceEvent:
@@ -1013,10 +1020,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 'Yes. I''ve been searching for this egg myself actually.
+  text: 'Yes. I''ve been searching for this egg myself.
 
-    Before I tell
-    you everything, you have to help me first.'
+    Before I tell you everything,
+    you have to help me first.'
   choices: []
   speakerName: Laura
   voiceEvent:
@@ -1086,7 +1093,7 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 1344265256}
   player: 1
 --- !u!1 &561656553 stripped
@@ -1495,6 +1502,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21dca2f227874164f9ac68e3123f5813, type: 3}
   m_PrefabInstance: {fileID: 351998942}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &666836715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 666836717}
+  - component: {fileID: 666836716}
+  m_Layer: 0
+  m_Name: 4.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &666836716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666836715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'It''s way bigger than any other eggs and the pattern doesn''t look familiar
+    either. Maybe it''s really old?
+
+'
+  choices: []
+  speakerName: PaoPao
+  voiceEvent:
+    Guid:
+      Data1: 1411458782
+      Data2: 1259466299
+      Data3: -952263790
+      Data4: -177416928
+    Path: event:/Dialogue/VOICE_Affe
+  npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 258296727}
+  player: 1
+--- !u!4 &666836717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666836715}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351998947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &676639317
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1768,7 +1836,7 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 304835877}
   player: 1
 --- !u!64 &781964549
@@ -2437,7 +2505,7 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 686172756}
   player: 1
 --- !u!1 &1150784248
@@ -2495,7 +2563,7 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 936144164}
   player: 1
 --- !u!64 &1180228990
@@ -3575,7 +3643,7 @@ MonoBehaviour:
       Data4: -1610596202
     Path: event:/Dialogue/VOICE_Huhn
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 8e02177ceba3e0c40af0e610c8f441a4, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
   nextLine: {fileID: 0}
   player: 0
 --- !u!64 &1373228916
@@ -4018,9 +4086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c12ce6a53b8029499341fe8e1cc9cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 'I''ve found this really strange egg on the shore. It''s way bigger than
-    any other eggs and the pattern doesn''t look familiar either. Maybe it''s really
-    old?
+  text: 'I''ve found this really strange egg on the shore.
 
 '
   choices: []
@@ -4033,8 +4099,8 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
-  nextLine: {fileID: 258296727}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
+  nextLine: {fileID: 666836716}
   player: 1
 --- !u!64 &1814677838
 MeshCollider:
@@ -4307,7 +4373,7 @@ MonoBehaviour:
       Data4: -177416928
     Path: event:/Dialogue/VOICE_Affe
   npcPortrait: {fileID: 21300000, guid: ba48a8882baf4b2439302073c4ef0742, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 948b14c4285d5e841be539441289d014, type: 3}
+  playerPortrait: {fileID: 21300000, guid: e048084545e4ed14dbf597e924eef256, type: 3}
   nextLine: {fileID: 0}
   player: 1
 --- !u!64 &1930693175

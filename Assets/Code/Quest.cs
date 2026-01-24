@@ -207,7 +207,7 @@ public class Quest : MonoBehaviour, IQuestManager
                 if (collectedEggs >= 8)
                 {
                     moeweQuestDone = true;
-                    questTMP.text = "All eggs collected! Return to the seagull";
+                    questTMP.text = "Return to the Benni";
                     if (moeweEggsComplete != null)
                         moewe.dialogue = moeweEggsComplete;
                 }
@@ -355,7 +355,7 @@ public class Quest : MonoBehaviour, IQuestManager
             tapeItem.gameObject.SetActive(true);
         bauarbeiter.dialogue = bauarbeiterDuring;
         yield return WaitForItem(ItemType.Tape, 1, null);
-        questTMP.text = "Bring the tape to the construction worker";
+        questTMP.text = "Bring Ingo the tape";
         if (bauarbeiterDone != null)
             bauarbeiter.dialogue = bauarbeiterDone;
     }
@@ -403,7 +403,7 @@ public class Quest : MonoBehaviour, IQuestManager
             blackScreen.gameObject.SetActive(false);
         }
 
-        questTMP.text = "Bridge fixed!";
+        questTMP.text = "Explore the city";
         if (bauarbeiterAfter != null)
             bauarbeiter.dialogue = bauarbeiterAfter;
         if (tapeItem != null)
@@ -533,7 +533,7 @@ public class Quest : MonoBehaviour, IQuestManager
     IEnumerator QuestMoewe()
     {
         yield return new WaitForSeconds(0.1f);
-        questTMP.text = "Collect all eggs (0/8)";
+        questTMP.text = "Collect eggs (0/8)";
         if (eier != null)
         {
             foreach (var ei in eier)
@@ -622,7 +622,7 @@ public class Quest : MonoBehaviour, IQuestManager
     IEnumerator QuestSchaf()
     {
         yield return new WaitForSeconds(0.1f);
-        questTMP.text = "Answer Marco's three questions";
+        questTMP.text = "Answer Marco's questions";
         correctAnswers = 0;
         if (schafQuestions != null && schafQuestions.Length > 0)
             schaf.dialogue = schafQuestions[0];
@@ -636,7 +636,7 @@ public class Quest : MonoBehaviour, IQuestManager
         if (isCorrect)
         {
             correctAnswers++;
-            questTMP.text = $"Answer Marco's three questions ({correctAnswers}/3)";
+            questTMP.text = $"Answer Marco's questions ({correctAnswers}/3)";
 
             if (correctAnswers >= 3)
             {
@@ -663,7 +663,7 @@ public class Quest : MonoBehaviour, IQuestManager
                 questSoundManager.PlayQuestFail();
 
             correctAnswers = 0;
-            questTMP.text = "Wrong answer! Starting over...";
+            questTMP.text = "Wrong answer!";
             if (schafWrongAnswer != null)
                 schaf.dialogue = schafWrongAnswer;
             StartCoroutine(ResetSchafQuest());
@@ -673,7 +673,7 @@ public class Quest : MonoBehaviour, IQuestManager
     IEnumerator ResetSchafQuest()
     {
         yield return new WaitForSeconds(2f);
-        questTMP.text = "Answer Marco's three questions";
+        questTMP.text = "Answer Marco questions";
         if (schafQuestions != null && schafQuestions.Length > 0)
             schaf.dialogue = schafQuestions[0];
     }
@@ -711,7 +711,7 @@ public class Quest : MonoBehaviour, IQuestManager
     IEnumerator QuestOpossum()
     {
         yield return new WaitForSeconds(0.1f);
-        questTMP.text = "Find the hiding opossum";
+        questTMP.text = "Find Jana";
         yield return new WaitForSeconds(3f);
 
         if (blackScreen != null)
@@ -759,7 +759,7 @@ public class Quest : MonoBehaviour, IQuestManager
         if (questSoundManager != null)
             questSoundManager.PlayQuestComplete();
 
-        questTMP.text = "You found the opossum!";
+        questTMP.text = "You found Jana!";
         yield return new WaitForSeconds(2f);
 
         if (blackScreen != null)
@@ -842,7 +842,7 @@ public class Quest : MonoBehaviour, IQuestManager
 
     IEnumerator EnterWald()
     {
-        questTMP.text = "Entering the forest...";
+        questTMP.text = "Entering the house...";
 
         if (blackScreen != null)
         {

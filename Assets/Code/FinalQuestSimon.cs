@@ -38,14 +38,14 @@ public class FinalQuestSimon : MonoBehaviour, IQuestManager
         questStarted = true;
         GameObject questDisplay = Instantiate(questDisplayPrefab, questScreen);
         questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
-        questTMP.text = "Door Puzzle (Round 1 / 3)";
+        questTMP.text = "Test (Round 1 / 3)";
 
         puzzleManager.StartPuzzle(this);
     }
 
     public void OnRoundCompleted(int round)
     {
-        questTMP.text = $"Door Puzzle (Round {round + 1} / 3)";
+        questTMP.text = $"Test (Round {round + 1} / 3)";
     }
 
     // Fehler-Reset
@@ -55,7 +55,7 @@ public class FinalQuestSimon : MonoBehaviour, IQuestManager
         if (questSoundManager != null)
             questSoundManager.PlayError();
 
-        questTMP.text = $"Wrong! Try again - Round {round + 1} / 3";
+        questTMP.text = $"Try again - Round {round + 1} / 3";
     }
 
     public void OnPuzzleCompleted()

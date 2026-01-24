@@ -16,11 +16,11 @@ public class MusicManager : MonoBehaviour
     public string sceneParameterName = "Scene";
 
     [Header("Fade Settings")]
-    [Tooltip("Fade-Out Dauer in Sekunden (schnell!)")]
-    public float fadeOutDuration = 0.5f;
+    [Tooltip("Fade-Out Dauer in Sekunden")]
+    public float fadeOutDuration = 1.5f;
 
-    [Tooltip("Fade-In Dauer in Sekunden (schnell!)")]
-    public float fadeInDuration = 0.5f;
+    [Tooltip("Fade-In Dauer in Sekunden")]
+    public float fadeInDuration = 1.5f;
 
     private EventInstance currentMusicInstance;
     private bool isMusicPlaying = false;

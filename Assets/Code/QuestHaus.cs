@@ -112,6 +112,10 @@ public class QuestHaus : MonoBehaviour
         questTMP = questDisplay.GetComponentInChildren<TMP_Text>();
         questTMP.text = "Find the shiny object";
 
+        // Placeholder verstecken
+        if (QuestPlaceholderManager.Instance != null)
+            QuestPlaceholderManager.Instance.OnQuestStarted();
+
         // Shiny Item aktivieren (falls versteckt)
         if (shinyItem != null && !shinyItem.gameObject.activeSelf)
             shinyItem.gameObject.SetActive(true);
@@ -126,7 +130,7 @@ public class QuestHaus : MonoBehaviour
             questSoundManager.PlayQuestComplete();
 
         if (questTMP != null)
-            questTMP.text = "Quest complete! Talk to the chicken again.";
+            questTMP.text = "Talk to Laura again.";
     }
 
     IEnumerator WaitForDialogueAndLoadScene()
@@ -135,7 +139,7 @@ public class QuestHaus : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         if (questTMP != null)
-            questTMP.text = "Returning outside...";
+            questTMP.text = "Listen to the prophecy...";
 
         // Blackscreen einblenden
         if (blackScreen != null)
@@ -152,6 +156,14 @@ public class QuestHaus : MonoBehaviour
             }
             blackScreen.alpha = 1f;
         }
+
+        // Quest Display entfernen vor Scene-Wechsel
+        if (questDisplay != null)
+            Destroy(questDisplay);
+
+        // Placeholder anzeigen (optional, da Scene wechselt)
+        if (QuestPlaceholderManager.Instance != null)
+            QuestPlaceholderManager.Instance.OnQuestCompleted();
 
         yield return new WaitForSeconds(2f);
 
